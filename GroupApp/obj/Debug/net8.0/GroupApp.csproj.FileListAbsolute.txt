@@ -145,3 +145,4 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\refint\Gro
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.genruntimeconfig.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\ref\GroupApp.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\libman.json
