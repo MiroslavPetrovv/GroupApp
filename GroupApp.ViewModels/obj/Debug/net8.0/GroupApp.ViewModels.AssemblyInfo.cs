@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroupApp.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43dc91299c0b57fa13907c2b7066a6059aa29440")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2eabf8af9e283d8a7e963894e53ad852a7c0517")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroupApp.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroupApp.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
