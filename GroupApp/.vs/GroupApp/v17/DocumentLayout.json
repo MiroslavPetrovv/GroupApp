@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\groupapp.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}|..\\GroupApp.Constants\\GroupApp.Constants.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.constants\\contants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -16,22 +32,12 @@
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}|..\\GroupApp.Constants\\GroupApp.Constants.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.constants\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -49,8 +55,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GroupApp.Data",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data\\GroupApp.Data.csproj",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj",
+              "RelativeToolTip": "..\\GroupApp.Data\\GroupApp.Data.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-19T10:11:32.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\Group.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
+              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\Group.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAIwCIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T10:05:04.331Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -61,7 +93,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Contants.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\Contants.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Constants\\Contants.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\Contants.cs",
+              "RelativeToolTip": "..\\GroupApp.Constants\\Contants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T10:04:01.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -74,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "00000000000000_CreateIdentitySchema.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
@@ -87,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "00000000000000_CreateIdentitySchema.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
@@ -100,20 +145,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "..\\GroupApp.Data\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T07:59:55.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "chat.js",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\chat.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\chat.js",
@@ -126,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -138,32 +183,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
               "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Hubs\\ChatHub.cs",
               "RelativeToolTip": "Hubs\\ChatHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T18:15:49.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Constants\\Class1.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\Class1.cs",
-              "RelativeToolTip": "..\\GroupApp.Constants\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T16:54:32.708Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -175,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -187,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GroupApp.Constants
 {
-    internal class Contants
+    public static class Group
     {
+        public const int nameMaxLength = 100;
+        public const int descriptionMaxLenght = 100;
+        
+
     }
 }
