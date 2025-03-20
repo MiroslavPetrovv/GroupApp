@@ -1721,14 +1721,14 @@
           }
         }
       },
-      "GroupApp.Constants/1.0.0": {
+      "GroupApp.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/GroupApp.Constants.dll": {}
+          "bin/placeholder/GroupApp.Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GroupApp.Constants.dll": {}
+          "bin/placeholder/GroupApp.Common.dll": {}
         }
       },
       "GroupApp.Data/1.0.0": {
@@ -1750,7 +1750,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "GroupApp.Constants": "1.0.0",
+          "GroupApp.Common": "1.0.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.4"
         },
         "compile": {
@@ -4695,10 +4695,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "GroupApp.Constants/1.0.0": {
+    "GroupApp.Common/1.0.0": {
       "type": "project",
-      "path": "../GroupApp.Constants/GroupApp.Constants.csproj",
-      "msbuildProject": "../GroupApp.Constants/GroupApp.Constants.csproj"
+      "path": "../GroupApp.Constants/GroupApp.Common.csproj",
+      "msbuildProject": "../GroupApp.Constants/GroupApp.Common.csproj"
     },
     "GroupApp.Data/1.0.0": {
       "type": "project",

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\GroupApp.Constants.csproj",
-      "projectName": "GroupApp.Constants",
-      "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\GroupApp.Constants.csproj",
+      "projectUniqueName": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\GroupApp.Common.csproj",
+      "projectName": "GroupApp.Common",
+      "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\GroupApp.Common.csproj",
       "packagesPath": "C:\\Users\\Miroslav\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\obj\\",
       "projectStyle": "PackageReference",

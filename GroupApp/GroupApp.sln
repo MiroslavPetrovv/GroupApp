@@ -5,13 +5,13 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupApp", "GroupApp.csproj", "{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupApp.ViewModels", "..\GroupApp.ViewModels\GroupApp.ViewModels.csproj", "{F0AC667F-9B70-4D55-8034-A51206C16239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupApp.ViewModels", "..\GroupApp.ViewModels\GroupApp.ViewModels.csproj", "{F0AC667F-9B70-4D55-8034-A51206C16239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupApp.Data", "..\GroupApp.Data\GroupApp.Data.csproj", "{1764F961-AC06-4E97-9A29-F54810E010BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupApp.Data", "..\GroupApp.Data\GroupApp.Data.csproj", "{1764F961-AC06-4E97-9A29-F54810E010BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupApp.Data.Models", "..\GroupApp.Data.Models\GroupApp.Data.Models.csproj", "{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupApp.Data.Models", "..\GroupApp.Data.Models\GroupApp.Data.Models.csproj", "{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupApp.Constants", "..\GroupApp.Constants\GroupApp.Constants.csproj", "{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupApp.Common", "..\GroupApp.Constants\GroupApp.Common.csproj", "{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB", "WEB", "{F2CAACCC-754B-41F9-BCC9-B6C7A370D38C}"
 EndProject

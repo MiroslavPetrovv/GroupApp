@@ -5,36 +5,33 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GroupApp.Data.Data.Models
 {
-    using static GroupApp.Constants.Group;
+    using static GroupApp.Common.EntityValidationConstants.Group;
     public class Group
     {
         public Group()
         {
-            Members = new List<Member>();
+            GroupMembers = new List<GroupMember>();
             TextChannels = new List<TextChannel>();
         }
-        [Key]
-        [Required]
+        
         public Guid Id { get; set; }
 
-        [Required]
-        [MaxLength(nameMaxLength)]
+        
         public string Title{ get; set; }
 
-        [Required]
-        [MaxLength(descriptionMaxLenght)]
+        
         public string Description{ get; set; }
 
-        [Required]
+       
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         
         public string OwnerId { get; set; }
 
-        [ForeignKey(nameof(OwnerId))]
-        public virtual IdentityUser Owner{ get; set; }
+        
+        public IdentityUser Owner{ get; set; }
 
-        public virtual List<Member> Members { get; set; } 
-        public virtual List<TextChannel> TextChannels { get; set; }
+        public List<GroupMember> GroupMembers { get; set; } 
+        public List<TextChannel> TextChannels { get; set; }
     }
 }
