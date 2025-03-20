@@ -1,11 +1,9 @@
 ﻿
+using GroupApp.Data.Models.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GroupApp.Data.Data.Models
+namespace GroupApp.Data.Models
 {
-    using static GroupApp.Common.EntityValidationConstants.Group;
     public class Group
     {
         public Group()
@@ -29,7 +27,7 @@ namespace GroupApp.Data.Data.Models
         public string OwnerId { get; set; }
 
         
-        public IdentityUser Owner{ get; set; }
+        public ApplicationUser Owner{ get; set; }
 
         public List<GroupMember> GroupMembers { get; set; } 
         public List<TextChannel> TextChannels { get; set; }

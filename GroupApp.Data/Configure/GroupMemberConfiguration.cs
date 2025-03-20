@@ -1,20 +1,36 @@
-﻿using GroupApp.Data.Data.Models;
+﻿using GroupApp.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupApp.Data.Configure
 {
+    using static GroupApp.Common.EntityValidationConstants.GroupMember;
     public class GroupMemberConfiguration : IEntityTypeConfiguration<GroupMember>
     {
+        
         public void Configure(EntityTypeBuilder<GroupMember> builder)
         {
-            throw new NotImplementedException();
+            builder
+                .HasKey(gm => gm.Id);
+
+
+            builder
+                .HasOne(gm => gm.Group)
+                .WithMany(g => g.GroupMembers)
+                .HasForeignKey(g=>g.GroupId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasOne(gm => gm.User)
+                .WithMany(u => u.GroupMemberships)
+                .HasForeignKey(u => u.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .Property(gm => gm.NickName)
+                .IsRequired()
+                .HasMaxLength(nickNameMaxLength);
+
         }
     }
 }

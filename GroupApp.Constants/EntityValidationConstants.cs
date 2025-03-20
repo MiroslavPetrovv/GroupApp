@@ -12,8 +12,21 @@ namespace GroupApp.Common
         {
             public const int descriptionMaxLenght = 100;
             public const int TitleMaxLength = 100;
+            
+        }
+
+        public static class GroupMember
+        {
+            public const int nickNameMaxLength = 50;
 
         }
+
+        public static class TextChannel
+        {
+            public const int NameMaxLength = 20;
+            public const int DescriptionMaxLength = 50; 
+        }
+        
         
 
     }
