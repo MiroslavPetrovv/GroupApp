@@ -19,7 +19,7 @@ namespace GroupApp.Data.Data.Models
 
         [Required]
         [MaxLength(nameMaxLength)]
-        public string Name{ get; set; }
+        public string Title{ get; set; }
 
         [Required]
         [MaxLength(descriptionMaxLenght)]

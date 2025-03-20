@@ -1759,6 +1759,16 @@
         "runtime": {
           "bin/placeholder/GroupApp.Data.Models.dll": {}
         }
+      },
+      "GroupApp.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GroupApp.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GroupApp.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -4699,11 +4709,17 @@
       "type": "project",
       "path": "../GroupApp.Data.Models/GroupApp.Data.Models.csproj",
       "msbuildProject": "../GroupApp.Data.Models/GroupApp.Data.Models.csproj"
+    },
+    "GroupApp.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../GroupApp.ViewModels/GroupApp.ViewModels.csproj",
+      "msbuildProject": "../GroupApp.ViewModels/GroupApp.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "GroupApp.Data >= 1.0.0",
+      "GroupApp.ViewModels >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.6",
@@ -4741,6 +4757,9 @@
           "projectReferences": {
             "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj": {
               "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj"
+            },
+            "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.ViewModels\\GroupApp.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.ViewModels\\GroupApp.ViewModels.csproj"
             }
           }
         }

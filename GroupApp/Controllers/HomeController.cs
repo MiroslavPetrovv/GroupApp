@@ -1,4 +1,4 @@
-using GroupApp.Models;
+using GroupApp.ViewModels.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,18 +15,11 @@ namespace GroupApp.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Title"] = "Home Page";
+            ViewData["Message"] = "Welocome to the Community";
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
     }
 }

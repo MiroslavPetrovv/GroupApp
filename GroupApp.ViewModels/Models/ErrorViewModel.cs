@@ -1,4 +1,4 @@
-namespace GroupApp.Models
+namespace GroupApp.ViewModels.Models
 {
     public class ErrorViewModel
     {
