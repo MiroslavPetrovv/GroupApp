@@ -13,6 +13,9 @@ namespace GroupApp.Data.Configure
             builder
                 .HasKey(gm => gm.Id);
 
+            builder.Property(gm => gm.UserId)
+                .IsRequired();
+
 
             builder
                 .HasOne(gm => gm.Group)

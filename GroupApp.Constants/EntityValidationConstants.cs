@@ -12,7 +12,7 @@ namespace GroupApp.Common
         {
             public const int descriptionMaxLenght = 100;
             public const int TitleMaxLength = 100;
-            
+
         }
 
         public static class GroupMember
@@ -24,12 +24,29 @@ namespace GroupApp.Common
         public static class TextChannel
         {
             public const int NameMaxLength = 20;
-            public const int DescriptionMaxLength = 50; 
+            public const int DescriptionMaxLength = 50;
         }
 
         public static class Message
         {
             public const int ContentMaxLength = 250;
+        }
+
+        public static class Course
+        {
+            public const int TitleMaxLength = 75;
+            public const int DescriptionMaxLength = 350;
+        }
+
+        public static class Module
+        {
+            public const int TitleMaxLength = 100;
+        }
+
+        public static class Lesson
+        {
+            public const int TitleMaxLength = 100;
+            public const int ContentMaxLength = 300;
         }
         
         
