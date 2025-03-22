@@ -3,8 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\textchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\configure\\textchannelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\configure\\groupmemberconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -16,16 +18,23 @@
       "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\groupmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F044CD2-D5EE-43E8-A4D6-98CAC3BB3BDA}|..\\GroupApp.Data.Models\\GroupApp.Data.Models.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data.models\\models\\textchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}|..\\GroupApp.Constants\\GroupApp.Constants.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.constants\\applicationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}|..\\GroupApp.Constants\\GroupApp.Common.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.constants\\entityvalidationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E95C9635-5C4E-4431-B8EB-B5DAA1D244C7}|..\\GroupApp.Constants\\GroupApp.Common.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.constants\\applicationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1764F961-AC06-4E97-9A29-F54810E010BD}|..\\GroupApp.Data\\GroupApp.Data.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.data\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -45,60 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:21:06.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GroupMemberConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
-              "RelativeToolTip": "..\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:17:40.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TextChannel.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\TextChannel.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\TextChannel.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\TextChannel.cs",
-              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\TextChannel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:59:55.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EntityValidationConstants.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\EntityValidationConstants.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Constants\\EntityValidationConstants.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\EntityValidationConstants.cs",
-              "RelativeToolTip": "..\\GroupApp.Constants\\EntityValidationConstants.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:57:07.696Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -109,7 +66,116 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextChannelConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\TextChannelConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data\\Configure\\TextChannelConfiguration.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\TextChannelConfiguration.cs",
+              "RelativeToolTip": "..\\GroupApp.Data\\Configure\\TextChannelConfiguration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T23:42:20.543Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T23:26:23.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\Message.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Message.cs",
+              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\Message.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T23:23:48.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:21:06.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GroupMemberConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
+              "RelativeToolTip": "..\\GroupApp.Data\\Configure\\GroupMemberConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:17:40.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TextChannel.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\TextChannel.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\TextChannel.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\TextChannel.cs",
+              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\TextChannel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:59:55.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EntityValidationConstants.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\EntityValidationConstants.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Constants\\EntityValidationConstants.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\EntityValidationConstants.cs",
+              "RelativeToolTip": "..\\GroupApp.Constants\\EntityValidationConstants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:57:07.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GroupConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
+              "RelativeToolTip": "..\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:53:12.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
+              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\Group.cs",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
+              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\Group.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAB0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T10:05:04.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ApplicationConstants.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Constants\\ApplicationConstants.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Constants\\ApplicationConstants.cs",
@@ -117,51 +183,23 @@
               "RelativeToolTip": "..\\GroupApp.Constants\\ApplicationConstants.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:56:22.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T16:56:22.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GroupConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
-              "RelativeToolTip": "..\\GroupApp.Data\\Configure\\GroupConfiguration.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAYwCUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:53:12.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "GroupMember.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\GroupMember.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\GroupMember.cs",
               "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\GroupMember.cs",
               "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\GroupMember.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:47:18.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T16:47:18.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "..\\GroupApp.Data.Models\\Models\\Group.cs",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data.Models\\Models\\Group.cs",
-              "RelativeToolTip": "..\\GroupApp.Data.Models\\Models\\Group.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwBwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:05:04.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "00000000000000_CreateIdentitySchema.cs",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
@@ -169,12 +207,11 @@
               "RelativeToolTip": "..\\GroupApp.Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T08:00:45.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T08:00:45.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "chat.js",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\chat.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\chat.js",
@@ -182,12 +219,11 @@
               "RelativeToolTip": "wwwroot\\js\\chat.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-11T18:20:59.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T18:20:59.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "GroupApp.Data.csproj",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj",
               "RelativeDocumentMoniker": "..\\GroupApp.Data\\GroupApp.Data.csproj",
@@ -195,8 +231,7 @@
               "RelativeToolTip": "..\\GroupApp.Data\\GroupApp.Data.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-19T10:11:32.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T10:11:32.428Z"
             }
           ]
         }

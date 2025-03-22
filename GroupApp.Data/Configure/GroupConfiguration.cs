@@ -1,5 +1,4 @@
-﻿using GroupApp.Data.Data.Models;
-using Microsoft.Data.SqlClient;
+﻿using GroupApp.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using GroupApp.Data.Models.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace GroupApp.Data.Models
 {
@@ -12,7 +13,7 @@ namespace GroupApp.Data.Models
         public Group Group { get; set; }
 
         public string UserId { get; set; }
-        public IdentityUser User { get; set; } 
+        public ApplicationUser User { get; set; } 
 
         public DateTime JoinedAt { get; set; } = DateTime.UtcNow;
     }

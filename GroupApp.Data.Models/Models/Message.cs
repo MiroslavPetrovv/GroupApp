@@ -1,4 +1,4 @@
-﻿namespace GroupApp.Data.Data.Models
+﻿namespace GroupApp.Data.Models
 {
     public class Message
     {
