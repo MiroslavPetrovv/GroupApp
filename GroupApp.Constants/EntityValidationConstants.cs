@@ -26,6 +26,11 @@ namespace GroupApp.Common
             public const int NameMaxLength = 20;
             public const int DescriptionMaxLength = 50; 
         }
+
+        public static class Message
+        {
+            public const int ContentMaxLength = 250;
+        }
         
         
 

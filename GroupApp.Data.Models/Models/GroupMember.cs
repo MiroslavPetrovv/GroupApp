@@ -9,12 +9,12 @@ namespace GroupApp.Data.Models
 
         public string NickName { get; set; }
 
-        public int GroupId { get; set; }
+        public string GroupId { get; set; }
         public Group Group { get; set; }
 
         public string UserId { get; set; }
         public ApplicationUser User { get; set; } 
 
-        public DateTime JoinedAt { get; set; } = DateTime.UtcNow;
+        public DateTime JoinedAt { get;private set; } = DateTime.UtcNow;
     }
 }

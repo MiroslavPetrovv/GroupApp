@@ -21,7 +21,7 @@ namespace GroupApp.Data.Configure
                 .HasMaxLength(descriptionMaxLenght);
 
             builder.HasOne(g => g.Owner)
-                .WithMany()
+                .WithMany(o=>o.OwnedGroups)
                 .HasForeignKey(g => g.OwnerId)
                 .OnDelete(DeleteBehavior.Cascade);
 

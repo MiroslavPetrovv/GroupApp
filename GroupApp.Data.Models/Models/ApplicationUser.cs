@@ -7,5 +7,7 @@ namespace GroupApp.Data.Models.Models
         public string DisplayName { get; set; }
         public ICollection<Group> OwnedGroups { get; set; } = new List<Group>();
         public ICollection<GroupMember> GroupMemberships { get; set; } = new List<GroupMember>();
+
+        public ICollection<Message> Messages { get; set; } = new List<Message>();
     }
 }

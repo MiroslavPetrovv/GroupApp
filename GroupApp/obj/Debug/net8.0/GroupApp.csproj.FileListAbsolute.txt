@@ -124,13 +124,11 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\w
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Constants.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Data.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Data.Models.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.ViewModels.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Data.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.ViewModels.pdb
-C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Constants.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Data.Models.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.csproj.AssemblyReference.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -158,3 +156,5 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\refint\Gro
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.genruntimeconfig.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\ref\GroupApp.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Common.pdb

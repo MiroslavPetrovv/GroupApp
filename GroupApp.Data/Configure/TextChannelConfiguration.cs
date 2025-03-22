@@ -20,7 +20,7 @@ namespace GroupApp.Data.Configure
             builder
                 .Property(tc => tc.Name)
                 .IsRequired()
-                .HasMaxLength(NameMaxLength); // Limit name leng
+                .HasMaxLength(NameMaxLength);
 
             builder
                 .Property(tc => tc.Description)
@@ -29,8 +29,8 @@ namespace GroupApp.Data.Configure
 
             builder
                 .HasOne(tc => tc.Group)
-                .WithMany(g => g.TextChannels) // Group's collection of TextChannels
-                .HasForeignKey(tc => tc.GroupId) // Foreign Key in TextChannel
+                .WithMany(g => g.TextChannels) 
+                .HasForeignKey(tc => tc.GroupId) 
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasIndex(tc => new { tc.GroupId, tc.Name })
