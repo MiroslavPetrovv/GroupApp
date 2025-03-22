@@ -24,6 +24,24 @@ namespace GroupApp.Data.Configure
             builder.Property(c=>c.Description)
                 .IsRequired()
                 .HasMaxLength(DescriptionMaxLength);
+
+            builder.Property(c => c.CreatorId)
+                .IsRequired();
+
+            builder.Property(c=> c.CreatorId)
+                .IsRequired();
+
+            builder.HasMany(c => c.Modules)
+                .WithOne(m => m.Course)
+                .HasForeignKey(m => m.CourseId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(c=>c.Enrollments)
+                .WithOne(e=>e.Course)
+                .HasForeignKey(e => e.CourseId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }
