@@ -8,6 +8,10 @@ namespace GroupApp.Data.Models
 {
     public class Lesson
     {
+        public Lesson()
+        {
+            Id = Guid.NewGuid();
+        }
         public Guid Id { get; set; }
 
         public Guid ModuleId { get; set; }

@@ -6,8 +6,11 @@ namespace GroupApp.Data.Models
 {
     public class Group
     {
-        
-        
+
+        public Group()
+        {
+            Id = Guid.NewGuid();
+        }
         public Guid Id { get; set; }
 
         

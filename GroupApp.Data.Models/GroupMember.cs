@@ -4,6 +4,10 @@ namespace GroupApp.Data.Models
 {
     public class GroupMember
     {
+        public GroupMember()
+        {
+            Id = Guid.NewGuid();    
+        }
         public Guid Id { get; set; }
 
         public string NickName { get; set; }

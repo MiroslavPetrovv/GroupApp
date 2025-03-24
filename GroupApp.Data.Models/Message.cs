@@ -4,6 +4,10 @@ namespace GroupApp.Data.Models
 {
     public class Message
     {
+        public Message()
+        {
+            Id = Guid.NewGuid();
+        }
         public Guid Id { get; set; }
 
         public Guid TextChannelId { get; set; }
