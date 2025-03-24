@@ -21,7 +21,7 @@ namespace GroupApp.Data.Models
         public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
 
         public ICollection<Lesson> Lessons { get; set; } =
-            new List<Lesson>();
+            new HashSet<Lesson>();
 
     }
 }

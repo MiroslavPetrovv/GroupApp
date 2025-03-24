@@ -2,10 +2,7 @@
 {
     public class TextChannel
     {
-        public TextChannel()
-        {
-            Messages = new List<Message>();
-        }
+        
         public Guid Id { get; set; }
 
         public string Name { get; set; }
@@ -16,8 +13,9 @@
         public Guid GroupId { get; set; }
         public Group Group { get; set; }
 
-        public List<Message> Messages { get; set; }
+        public ICollection<Message> Messages { get; set; } 
+            = new HashSet<Message>();
 
-        
+
     }
 }

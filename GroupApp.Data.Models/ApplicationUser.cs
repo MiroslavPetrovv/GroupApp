@@ -8,16 +8,16 @@ namespace GroupApp.Data.Models
         
         public string DisplayName { get; set; }
         public ICollection<Group> OwnedGroups { get; set; } 
-            = new List<Group>();
+            = new HashSet<Group>();
 
         public ICollection<GroupMember> GroupMemberships { get; set; } 
-            = new List<GroupMember>();
+            = new HashSet<GroupMember>();
 
         public ICollection<Enrollment> Enrollments { get; set; } 
-            = new List<Enrollment>();
+            = new HashSet<Enrollment>();
 
         public ICollection<Message> Messages { get; set; } 
-            = new List<Message>();
+            = new HashSet<Message>();
 
     }
 }

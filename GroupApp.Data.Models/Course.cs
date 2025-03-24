@@ -21,9 +21,9 @@ namespace GroupApp.Data.Models
         public DateTime CreatedAt { get;private set; } = DateTime.UtcNow;
 
         public ICollection<Module> Modules { get; set; } 
-            = new List<Module>();
+            = new HashSet<Module>();
         public ICollection<Enrollment> Enrollments{ get; set; } 
-            = new List<Enrollment>();
+            = new HashSet<Enrollment>();
 
         
     }

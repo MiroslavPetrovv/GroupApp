@@ -37,6 +37,9 @@ namespace GroupApp.Data.Configure
                 .Property(gm => gm.NickName)
                 .IsRequired()
                 .HasMaxLength(nickNameMaxLength);
+            builder
+                .HasIndex(gm => new { gm.UserId, gm.GroupId })
+                .IsUnique();
 
         }
     }

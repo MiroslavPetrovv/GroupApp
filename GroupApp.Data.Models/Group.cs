@@ -6,11 +6,7 @@ namespace GroupApp.Data.Models
 {
     public class Group
     {
-        public Group()
-        {
-            GroupMembers = new List<GroupMember>();
-            TextChannels = new List<TextChannel>();
-        }
+        
         
         public Guid Id { get; set; }
 
@@ -29,7 +25,10 @@ namespace GroupApp.Data.Models
         
         public ApplicationUser Owner{ get; set; }
 
-        public List<GroupMember> GroupMembers { get; set; } 
-        public List<TextChannel> TextChannels { get; set; }
+        public ICollection<GroupMember> GroupMembers { get; set; } 
+            = new HashSet<GroupMember>();
+
+        public ICollection<TextChannel> TextChannels { get; set; } 
+            = new HashSet<TextChannel>();
     }
 }
