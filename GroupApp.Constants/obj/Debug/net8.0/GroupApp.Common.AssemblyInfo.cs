@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroupApp.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e35c4c2b4018eb4779f495e2e7cee46077014da7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c54bf19331ed7c55ae2b5fccc8f5362d7862b9d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroupApp.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroupApp.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
