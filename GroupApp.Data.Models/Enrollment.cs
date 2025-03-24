@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GroupApp.Data.Models.Models
+namespace GroupApp.Data.Models
 {
     public class Enrollment
     {
@@ -14,10 +14,10 @@ namespace GroupApp.Data.Models.Models
 
         public ApplicationUser User { get; set; }
 
-        public string CourseId { get; set; }
+        public Guid CourseId { get; set; }
 
         public Course Course { get; set; }
 
-        public DateTime EnrolledAt { get;private set; } = DateTime.UtcNow;
+        public DateTime EnrolledAt { get; private set; } = DateTime.UtcNow;
     }
 }

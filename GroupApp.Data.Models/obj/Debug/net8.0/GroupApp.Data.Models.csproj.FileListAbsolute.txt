@@ -1,0 +1,16 @@
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\bin\Debug\net8.0\GroupApp.Data.Models.deps.json
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\bin\Debug\net8.0\GroupApp.Data.Models.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\bin\Debug\net8.0\GroupApp.Data.Models.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\bin\Debug\net8.0\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\bin\Debug\net8.0\GroupApp.Common.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.csproj.AssemblyReference.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.AssemblyInfoInputs.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.AssemblyInfo.cs
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.sourcelink.json
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.06E04508.Up2Date
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\refint\GroupApp.Data.Models.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\GroupApp.Data.Models.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Data.Models\obj\Debug\net8.0\ref\GroupApp.Data.Models.dll

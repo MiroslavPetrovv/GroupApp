@@ -12,6 +12,9 @@ namespace GroupApp.Data.Configure
             //Fluent API
             builder.HasKey(g => g.Id);
 
+            builder.Property(g => g.OwnerId)
+                .IsRequired();
+
             builder.Property(g => g.Title)
                 .IsRequired()
                 .HasMaxLength(TitleMaxLength);

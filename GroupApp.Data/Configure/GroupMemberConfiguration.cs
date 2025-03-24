@@ -11,22 +11,26 @@ namespace GroupApp.Data.Configure
         public void Configure(EntityTypeBuilder<GroupMember> builder)
         {
             builder
-                .HasKey(gm => gm.Id);
+                .HasKey(gm => gm.Id); // Primary key
 
-            builder.Property(gm => gm.UserId)
+            builder
+                .Property(gm => gm.UserId)
                 .IsRequired();
 
+            builder
+                .Property(gm => gm.GroupId)
+                .IsRequired();
 
             builder
                 .HasOne(gm => gm.Group)
                 .WithMany(g => g.GroupMembers)
-                .HasForeignKey(g=>g.GroupId)
+                .HasForeignKey(gm => gm.GroupId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(gm => gm.User)
                 .WithMany(u => u.GroupMemberships)
-                .HasForeignKey(u => u.UserId)
+                .HasForeignKey(gm => gm.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder

@@ -1,6 +1,6 @@
 ﻿
-using GroupApp.Data.Models.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
+using GroupApp.Data.Models;
+
 
 namespace GroupApp.Data.Models
 {

@@ -1,7 +1,8 @@
 using GroupApp.Data;
-using GroupApp.Data.Models.Models;
+using GroupApp.Data.Models;
 using GroupApp.Hubs;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -14,11 +15,28 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddSignalR();
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddControllersWithViews();
+builder.Services
+                .AddIdentity<ApplicationUser, IdentityRole>(cfg =>
+                {
+                    cfg.Password.RequiredUniqueChars = 0;
+                    cfg.Password.RequiredUniqueChars = 0;
+                    cfg.Password.RequiredLength = 4;
+                    cfg.Password.RequireUppercase = false;
+                }
+                )
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddControllersWithViews(cfg =>
+{
+    cfg.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
+builder.Services.AddRazorPages();
+//builder.Services.ConfigureApplicationCookie(cfg =>
+//{
+//    cfg.LoginPath = "/Identity/Account/Login";
+//});
 
-var app = builder.Build();
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -45,3 +63,29 @@ app.MapControllerRoute(
 app.MapRazorPages();
 app.MapHub<ChatHub>("/chatHub");
 app.Run();
+
+static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions cfg)
+{
+    cfg.Password.RequireDigit =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
+    cfg.Password.RequireLowercase =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
+    cfg.Password.RequireUppercase =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
+    cfg.Password.RequireNonAlphanumeric =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumerical");
+    cfg.Password.RequiredLength =
+        builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
+    cfg.Password.RequiredUniqueChars =
+        builder.Configuration.GetValue<int>("Identity:Password:RequiredUniqueCharacters");
+
+    cfg.SignIn.RequireConfirmedAccount =
+        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
+    cfg.SignIn.RequireConfirmedEmail =
+        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedEmail");
+    cfg.SignIn.RequireConfirmedPhoneNumber =
+        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedPhoneNumber");
+
+    cfg.User.RequireUniqueEmail =
+        builder.Configuration.GetValue<bool>("Identity:User:RequireUniqueEmail");
+}

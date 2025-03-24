@@ -13,7 +13,7 @@
         public string  Description { get; set; }
 
         public DateTime CreatedAt { get;private set; }
-        public string GroupId { get; set; }
+        public Guid GroupId { get; set; }
         public Group Group { get; set; }
 
         public List<Message> Messages { get; set; }

@@ -1,6 +1,4 @@
-﻿using GroupApp.Data.Models;
-using GroupApp.Data.Models.Enums;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using GroupApp.Data.Models.Enums;
 
 namespace GroupApp.Data.Models
 {
@@ -10,7 +8,7 @@ namespace GroupApp.Data.Models
 
         public string NickName { get; set; }
 
-        public string GroupId { get; set; }
+        public Guid GroupId { get; set; }
         public Group Group { get; set; }
 
         public string UserId { get; set; }

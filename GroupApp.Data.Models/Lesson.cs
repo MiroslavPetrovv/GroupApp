@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GroupApp.Data.Models.Models
+namespace GroupApp.Data.Models
 {
     public class Lesson
     {
         public Guid Id { get; set; }
 
-        public string ModuleId { get; set; }
+        public Guid ModuleId { get; set; }
 
         public Module Module { get; set; }
 
@@ -18,7 +18,7 @@ namespace GroupApp.Data.Models.Models
 
         public string Content { get; set; }
 
-        public DateTime CreatedAt { get;private set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
 
         public int LessonOrder { get; set; }
 

@@ -1,4 +1,4 @@
-﻿using GroupApp.Data.Models.Models;
+﻿using GroupApp.Data.Models;
 
 namespace GroupApp.Data.Models
 {
@@ -6,7 +6,7 @@ namespace GroupApp.Data.Models
     {
         public Guid Id { get; set; }
 
-        public int TextChannelId { get; set; }
+        public Guid TextChannelId { get; set; }
 
         public TextChannel TextChannel { get; set; }
 

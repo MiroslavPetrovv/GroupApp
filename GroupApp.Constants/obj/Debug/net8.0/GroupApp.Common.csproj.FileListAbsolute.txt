@@ -1,0 +1,12 @@
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\bin\Debug\net8.0\GroupApp.Common.deps.json
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\bin\Debug\net8.0\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\bin\Debug\net8.0\GroupApp.Common.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.AssemblyInfoInputs.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.AssemblyInfo.cs
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.sourcelink.json
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\refint\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\GroupApp.Common.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.Constants\obj\Debug\net8.0\ref\GroupApp.Common.dll
