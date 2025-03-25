@@ -981,7 +981,10 @@
       },
       "GroupApp.Common/1.0.0": {
         "runtime": {
-          "GroupApp.Common.dll": {}
+          "GroupApp.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GroupApp.Data.Models/1.0.0": {
@@ -990,7 +993,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.6"
         },
         "runtime": {
-          "GroupApp.Data.Models.dll": {}
+          "GroupApp.Data.Models.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

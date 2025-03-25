@@ -15,16 +15,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddSignalR();
-builder.Services
-                .AddIdentity<ApplicationUser, IdentityRole>(cfg =>
-                {
-                    cfg.Password.RequiredUniqueChars = 0;
-                    cfg.Password.RequiredUniqueChars = 0;
-                    cfg.Password.RequiredLength = 4;
-                    cfg.Password.RequireUppercase = false;
-                }
-                )
-                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = true;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
