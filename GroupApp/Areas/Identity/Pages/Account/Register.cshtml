@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
@@ -65,3 +65,60 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+ *@
+ @page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create Account</h1>
+            <p class="subtitle">Please fill in the details to get started</p>
+
+            <form class="auth-form" id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+
+
+                <div class="form-group">
+                    <label asp-for="Input.Email">Email</label>
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="Enter your email" required>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Password">Password</label>
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" placeholder="Create a password" required>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" placeholder="Confirm your password" required>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+
+            <p class="switch-page">
+                Already have an account? <a asp-page="./Login">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>

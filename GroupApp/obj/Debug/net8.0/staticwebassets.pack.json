@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GroupApp.fgd03p8e69.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

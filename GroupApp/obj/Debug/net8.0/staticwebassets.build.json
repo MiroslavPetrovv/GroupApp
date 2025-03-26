@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HX1+BdHBSzAiWjcKPX5mkz9SonYJhC9vCOWgRffIlEM=",
+  "Hash": "aRNeC0MIQIo4chXpWcxyJzVn2elMPz++DaC7MPtvj3g=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1319,6 +1319,27 @@
       "OriginalItemSpec": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GroupApp.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f2gi7w6cur",
+      "Integrity": "12iU/2DvRXdar84pcOnrCUpH1LJdo5GZiSmNIqMoT+8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
       "SourceId": "GroupApp",
       "SourceType": "Discovered",
@@ -1333,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "w4yeals8wo",
+      "Integrity": "UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2644,8 +2665,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
+      "Route": "css/login.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2654,7 +2675,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "2742"
         },
         {
           "Name": "Content-Type",
@@ -2662,11 +2683,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"12iU/2DvRXdar84pcOnrCUpH1LJdo5GZiSmNIqMoT+8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 20:37:17 GMT"
+          "Value": "Wed, 26 Mar 2025 00:11:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-12iU/2DvRXdar84pcOnrCUpH1LJdo5GZiSmNIqMoT+8="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.f2gi7w6cur.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2742"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"12iU/2DvRXdar84pcOnrCUpH1LJdo5GZiSmNIqMoT+8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 00:11:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2676,15 +2734,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "f2gi7w6cur"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/login.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-12iU/2DvRXdar84pcOnrCUpH1LJdo5GZiSmNIqMoT+8="
         }
       ]
     },
@@ -2699,7 +2757,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "12118"
         },
         {
           "Name": "Content-Type",
@@ -2707,11 +2765,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 20:37:17 GMT"
+          "Value": "Wed, 26 Mar 2025 00:23:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2721,7 +2779,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.w4yeals8wo.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 00:23:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4yeals8wo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos="
         }
       ]
     },

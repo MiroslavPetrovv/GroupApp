@@ -4,7 +4,7 @@
     string footerNote = (ReleaseYear == currentYear) ? $"{currentYear}" : $"{ReleaseYear} - {currentYear}";
 }
 
-<!DOCTYPE html>
+@* <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -44,6 +44,220 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; @footerNote - The GroupApp
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> *@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupHub - Community Platform</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Group<span>Hub</span></div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#training">Free Training</a>
+            <a href="#demo">Demo</a>
+            <a href="#blog">Blog</a>
+            <a href="#login" class="login">Log in</a>
+            <a href="#start" class="start-free">Start for free</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <h1>The Community Platform Built<br>for Learning Programs</h1>
+        <p>Transform your courses, training and coaching programs with community-based<br>learning. Drive deeper engagement, higher completion rates, and lasting results.</p>
+        <div class="cta-section">
+            <button class="cta-button">Start for free</button>
+            <p class="no-credit">No credit card required</p>
+        </div>
+    </main>
+
+    <section class="features">
+        <h2>Features Designed for Collaboration</h2>
+        <p class="features-subtitle">Everything you need to connect, share, and work together effectively.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon team"></div>
+                <h3>Team Collaboration</h3>
+                <p>Work together in real-time with your team members on projects and tasks.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon message"></div>
+                <h3>Group Messaging</h3>
+                <p>Communicate efficiently with dedicated chat rooms for every topic.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon calendar"></div>
+                <h3>Event Planning</h3>
+                <p>Schedule and organize events, meetings, and activities for your group.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon document"></div>
+                <h3>Document Sharing</h3>
+                <p>Share and collaborate on documents with version control and comments.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon share"></div>
+                <h3>Content Sharing</h3>
+                <p>Share photos, videos, and other media with your group members.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon privacy"></div>
+                <h3>Privacy Controls</h3>
+                <p>Control who can see your content with customizable privacy settings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="discover">
+        <h2>Discover Popular Groups</h2>
+        <p class="discover-subtitle">Join existing communities or create your own group to connect with like-minded people.</p>
+
+        <div class="groups-grid">
+            <div class="group-card">
+                <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80')"></div>
+                <div class="group-content">
+                    <h3>Design Enthusiasts</h3>
+                    <p class="members">👥 1,248 members</p>
+                    <p class="description">A community for UI/UX designers to share ideas, get feedback, and discuss the latest trends in design.</p>
+                    <div class="group-actions">
+                        <button class="details-btn">Details</button>
+                        <button class="join-btn">Join Group</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop&q=80')"></div>
+                <div class="group-content">
+                    <h3>Tech Innovators</h3>
+                    <p class="members">👥 3,765 members</p>
+                    <p class="description">Connect with technology professionals, entrepreneurs, and enthusiasts to discuss the latest in tech.</p>
+                    <div class="group-actions">
+                        <button class="details-btn">Details</button>
+                        <button class="join-btn">Join Group</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80')"></div>
+                <div class="group-content">
+                    <h3>Travel Adventures</h3>
+                    <p class="members">👥 2,430 members</p>
+                    <p class="description">Share your travel experiences, get tips, and connect with fellow adventurers from around the world.</p>
+                    <div class="group-actions">
+                        <button class="details-btn">Details</button>
+                        <button class="join-btn">Join Group</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&auto=format&fit=crop&q=80')"></div>
+                <div class="group-content">
+                    <h3>Fitness & Wellness</h3>
+                    <p class="members">👥 1,876 members</p>
+                    <p class="description">A supportive community for fitness enthusiasts to share workout routines, nutrition tips, and wellness advice.</p>
+                    <div class="group-actions">
+                        <button class="details-btn">Details</button>
+                        <button class="join-btn">Join Group</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="view-all">View All Groups</button>
+    </section>
+
+    <section class="testimonials">
+        <h2>What People Are Saying</h2>
+        <p class="testimonials-subtitle">Don't just take our word for it. Here's what our users have to say.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote">"</div>
+                <p class="testimonial-text">GroupHub has transformed how our team collaborates. The interface is intuitive and the features are exactly what we needed.</p>
+                <p class="testimonial-author">Sarah Johnson</p>
+                <p class="testimonial-role">Marketing Director</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote">"</div>
+                <p class="testimonial-text">I've tried many group platforms, but this one stands out for its simplicity and powerful features. It's helped our community grow exponentially.</p>
+                <p class="testimonial-author">David Chen</p>
+                <p class="testimonial-role">Community Manager</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote">"</div>
+                <p class="testimonial-text">The event planning features are incredible. We've increased attendance at our meetups by 40% since we started using GroupHub.</p>
+                <p class="testimonial-author">Michael Rodriguez</p>
+                <p class="testimonial-role">Event Coordinator</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">Group<span>Hub</span></div>
+                <p>Connect, collaborate, and create together with the ultimate group platform.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#security">Security</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Stay updated with the latest features and releases.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" class="subscribe-input">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GroupHub. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookie">Cookie Policy</a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
