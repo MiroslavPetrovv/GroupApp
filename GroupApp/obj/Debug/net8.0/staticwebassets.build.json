@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aRNeC0MIQIo4chXpWcxyJzVn2elMPz++DaC7MPtvj3g=",
+  "Hash": "8U7TyKdhzi98w1OyDcVPjp+ZcMDk+JF2ZDhmZSEFKkQ=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "w4yeals8wo",
-      "Integrity": "UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=",
+      "Fingerprint": "2grh8y1jwu",
+      "Integrity": "MkWJDKVNV01j3knn5xqeV7mhqA1/DOaI7RMW1WX8CSw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2747,6 +2747,51 @@
       ]
     },
     {
+      "Route": "css/site.2grh8y1jwu.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MkWJDKVNV01j3knn5xqeV7mhqA1/DOaI7RMW1WX8CSw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 12:31:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2grh8y1jwu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MkWJDKVNV01j3knn5xqeV7mhqA1/DOaI7RMW1WX8CSw="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2757,7 +2802,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12118"
+          "Value": "12831"
         },
         {
           "Name": "Content-Type",
@@ -2765,11 +2810,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=\""
+          "Value": "\"MkWJDKVNV01j3knn5xqeV7mhqA1/DOaI7RMW1WX8CSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 00:23:31 GMT"
+          "Value": "Wed, 26 Mar 2025 12:31:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2779,52 +2824,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.w4yeals8wo.css",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12118"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 00:23:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "w4yeals8wo"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UCKyKq1xbClYRFseFlUTjUvCfLY/5ths6B+Ozeenvos="
+          "Value": "sha256-MkWJDKVNV01j3knn5xqeV7mhqA1/DOaI7RMW1WX8CSw="
         }
       ]
     },

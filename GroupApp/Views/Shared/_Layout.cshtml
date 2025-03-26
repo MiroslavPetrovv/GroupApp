@@ -4,54 +4,7 @@
     string footerNote = (ReleaseYear == currentYear) ? $"{currentYear}" : $"{ReleaseYear} - {currentYear}";
 }
 
-@* <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GroupApp.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GroupApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @footerNote - The GroupApp
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html> *@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,27 +20,27 @@
             <a href="#pricing">Pricing</a>
             <a href="#training">Free Training</a>
             <a href="#demo">Demo</a>
-            <a href="#blog">Blog</a>
-            <a href="#login" class="login">Log in</a>
+            <a href="#blog">Blog</a> 
+            <partial name="_LoginPartial"/>
             <a href="#start" class="start-free">Start for free</a>
         </div>
     </nav>
 
     <main class="hero">
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
         <h1>The Community Platform Built<br>for Learning Programs</h1>
         <p>Transform your courses, training and coaching programs with community-based<br>learning. Drive deeper engagement, higher completion rates, and lasting results.</p>
         <div class="cta-section">
             <button class="cta-button">Start for free</button>
+                    
+                        
+                            @RenderBody()
+                        
+                    
             <p class="no-credit">No credit card required</p>
         </div>
     </main>
 
-    <section class="features">
+    <section id="features" class="features">
         <h2>Features Designed for Collaboration</h2>
         <p class="features-subtitle">Everything you need to connect, share, and work together effectively.</p>
 
@@ -130,18 +83,7 @@
         <p class="discover-subtitle">Join existing communities or create your own group to connect with like-minded people.</p>
 
         <div class="groups-grid">
-            <div class="group-card">
-                <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80')"></div>
-                <div class="group-content">
-                    <h3>Design Enthusiasts</h3>
-                    <p class="members">👥 1,248 members</p>
-                    <p class="description">A community for UI/UX designers to share ideas, get feedback, and discuss the latest trends in design.</p>
-                    <div class="group-actions">
-                        <button class="details-btn">Details</button>
-                        <button class="join-btn">Join Group</button>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="group-card">
                 <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop&q=80')"></div>
@@ -263,6 +205,15 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+                window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("styles", required: false)
 </body>
 </html>

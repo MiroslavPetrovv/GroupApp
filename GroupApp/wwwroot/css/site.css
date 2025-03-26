@@ -1,4 +1,5 @@
-﻿:root {
+﻿
+:root {
     --primary-blue: #2563EB;
     --text-color: #ffffff;
     --bg-dark: #050914;
@@ -64,20 +65,38 @@ body {
             color: var(--primary-blue);
         }
 
-.login {
-    color: var(--text-color);
-}
+        .nav-links a.login {
+            background-color: #0A0A0A;
+            color: #0077FF;
+            border: 2px solid #0077FF;
+            padding: 0.5rem 1rem;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius:20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-.start-free {
-    background: var(--primary-blue);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    color: white !important;
-}
+            .nav-links a.login:hover {
+                background-color: #0077FF;
+                color: var(--text-color);
+            }
 
-    .start-free:hover {
-        opacity: 0.9;
-    }
+            .nav-links a.login:active {
+                background-color: #005CE6;
+                color: #0A0A0A;
+            }
+
+        .nav-links a.start-free {
+            background: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius:20px;
+            color: white !important;
+        }
+
+            .nav-links a.start-free:hover {
+                opacity: 0.9;
+            }
 
 .hero {
     display: flex;
