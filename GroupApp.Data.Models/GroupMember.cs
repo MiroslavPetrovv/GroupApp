@@ -4,10 +4,7 @@ namespace GroupApp.Data.Models
 {
     public class GroupMember
     {
-        public GroupMember()
-        {
-            Id = Guid.NewGuid();    
-        }
+        
         public Guid Id { get; set; }
 
         public string NickName { get; set; }
@@ -20,6 +17,6 @@ namespace GroupApp.Data.Models
 
         public GroupRole Role { get; set; }
 
-        public DateTime JoinedAt { get;private set; } = DateTime.UtcNow;
+        public DateTime JoinedAt { get;private set; } 
     }
 }

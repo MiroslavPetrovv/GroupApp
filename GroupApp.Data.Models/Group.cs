@@ -1,9 +1,6 @@
-﻿
-using GroupApp.Data.Models;
-
-
-namespace GroupApp.Data.Models
+﻿namespace GroupApp.Data.Models
 {
+    using GroupApp.Data.Models.Enums;
     public class Group
     {
 
@@ -19,8 +16,9 @@ namespace GroupApp.Data.Models
         
         public string Description{ get; set; }
 
-       
-        public DateTime CreatedAt { get;private set; } = DateTime.UtcNow;
+        public GroupCategory Category { get; set; }
+
+        public DateTime CreatedAt { get;private set; } 
 
         public string? Banner {get; set;}
         public string OwnerId { get; set; }

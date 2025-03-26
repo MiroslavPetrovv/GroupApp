@@ -4,6 +4,10 @@ using GroupApp.Hubs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using GroupApp.Web.Infra.Extensions;
+using GroupApp.Services.Data.Interfaces;
+using GroupApp.Services.Data;
+using GroupApp.Data.Repository.Interfaces;
+using NuGet.Protocol.Core.Types;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +25,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 })
 .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IBaseService, BaseService>();
+builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddRazorPages();
 
 WebApplication app = builder.Build();

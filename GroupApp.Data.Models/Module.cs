@@ -8,10 +8,7 @@ namespace GroupApp.Data.Models
 {
     public class Module
     {
-        public Module()
-        {
-            Id = Guid.NewGuid();
-        }
+        
         public Guid Id { get; set; }
 
         public Guid CourseId { get; set; }
@@ -22,7 +19,7 @@ namespace GroupApp.Data.Models
 
         public int ModuleOrder { get; set; }
 
-        public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; private set; }
 
         public ICollection<Lesson> Lessons { get; set; } =
             new HashSet<Lesson>();

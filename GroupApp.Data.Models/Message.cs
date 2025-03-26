@@ -4,10 +4,7 @@ namespace GroupApp.Data.Models
 {
     public class Message
     {
-        public Message()
-        {
-            Id = Guid.NewGuid();
-        }
+        
         public Guid Id { get; set; }
 
         public Guid TextChannelId { get; set; }
@@ -18,7 +15,7 @@ namespace GroupApp.Data.Models
 
         public ApplicationUser ApplicationUser { get; set; }
 
-        public DateTime CreatedAt { get;private set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get;private set; } 
 
         public string Content { get; set; }
     }

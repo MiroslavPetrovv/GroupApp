@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GroupApp.Constants\GroupApp.Common.csproj" />
+  </ItemGroup>
+
 </Project>

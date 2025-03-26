@@ -307,3 +307,5 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\w
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Services.Data.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Services.Data.pdb

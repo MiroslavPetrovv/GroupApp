@@ -9,6 +9,7 @@
       "GroupApp/1.0.0": {
         "dependencies": {
           "GroupApp.Data": "1.0.0",
+          "GroupApp.Services.Data": "1.0.0",
           "GroupApp.ViewModels": "1.0.0",
           "GroupApp.Web.Infra": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.14",
@@ -2235,7 +2236,22 @@
           }
         }
       },
+      "GroupApp.Services.Data/1.0.0": {
+        "dependencies": {
+          "GroupApp.Data": "1.0.0",
+          "GroupApp.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "GroupApp.Services.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GroupApp.ViewModels/1.0.0": {
+        "dependencies": {
+          "GroupApp.Common": "1.0.0"
+        },
         "runtime": {
           "GroupApp.ViewModels.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -3535,6 +3551,11 @@
       "sha512": ""
     },
     "GroupApp.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GroupApp.Services.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -10,3 +10,7 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0\refint\GroupApp.ViewModels.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0\GroupApp.ViewModels.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0\ref\GroupApp.ViewModels.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\bin\Debug\net8.0\GroupApp.Common.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\bin\Debug\net8.0\GroupApp.Common.pdb
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0\GroupApp.ViewModels.csproj.AssemblyReference.cache
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp.ViewModels\obj\Debug\net8.0\GroupApp.8C396361.Up2Date

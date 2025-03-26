@@ -10,8 +10,13 @@ namespace GroupApp.Common
     {
         public static class Group
         {
-            public const int descriptionMaxLenght = 100;
+            public const int descriptionMaxLenght = 300;
+            public const int DescriptionMinlength = 50;
+
+            
+
             public const int TitleMaxLength = 100;
+            
 
         }
 

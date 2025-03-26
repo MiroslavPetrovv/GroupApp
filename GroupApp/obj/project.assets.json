@@ -3193,9 +3193,26 @@
           "bin/placeholder/GroupApp.Data.Models.dll": {}
         }
       },
+      "GroupApp.Services.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "GroupApp.Data": "1.0.0",
+          "GroupApp.ViewModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GroupApp.Services.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GroupApp.Services.Data.dll": {}
+        }
+      },
       "GroupApp.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "GroupApp.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/GroupApp.ViewModels.dll": {}
         },
@@ -8601,6 +8618,11 @@
       "path": "../GroupApp.Data.Models/GroupApp.Data.Models.csproj",
       "msbuildProject": "../GroupApp.Data.Models/GroupApp.Data.Models.csproj"
     },
+    "GroupApp.Services.Data/1.0.0": {
+      "type": "project",
+      "path": "../GroupApp.Services.Data/GroupApp.Services.Data.csproj",
+      "msbuildProject": "../GroupApp.Services.Data/GroupApp.Services.Data.csproj"
+    },
     "GroupApp.ViewModels/1.0.0": {
       "type": "project",
       "path": "../GroupApp.ViewModels/GroupApp.ViewModels.csproj",
@@ -8615,6 +8637,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "GroupApp.Data >= 1.0.0",
+      "GroupApp.Services.Data >= 1.0.0",
       "GroupApp.ViewModels >= 1.0.0",
       "GroupApp.Web.Infra >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.14",
@@ -8663,6 +8686,9 @@
             },
             "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj": {
               "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Data\\GroupApp.Data.csproj"
+            },
+            "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Services.Data\\GroupApp.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.Services.Data\\GroupApp.Services.Data.csproj"
             },
             "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.ViewModels\\GroupApp.ViewModels.csproj": {
               "projectPath": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp.ViewModels\\GroupApp.ViewModels.csproj"

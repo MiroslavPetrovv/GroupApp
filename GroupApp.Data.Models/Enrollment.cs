@@ -8,10 +8,7 @@ namespace GroupApp.Data.Models
 {
     public class Enrollment
     {
-        public Enrollment()
-        {
-            Id = Guid.NewGuid();
-        }
+        
         public Guid Id { get; set; }
 
         public string UserId { get; set; }
@@ -22,6 +19,6 @@ namespace GroupApp.Data.Models
 
         public Course Course { get; set; }
 
-        public DateTime EnrolledAt { get; private set; } = DateTime.UtcNow;
+        public DateTime EnrolledAt { get; private set; } 
     }
 }

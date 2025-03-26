@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Cinema.Web.Infra\GroupApp.Web.Infra.csproj" />
     <ProjectReference Include="..\GroupApp.Data\GroupApp.Data.csproj" />
+    <ProjectReference Include="..\GroupApp.Services.Data\GroupApp.Services.Data.csproj" />
     <ProjectReference Include="..\GroupApp.ViewModels\GroupApp.ViewModels.csproj" />
   </ItemGroup>
 
