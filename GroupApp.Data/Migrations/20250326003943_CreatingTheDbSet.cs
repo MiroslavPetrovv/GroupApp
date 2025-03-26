@@ -6,29 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GroupApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class CreatingDbSets : Migration
+    public partial class CreatingTheDbSet : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                name: "Name",
-                table: "AspNetUserTokens",
-                type: "nvarchar(450)",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(128)",
-                oldMaxLength: 128);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserTokens",
-                type: "nvarchar(450)",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(128)",
-                oldMaxLength: 128);
-
             migrationBuilder.AddColumn<string>(
                 name: "Discriminator",
                 table: "AspNetUsers",
@@ -42,24 +24,6 @@ namespace GroupApp.Data.Migrations
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
                 nullable: true);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "ProviderKey",
-                table: "AspNetUserLogins",
-                type: "nvarchar(450)",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(128)",
-                oldMaxLength: 128);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserLogins",
-                type: "nvarchar(450)",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(128)",
-                oldMaxLength: 128);
 
             migrationBuilder.CreateTable(
                 name: "Courses",
@@ -90,6 +54,7 @@ namespace GroupApp.Data.Migrations
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Banner = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OwnerId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
@@ -126,7 +91,7 @@ namespace GroupApp.Data.Migrations
                         column: x => x.CourseId,
                         principalTable: "Courses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -175,7 +140,7 @@ namespace GroupApp.Data.Migrations
                         column: x => x.GroupId,
                         principalTable: "Groups",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -247,7 +212,7 @@ namespace GroupApp.Data.Migrations
                         column: x => x.TextChannelId,
                         principalTable: "TextChannels",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -271,9 +236,10 @@ namespace GroupApp.Data.Migrations
                 column: "GroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GroupMembers_UserId",
+                name: "IX_GroupMembers_UserId_GroupId",
                 table: "GroupMembers",
-                column: "UserId");
+                columns: new[] { "UserId", "GroupId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Groups_OwnerId",
@@ -341,42 +307,6 @@ namespace GroupApp.Data.Migrations
             migrationBuilder.DropColumn(
                 name: "DisplayName",
                 table: "AspNetUsers");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "Name",
-                table: "AspNetUserTokens",
-                type: "nvarchar(128)",
-                maxLength: 128,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(450)");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserTokens",
-                type: "nvarchar(128)",
-                maxLength: 128,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(450)");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "ProviderKey",
-                table: "AspNetUserLogins",
-                type: "nvarchar(128)",
-                maxLength: 128,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(450)");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserLogins",
-                type: "nvarchar(128)",
-                maxLength: 128,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(450)");
         }
     }
 }

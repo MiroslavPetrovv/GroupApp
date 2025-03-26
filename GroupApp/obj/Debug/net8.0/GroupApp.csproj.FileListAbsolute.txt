@@ -269,7 +269,6 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.W
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\GroupApp.Web.Infra.pdb
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\staticwebassets\msbuild.GroupApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
@@ -307,3 +306,4 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\w
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

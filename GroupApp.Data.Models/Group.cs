@@ -22,7 +22,7 @@ namespace GroupApp.Data.Models
        
         public DateTime CreatedAt { get;private set; } = DateTime.UtcNow;
 
-        
+        public string? Banner {get; set;}
         public string OwnerId { get; set; }
 
         
