@@ -1,6 +1,7 @@
 wwwroot\css\AddGroup.css
 wwwroot\css\login.css
 wwwroot\css\site.css
+wwwroot\css\upload.css
 wwwroot\favicon.ico
 wwwroot\js\chat.js
 wwwroot\js\signalr\dist\browser\signalr.js
@@ -63,3 +64,6 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg
+wwwroot\uploads\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg
+wwwroot\uploads\ff137036-d291-4b8a-af1c-e3f16b42913b_pokemon.jpg

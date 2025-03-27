@@ -19,6 +19,6 @@ namespace GroupApp.Data.Models
 
         public Course Course { get; set; }
 
-        public DateTime EnrolledAt { get; private set; } 
+        public DateTime EnrolledAt { get;  set; } 
     }
 }

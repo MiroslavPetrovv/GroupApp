@@ -2250,7 +2250,8 @@
       },
       "GroupApp.ViewModels/1.0.0": {
         "dependencies": {
-          "GroupApp.Common": "1.0.0"
+          "GroupApp.Common": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.3.0"
         },
         "runtime": {
           "GroupApp.ViewModels.dll": {

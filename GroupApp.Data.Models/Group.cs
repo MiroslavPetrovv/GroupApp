@@ -18,7 +18,7 @@
 
         public GroupCategory Category { get; set; }
 
-        public DateTime CreatedAt { get;private set; } 
+        public DateTime CreatedAt { get; set; } 
 
         public string? Banner {get; set;}
         public string OwnerId { get; set; }

@@ -19,7 +19,7 @@ namespace GroupApp.Data.Models
 
         public int ModuleOrder { get; set; }
 
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get;  set; }
 
         public ICollection<Lesson> Lessons { get; set; } =
             new HashSet<Lesson>();

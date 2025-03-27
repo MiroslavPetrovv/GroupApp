@@ -19,7 +19,7 @@ namespace GroupApp.Data.Models
 
         public ApplicationUser Creator { get; set; }
 
-        public DateTime CreatedAt { get;private set; } 
+        public DateTime CreatedAt { get; set; } 
 
         public ICollection<Module> Modules { get; set; } 
             = new HashSet<Module>();

@@ -12,8 +12,8 @@ namespace GroupApp.Common
         {
             public const string TitleRequiredMessage = "Group title is required";
             public const string DescriptionRequiredMessage = "Group description is required";
-            public const string ReleaseDateFormat = "MM/yyyy";
-            public const string ReleaseDateRequiredMessage = "Release date is required in format MM/yyyy";
+            public const string ReleaseDateFormat = "MM-dd-yy";
+            public const string ReleaseDateRequiredMessage = "Release date is required in format MM-dd-yy";
         }
     }
 }

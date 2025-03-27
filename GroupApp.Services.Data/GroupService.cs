@@ -5,6 +5,8 @@ using GroupApp.Data.Repository.Interfaces;
 using GroupApp.Services.Data.Interfaces;
 using GroupApp.ViewModels.Group;
 using GroupApp.ViewModels.Models;
+using System.Diagnostics.Contracts;
+using System.Globalization;
 
 
 namespace GroupApp.Services.Data
@@ -21,13 +23,19 @@ namespace GroupApp.Services.Data
         public async Task AddGroupAsync(AddGroupInputModel model, string userId)
         {
             GroupCategory category = (GroupCategory)Enum.Parse(typeof(GroupCategory), model.Category);
+            string format = "MM-dd-yy";
+
+            var createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
+                DateTimeStyles.None);
+            
             Group group = new Group()
             {
                 Title = model.Title,
                 Description = model.Description,
-                Banner = model.Banner,
+                Banner = model.Banner.ToString(),
                 Category = category,
-                OwnerId = userId
+                OwnerId = userId,
+                CreatedAt = createdAt,
             };
 
             _context.Groups.Add(group);

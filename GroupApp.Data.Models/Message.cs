@@ -15,7 +15,7 @@ namespace GroupApp.Data.Models
 
         public ApplicationUser ApplicationUser { get; set; }
 
-        public DateTime CreatedAt { get;private set; } 
+        public DateTime CreatedAt { get; set; } 
 
         public string Content { get; set; }
     }

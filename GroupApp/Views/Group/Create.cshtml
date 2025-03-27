@@ -39,20 +39,23 @@
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
+
+
                 <!-- Group Image -->
                 <div class="form-group">
                     <label>Group Image</label>
                     <div class="upload-area" id="uploadArea">
-                        <input type="file" asp-for="Banner" class="file-input" id="fileInput" accept="image/*">
+                        <input type="file" asp-for="Banner" class="file-input" name="Banner" id="fileInput" accept="image/*">
                         <div class="upload-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" 
+                                /><line x1="12" y1="3" x2="12" y2="15" /></svg>
                             <p class="upload-text">Drag and drop an image or click to browse</p>
                             <p class="upload-size">Recommended size: 1200 x 800px</p>
-                            <button type="button" class="upload-button" onclick="document.getElementById('fileInput').click()">Upload Image</button>
+                            <button type="button" class="upload-button"  onclick="document.getElementById('fileInput').click()">Upload Image</button>
                         </div>
                         <div class="preview-area" id="previewArea"></div>
                     </div>
-                    <span asp-validation-for="Banner" class="text-danger"></span>
+                    <span asp-validation-for="Banner"></span>
                 </div>
 
                 <!-- Category -->
@@ -76,51 +79,48 @@
 
 @section Scripts {
     <script>
-        // Drag and drop functionality
-        const dropZone = document.querySelector('.upload-area');
         const fileInput = document.getElementById('fileInput');
+        const previewArea = document.getElementById('previewArea');
+        const uploadArea = fileInput.parentElement;
+        !alert
+        fileInput.addEventListener('change', handleFileSelect);
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('drop', handleDrop);
 
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.classList.add('drag-over');
-        });
-
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.classList.remove('drag-over');
-        });
-
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('drag-over');
-
-            if (e.dataTransfer.files.length) {
-                fileInput.files = e.dataTransfer.files;
-                updatePreview(e.dataTransfer.files[0]);
-            }
-        });
-
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files.length) {
-                updatePreview(e.target.files[0]);
-            }
-        });
-
-        function updatePreview(file) {
-            if (file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    dropZone.style.backgroundImage = `url(${e.target.result})`;
-                    dropZone.style.backgroundSize = 'cover';
-                    dropZone.style.backgroundPosition = 'center';
-                    dropZone.innerHTML = '';
-                    const previewArea = document.getElementById('previewArea');
-                    previewArea.classList.add('show');
-                    previewArea.innerHTML = `<img src="${e.target.result}" alt="Image Preview" />`;
-                };
-                reader.readAsDataURL(file);
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                displayPreview(file);
             }
         }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const file = e.dataTransfer.files[0];
+            if (file) {
+                fileInput.files = e.dataTransfer.files;
+                displayPreview(file);
+            }
+        }
+
+        function displayPreview(file) {
+            if (!file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+            };
+            reader.readAsDataURL(file);
+        }
     </script>
+
 
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

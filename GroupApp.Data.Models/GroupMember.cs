@@ -17,6 +17,6 @@ namespace GroupApp.Data.Models
 
         public GroupRole Role { get; set; }
 
-        public DateTime JoinedAt { get;private set; } 
+        public DateTime JoinedAt { get; set; } 
     }
 }

@@ -10,7 +10,7 @@
 
         public string  Description { get; set; }
 
-        public DateTime CreatedAt { get;private set; }
+        public DateTime CreatedAt { get; set; }
         public Guid GroupId { get; set; }
         public Group Group { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -24,7 +25,10 @@ namespace GroupApp.ViewModels.Group
         [MinLength(DescriptionMinlength)]
         public string Description { get; set; } = null!;
 
-        public string? Banner { get; set; }
+        [Required(ErrorMessage = "Please select an image")]
+        public IFormFile Banner { get; set; } = null!;
+
+        
 
         [Required(ErrorMessage =ReleaseDateRequiredMessage)]
         public string CreatedAt { get; set; }
