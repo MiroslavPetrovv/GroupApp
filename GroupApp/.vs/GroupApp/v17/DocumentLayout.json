@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:views\\group\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\wwwroot\\css\\addgroup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:wwwroot\\css\\addgroup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp\\wwwroot\\css\\addgroup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D1D18D42-4DC3-4D6E-BC8F-8357659146E7}|GroupApp.csproj|solutionrelative:wwwroot\\css\\addgroup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0AC667F-9B70-4D55-8034-A51206C16239}|..\\GroupApp.ViewModels\\GroupApp.ViewModels.csproj|c:\\users\\miroslav\\documents\\github\\groupapp\\groupapp.viewmodels\\group\\addgroupinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -141,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AddGroup.css",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\AddGroup.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\AddGroup.css",
@@ -158,9 +158,9 @@
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Views\\Group\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Group\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Views\\Group\\Create.cshtml*",
-              "RelativeToolTip": "Views\\Group\\Create.cshtml*",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\Views\\Group\\Create.cshtml",
+              "RelativeToolTip": "Views\\Group\\Create.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAADcAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-24T16:33:26.026Z",
               "EditorCaption": ""
@@ -211,8 +211,7 @@
               "RelativeToolTip": "..\\GroupApp.ViewModels\\Group\\AddGroupInputModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:59:50.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T17:59:50.887Z"
             },
             {
               "$type": "Document",
@@ -252,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -260,12 +259,11 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAF4CAAAAAAAAAAAYwHQCAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-26T18:07:57.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T18:07:57.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "login.css",
               "DocumentMoniker": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
@@ -273,8 +271,7 @@
               "RelativeToolTip": "wwwroot\\css\\login.css",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAG0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-27T12:39:08.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T12:39:08.115Z"
             },
             {
               "$type": "Document",

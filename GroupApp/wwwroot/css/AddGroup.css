@@ -148,7 +148,7 @@ textarea {
 }
 
 .preview-area {
-    display: none;
+    
     margin-top: 1rem;
 }
 
@@ -161,6 +161,7 @@ textarea {
     .preview-area.show {
         display: block;
     }
+
 
 /* Select styles */
 .select-wrapper {

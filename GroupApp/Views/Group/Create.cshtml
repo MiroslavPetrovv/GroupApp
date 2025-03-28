@@ -50,10 +50,10 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" 
                                 /><line x1="12" y1="3" x2="12" y2="15" /></svg>
                             <p class="upload-text">Drag and drop an image or click to browse</p>
-                            <p class="upload-size">Recommended size: 1200 x 800px</p>
+                            <p class="upload-size">Recommended size: 412 x 180px</p>
                             <button type="button" class="upload-button"  onclick="document.getElementById('fileInput').click()">Upload Image</button>
                         </div>
-                        <div class="preview-area" id="previewArea"></div>
+                        <div  id="previewArea"></div>
                     </div>
                     <span asp-validation-for="Banner"></span>
                 </div>
@@ -82,7 +82,7 @@
         const fileInput = document.getElementById('fileInput');
         const previewArea = document.getElementById('previewArea');
         const uploadArea = fileInput.parentElement;
-        !alert
+        
         fileInput.addEventListener('change', handleFileSelect);
         uploadArea.addEventListener('dragover', handleDragOver);
         uploadArea.addEventListener('drop', handleDrop);
@@ -115,7 +115,14 @@
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview" 
+                
+                style="
+                display;block;
+                width: 412x;
+                margin-top: 1rem;
+                height:180;
+                border-radius: 10px;">`;
             };
             reader.readAsDataURL(file);
         }
