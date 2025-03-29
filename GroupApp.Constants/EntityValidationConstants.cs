@@ -29,7 +29,7 @@ namespace GroupApp.Common
         public static class TextChannel
         {
             public const int NameMaxLength = 20;
-            public const int DescriptionMaxLength = 50;
+            public const int DescriptionMaxLength = 100;
         }
 
         public static class Message

@@ -22,18 +22,18 @@ namespace GroupApp.Controllers
         {
             if (!User.Identity.IsAuthenticated)
             {
-               
+
                 TempData["Message"] = "You must be logged in to start for free. Please register.";
 
-                
+
                 return RedirectToAction("Register", "Account");
             }
             var model = new AddGroupInputModel
             {
                 Category = GroupCategory.Business.ToString(),
-                
+
             };
-            return  this.View(model);       
+            return this.View(model);
         }
 
         [HttpPost]
@@ -43,7 +43,7 @@ namespace GroupApp.Controllers
 
             if (!ModelState.IsValid)
             {
-                
+
                 return this.View(model);
             }
             string uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
@@ -72,11 +72,26 @@ namespace GroupApp.Controllers
             bool isValid = this.IsGuidValid(User.GetId(), ref userGuid);
             if (!isValid)
             {
-                return this.RedirectToAction(nameof(Index));
+                return this.RedirectToAction("Index","Home");
             }
             string userId = User.GetId();
-            await this._groupService.AddGroupAsync(model, userId);
-            return RedirectToAction("Index", "Home");    
+            var group =await this._groupService.AddGroupAsync(model, userId);
+            return RedirectToAction("Display", new {groupId = group.Id});
+        }
+
+
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Display(Guid groupId)
+        {
+            var group = await _groupService.GetGroupByIdAsync(groupId);
+            if (group == null)
+            {
+                return NotFound();
+            }
+
+            return View();
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4CNr0zbB4JmXTbstn3uGowORH2sIPcQW6jk2DkN2tkE=",
+  "Hash": "7xRVe5Hgh+T7lWsad9IHTarSRDm2KJUaBFFPAQOkg9Y=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4se3ob6das",
-      "Integrity": "lDH8I2GlPnQ9I6BHnblJeKkVED/VMYpY6vzlHtZXCuI=",
+      "Fingerprint": "royz1jl0ti",
+      "Integrity": "W7eOaxbm4DAnHjnMl1adbDH/OZe/crxoqqWRhm6Q4FE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AddGroup.css"
@@ -1485,27 +1485,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\site.js",
-      "SourceId": "GroupApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
-      "BasePath": "_content/GroupApp",
-      "RelativePath": "js/site#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -2705,6 +2684,90 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmm6moaooe",
+      "Integrity": "/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4d2ycdhs6m",
+      "Integrity": "eDCDFEfdWnNnaQIsocq5F5goDc6ztEyjMzldl7/NeGk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmm6moaooe",
+      "Integrity": "/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4f5a0i200i",
+      "Integrity": "8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg",
       "SourceId": "GroupApp",
       "SourceType": "Discovered",
@@ -2747,6 +2810,69 @@
       "OriginalItemSpec": "wwwroot\\uploads\\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg"
     },
     {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmm6moaooe",
+      "Integrity": "/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmm6moaooe",
+      "Integrity": "/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6d9zya5sx5",
+      "Integrity": "KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png"
+    },
+    {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\ff137036-d291-4b8a-af1c-e3f16b42913b_pokemon.jpg",
       "SourceId": "GroupApp",
       "SourceType": "Discovered",
@@ -2770,51 +2896,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/AddGroup.4se3ob6das.css",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\AddGroup.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4951"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"lDH8I2GlPnQ9I6BHnblJeKkVED/VMYpY6vzlHtZXCuI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 13:32:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4se3ob6das"
-        },
-        {
-          "Name": "label",
-          "Value": "css/AddGroup.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-lDH8I2GlPnQ9I6BHnblJeKkVED/VMYpY6vzlHtZXCuI="
-        }
-      ]
-    },
-    {
       "Route": "css/AddGroup.css",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\AddGroup.css",
       "Selectors": [],
@@ -2825,7 +2906,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4951"
+          "Value": "4939"
         },
         {
           "Name": "Content-Type",
@@ -2833,11 +2914,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lDH8I2GlPnQ9I6BHnblJeKkVED/VMYpY6vzlHtZXCuI=\""
+          "Value": "\"W7eOaxbm4DAnHjnMl1adbDH/OZe/crxoqqWRhm6Q4FE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 13:32:55 GMT"
+          "Value": "Fri, 28 Mar 2025 10:58:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2847,7 +2928,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lDH8I2GlPnQ9I6BHnblJeKkVED/VMYpY6vzlHtZXCuI="
+          "Value": "sha256-W7eOaxbm4DAnHjnMl1adbDH/OZe/crxoqqWRhm6Q4FE="
+        }
+      ]
+    },
+    {
+      "Route": "css/AddGroup.royz1jl0ti.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\AddGroup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4939"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W7eOaxbm4DAnHjnMl1adbDH/OZe/crxoqqWRhm6Q4FE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 10:58:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "royz1jl0ti"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AddGroup.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W7eOaxbm4DAnHjnMl1adbDH/OZe/crxoqqWRhm6Q4FE="
         }
       ]
     },
@@ -5806,88 +5932,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-4opyCjWbN8sBV1jVQ/kIcw7Vu+R42wlQa7aIfxgxNTg="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:38:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:38:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
         }
       ]
     },
@@ -10566,6 +10610,334 @@
       ]
     },
     {
+      "Route": "uploads/12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.bmm6moaooe.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:51:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmm6moaooe"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:51:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.4d2ycdhs6m.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eDCDFEfdWnNnaQIsocq5F5goDc6ztEyjMzldl7/NeGk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 18:33:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4d2ycdhs6m"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eDCDFEfdWnNnaQIsocq5F5goDc6ztEyjMzldl7/NeGk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eDCDFEfdWnNnaQIsocq5F5goDc6ztEyjMzldl7/NeGk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 18:33:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eDCDFEfdWnNnaQIsocq5F5goDc6ztEyjMzldl7/NeGk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.bmm6moaooe.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:09:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmm6moaooe"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:09:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.4f5a0i200i.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:03:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4f5a0i200i"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:03:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4="
+        }
+      ]
+    },
+    {
       "Route": "uploads/8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.4f5a0i200i.jpg",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg",
       "Selectors": [],
@@ -10726,6 +11098,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.bmm6moaooe.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:50:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmm6moaooe"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:50:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.bmm6moaooe.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:50:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmm6moaooe"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:50:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.6d9zya5sx5.png",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4048888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:14:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6d9zya5sx5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4048888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:14:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0="
         }
       ]
     },

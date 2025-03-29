@@ -1,14 +1,12 @@
-﻿using GroupApp.ViewModels.Group;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GroupApp.Data.Models;
+using GroupApp.ViewModels.Group;
+
 
 namespace GroupApp.Services.Data.Interfaces
 {
     public interface IGroupService
     {
-        Task AddGroupAsync(AddGroupInputModel model,string userId);
+        Task<Group> AddGroupAsync(AddGroupInputModel model,string userId);
+        Task<Group> GetGroupByIdAsync(Guid groupId);
     }
 }

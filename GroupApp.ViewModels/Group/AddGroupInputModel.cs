@@ -16,6 +16,8 @@ namespace GroupApp.ViewModels.Group
         {
             this.CreatedAt = DateTime.UtcNow.ToString(ReleaseDateFormat);
         }
+        
+
         [Required(ErrorMessage = TitleRequiredMessage)]
         [MaxLength(TitleMaxLength)]
         public string Title { get; set; } = null!;

@@ -6,7 +6,6 @@ wwwroot\favicon.ico
 wwwroot\js\chat.js
 wwwroot\js\signalr\dist\browser\signalr.js
 wwwroot\js\signalr\dist\browser\signalr.min.js
-wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
@@ -64,6 +63,13 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg
+wwwroot\uploads\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg
+wwwroot\uploads\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg
+wwwroot\uploads\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg
 wwwroot\uploads\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg
 wwwroot\uploads\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg
+wwwroot\uploads\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg
+wwwroot\uploads\b9c409f2-1b2c-452a-a8b9-3ce6426f26c4_Something.jpg
+wwwroot\uploads\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png
 wwwroot\uploads\ff137036-d291-4b8a-af1c-e3f16b42913b_pokemon.jpg

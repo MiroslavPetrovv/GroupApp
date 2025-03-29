@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupHub</title>
+    <!-- Add SignalR client library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0a0c10;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: #1a1d24;
+            padding: 1rem;
+            border-bottom: 1px solid #2d3139;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+
+            .nav-link:hover {
+                color: #e2e8f0;
+            }
+
+            .nav-link.active {
+                color: #60a5fa;
+            }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background-color: #1a1d24;
+            padding: 1rem;
+        }
+
+        .channels-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .channels-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .add-channel {
+            color: #94a3b8;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .channel-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .category-name {
+            color: #94a3b8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .channel-list {
+            list-style: none;
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+            .channel-item:hover {
+                background-color: #2d3139;
+            }
+
+            .channel-item.active {
+                color: #60a5fa;
+            }
+
+        /* Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #1a1d24;
+            padding: 1rem;
+            border-bottom: 1px solid #2d3139;
+        }
+
+        .channel-info h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .channel-description {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .message {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .message-content {
+            flex: 1;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .username {
+            font-weight: 600;
+        }
+
+        .timestamp {
+            color: #94a3b8;
+            font-size: 0.75rem;
+        }
+
+        .message-text {
+            color: #e2e8f0;
+        }
+
+        .message-input {
+            padding: 1rem;
+            background-color: #1a1d24;
+            border-top: 1px solid #2d3139;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .message-input input {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            background-color: #2d3139;
+            border: none;
+            border-radius: 0.375rem;
+            color: #e2e8f0;
+        }
+
+            .message-input input:focus {
+                outline: 2px solid #3b82f6;
+                outline-offset: 2px;
+            }
+
+        .send-button {
+            padding: 0.5rem 1rem;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .send-button:hover {
+                background-color: #2563eb;
+            }
+
+        /* Hide the user input as we'll get it from the profile */
+        #userInput {
+            display: none;
+        }
+
+        /* Style for the messages list */
+        #messagesList {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="logo">GroupHub</div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active">
+                <span>📺</span>
+                <span>Community</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span>🎓</span>
+                <span>Classroom</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span>👥</span>
+                <span>Members</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span>📅</span>
+                <span>Events</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="channels-header">
+                <h2 class="channels-title">Channels</h2>
+                <button class="add-channel">+</button>
+            </div>
+
+            <div class="channel-category">
+                <h3 class="category-name">GENERAL</h3>
+                <div class="channel-list">
+                    <a href="#" class="channel-item active"># welcome</a>
+                    <a href="#" class="channel-item"># announcements</a>
+                    <a href="#" class="channel-item"># introductions</a>
+                </div>
+            </div>
+
+            <div class="channel-category">
+                <h3 class="category-name">DISCUSSIONS</h3>
+                <div class="channel-list">
+                    <a href="#" class="channel-item"># general</a>
+                    <a href="#" class="channel-item"># questions</a>
+                    <a href="#" class="channel-item"># resources</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <div class="chat-header">
+                <div class="channel-info">
+                    <h2># welcome</h2>
+                    <p class="channel-description">Welcome to #welcome! This channel is for discussing all things related to the topic.</p>
+                </div>
+            </div>
+
+            <div class="messages" id="messagesList">
+                <!-- Messages will be dynamically added here by SignalR -->
+            </div>
+
+            <div class="message-input">
+                <div class="input-container">
+                    <input type="hidden" id="userInput" value="User">
+                    <input type="text" id="messageInput" placeholder="Message #welcome">
+                    <button id="sendButton" class="send-button" disabled>Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        "use strict";
+
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+        //Disable the send button until connection is established.
+        document.getElementById("sendButton").disabled = true;
+
+        connection.on("ReceiveMessage", function (user, message) {
+            // Create message container
+            var messageDiv = document.createElement("div");
+            messageDiv.className = "message";
+
+            // Create avatar
+            var avatarDiv = document.createElement("div");
+            avatarDiv.className = "avatar";
+            avatarDiv.style.backgroundColor = getRandomColor();
+            avatarDiv.textContent = user.substring(0, 2).toUpperCase();
+
+            // Create message content
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "message-content";
+
+            // Create message header
+            var headerDiv = document.createElement("div");
+            headerDiv.className = "message-header";
+
+            var usernameSpan = document.createElement("span");
+            usernameSpan.className = "username";
+            usernameSpan.textContent = user;
+
+            var timestampSpan = document.createElement("span");
+            timestampSpan.className = "timestamp";
+            timestampSpan.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            headerDiv.appendChild(usernameSpan);
+            headerDiv.appendChild(timestampSpan);
+
+            // Create message text
+            var messageText = document.createElement("p");
+            messageText.className = "message-text";
+            messageText.textContent = message;
+
+            // Assemble the message
+            contentDiv.appendChild(headerDiv);
+            contentDiv.appendChild(messageText);
+            messageDiv.appendChild(avatarDiv);
+            messageDiv.appendChild(contentDiv);
+
+            document.getElementById("messagesList").appendChild(messageDiv);
+        });
+
+        connection.start().then(function () {
+            document.getElementById("sendButton").disabled = false;
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("sendButton").addEventListener("click", function (event) {
+            var user = document.getElementById("userInput").value;
+            var message = document.getElementById("messageInput").value;
+            connection.invoke("SendMessage", user, message).catch(function (err) {
+                return console.error(err.toString());
+            });
+            document.getElementById("messageInput").value = '';
+            event.preventDefault();
+        });
+
+        // Helper function to generate random colors for avatars
+        function getRandomColor() {
+            const colors = ['#3b82f6', '#22c55e', '#eab308', '#ec4899', '#8b5cf6', '#f43f5e'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Add enter key support for sending messages
+        document.getElementById("messageInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("sendButton").click();
+            }
+        });
+    </script>
+</body>
+</html>
