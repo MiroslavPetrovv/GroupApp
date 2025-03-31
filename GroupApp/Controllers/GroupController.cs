@@ -91,7 +91,7 @@ namespace GroupApp.Controllers
                 return NotFound();
             }
 
-            return View();
+            return View(group);
         }
     }
 }

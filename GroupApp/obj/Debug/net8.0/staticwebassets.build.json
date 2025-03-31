@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7xRVe5Hgh+T7lWsad9IHTarSRDm2KJUaBFFPAQOkg9Y=",
+  "Hash": "GGYwg59uWhUzhy0P0tZnk57Va4cXUaQoL0xegeKnZlw=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -2873,6 +2873,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\bf63e0d3-a3c7-4903-ba5d-c972ef63f9ed_1348079.png"
     },
     {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/dd7d1986-7089-4597-9d7a-6179485b5299_1348079#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6d9zya5sx5",
+      "Integrity": "KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png"
+    },
+    {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\ff137036-d291-4b8a-af1c-e3f16b42913b_pokemon.jpg",
       "SourceId": "GroupApp",
       "SourceType": "Discovered",
@@ -5712,7 +5733,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 18:37:05 GMT"
+          "Value": "Mon, 31 Mar 2025 10:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5749,7 +5770,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 18:37:05 GMT"
+          "Value": "Mon, 31 Mar 2025 10:34:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11334,6 +11355,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sat, 29 Mar 2025 20:14:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dd7d1986-7089-4597-9d7a-6179485b5299_1348079.6d9zya5sx5.png",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4048888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:21:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6d9zya5sx5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\dd7d1986-7089-4597-9d7a-6179485b5299_1348079.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4048888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KjQaU2jVzXhY/oqNdrQSsru6OVswPg611Yos3MAveA0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 20:21:37 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -3,6 +3,7 @@ using GroupApp.Data.Models;
 using GroupApp.Data.Models.Enums;
 using GroupApp.Services.Data.Interfaces;
 using GroupApp.ViewModels.Group;
+using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
 
@@ -78,17 +79,47 @@ namespace GroupApp.Services.Data
         }
 
 
-        //public async Task<Group> DisplayGroup(string groupId)
-        //{
-        //    return await _context.Groups
-        //        .Where(g=>g.Id.ToString() == groupId)
-        //        .Select(groupId => new Group)
+        public async Task<GroupViewModel> DisplayGroup(Guid groupId)
+        {
+            var group = await _context.Groups
+              .Include(g => g.Owner)
+              .Include(g => g.TextChannels)
+              .ThenInclude(tc => tc.Messages.OrderByDescending(m => m.CreatedAt).Take(50))
+              .Include(g => g.GroupMembers)
+              .ThenInclude(m => m.User)
+              .FirstOrDefaultAsync(g => g.Id == groupId);
 
-        //}
-        //public async Task<Guid> GetGroupIdAsync(AddGroupInputModel model, string userId)
-        //{
-        //    return await _context.Groups
-        //        .Where(g=>)
-        //}
+            if (group == null)
+            {
+                return null;
+
+            }
+
+            return new GroupViewModel
+            {
+                Id = group.Id,
+                Title = group.Title,
+                OwnerId = group.OwnerId,
+                TextChannels = group.TextChannels.Select(tc => new GroupViewModel.TextChannelDto
+                {
+                    Id = tc.Id,
+                    Name = tc.Name,
+                    Messages = tc.Messages.Select(msg => new GroupViewModel.TextChannelDto.MessageDto
+                    {
+                        Content = msg.Content,
+                        UserId = msg.ApplicationUserId,
+                        TimeStamp = msg.CreatedAt
+                    }).ToList(),
+
+                }).ToList(),
+                GroupMembers = group.GroupMembers.Select(m => new GroupViewModel.MemberDto
+                {
+                    UserId = m.UserId,
+                    UserName = m.User.UserName
+                }).ToList()
+            };
+
+        }
+        
     }
 }
