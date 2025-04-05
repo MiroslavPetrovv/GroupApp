@@ -67,6 +67,7 @@ wwwroot\uploads\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg
 wwwroot\uploads\360cca0b-dd7b-45b6-8ce4-d76fd770c1da_51ldhBY-YRL._AC_UF1000,1000_QL80_.jpg
 wwwroot\uploads\4ee584ba-bb56-43a7-866d-c918e1ae2e5f_Something.jpg
 wwwroot\uploads\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg
+wwwroot\uploads\76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg
 wwwroot\uploads\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg
 wwwroot\uploads\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg
 wwwroot\uploads\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg

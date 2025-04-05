@@ -6,7 +6,7 @@ namespace GroupApp.Data.Models
     public class ApplicationUser : IdentityUser
     {
         
-        public string DisplayName { get; set; }
+        
         public ICollection<Group> OwnedGroups { get; set; } 
             = new HashSet<Group>();
 

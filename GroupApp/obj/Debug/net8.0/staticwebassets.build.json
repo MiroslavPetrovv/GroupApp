@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GGYwg59uWhUzhy0P0tZnk57Va4cXUaQoL0xegeKnZlw=",
+  "Hash": "gPajcNTBK+23Zlbe9rIUqh1hbvgtqSlz/0Mgqlu/qW0=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -2766,6 +2766,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\5830c46d-3fd6-4c2a-bef8-de7394410987_pokemon.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "uploads/76a361e1-5696-4703-a737-91f0e2b08ada_Something#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmm6moaooe",
+      "Integrity": "/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg"
     },
     {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\8ad2d6b2-11d0-4447-8682-44b7c0ff806c_pokemon.jpg",
@@ -10955,6 +10976,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-8OH8yCs71URX8z8SZaINQXHEQlKRbZ6TD6DHWgal7s4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/76a361e1-5696-4703-a737-91f0e2b08ada_Something.bmm6moaooe.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:53:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmm6moaooe"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\76a361e1-5696-4703-a737-91f0e2b08ada_Something.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:53:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/XH7fCrwYN2l6rgFV16pT9ZB8rNoz2ZrEfzvMwmy8Lc="
         }
       ]
     },
