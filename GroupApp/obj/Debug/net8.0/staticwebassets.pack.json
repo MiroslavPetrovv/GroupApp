@@ -25,10 +25,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\chat.js",
-      "PackagePath": "staticwebassets\\js\\chat.js"
-    },
-    {
       "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
       "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
     },
@@ -265,6 +261,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\0d614753-8fff-49c3-a829-a1ffc3346ac7_1348079.png",
+      "PackagePath": "staticwebassets\\uploads\\0d614753-8fff-49c3-a829-a1ffc3346ac7_1348079.png"
+    },
+    {
       "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg",
       "PackagePath": "staticwebassets\\uploads\\12d74c58-7af6-4c7e-9e0e-3cb5887b3ac2_Something.jpg"
     },
@@ -291,6 +291,18 @@
     {
       "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg",
       "PackagePath": "staticwebassets\\uploads\\92cac1e1-931a-46ae-bdab-d67a89510187_pokemon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\9465a003-bb13-40a3-b618-8cda29f38020_pokemon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9465a003-bb13-40a3-b618-8cda29f38020_pokemon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\9b6b7c5c-4d86-48ee-8ccf-9f8a51c342e4_pokemon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9b6b7c5c-4d86-48ee-8ccf-9f8a51c342e4_pokemon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\9e6cd884-2f06-42c6-a248-3dd82dac1148_pokemon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9e6cd884-2f06-42c6-a248-3dd82dac1148_pokemon.jpg"
     },
     {
       "Id": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\uploads\\a3b759f9-3cd2-4ef6-8db7-dbe6d82c0de7_Something.jpg",

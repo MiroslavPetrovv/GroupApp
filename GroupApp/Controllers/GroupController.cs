@@ -43,7 +43,6 @@ namespace GroupApp.Controllers
 
             if (!ModelState.IsValid)
             {
-
                 return this.View(model);
             }
             string uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
@@ -65,33 +64,30 @@ namespace GroupApp.Controllers
             }
             TempData["Message"] = "File uploaded successfully";
 
-            // You can save the file path to your database here if needed
-            // Example: _context.Images.Add(new Image { Path = uniqueFileName });
-            // await _context.SaveChangesAsync();
             Guid userGuid = Guid.Empty;
             bool isValid = this.IsGuidValid(User.GetId(), ref userGuid);
             if (!isValid)
             {
                 return this.RedirectToAction("Index","Home");
             }
+
             string userId = User.GetId();
             var group =await this._groupService.AddGroupAsync(model, userId);
             return RedirectToAction("Display", new {groupId = group.Id});
         }
-
-
-
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Display(Guid groupId)
         {
-            var group = await _groupService.GetGroupByIdAsync(groupId);
-            if (group == null)
+            
+            var groupModel = await _groupService.DisplayGroupAsync(groupId);
+            if (groupModel == null)
             {
                 return NotFound();
             }
 
-            return View(group);
+            return View(groupModel);
+
         }
     }
 }

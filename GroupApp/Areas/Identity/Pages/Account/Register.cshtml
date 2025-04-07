@@ -30,8 +30,13 @@
 
                 <div class="form-group">
                     <label asp-for="Input.Email">Email</label>
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="Enter your email" required>
+                    <input asp-for="Input.Email" class="form-control" @* autocomplete="username" *@ placeholder="Enter your email" required>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.UserName">UserName</label>
+                    <input asp-for="Input.UserName" class="form-control" autocomplete="username" placeholder="Enter your UserName" required>
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">

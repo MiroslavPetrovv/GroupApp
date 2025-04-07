@@ -79,7 +79,7 @@ namespace GroupApp.Services.Data
         }
 
 
-        public async Task<GroupViewModel> DisplayGroup(Guid groupId)
+        public async Task<GroupViewModel> DisplayGroupAsync(Guid groupId)
         {
             var group = await _context.Groups
               .Include(g => g.Owner)
@@ -104,12 +104,7 @@ namespace GroupApp.Services.Data
                 {
                     Id = tc.Id,
                     Name = tc.Name,
-                    Messages = tc.Messages.Select(msg => new GroupViewModel.TextChannelDto.MessageDto
-                    {
-                        Content = msg.Content,
-                        UserId = msg.ApplicationUserId,
-                        TimeStamp = msg.CreatedAt
-                    }).ToList(),
+                   
 
                 }).ToList(),
                 GroupMembers = group.GroupMembers.Select(m => new GroupViewModel.MemberDto

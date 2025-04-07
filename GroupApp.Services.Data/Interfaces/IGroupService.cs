@@ -8,5 +8,7 @@ namespace GroupApp.Services.Data.Interfaces
     {
         Task<Group> AddGroupAsync(AddGroupInputModel model,string userId);
         Task<Group> GetGroupByIdAsync(Guid groupId);
+
+        Task<GroupViewModel> DisplayGroupAsync(Guid groupId);
     }
 }

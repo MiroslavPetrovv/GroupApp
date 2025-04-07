@@ -22,19 +22,7 @@ namespace GroupApp.ViewModels.Group
             public Guid Id { get; set; }
             public string Name { get; set; } = string.Empty;
 
-            public List<MessageDto> Messages { get; set; } = new();
-
-
-            public class MessageDto
-            {
-                public string Content { get; set; } = string.Empty;
-
-                public string TextChannelId { get; set; } = string.Empty;
-
-                public string UserId { get; set; } = string.Empty;
-
-                public DateTime TimeStamp { get; set; }
-            }
+            
         }
 
         public class MemberDto

@@ -292,18 +292,18 @@
             <div class="channel-category">
                 <h3 class="category-name">GENERAL</h3>
                 <div class="channel-list">
-                    @foreach(var textchannel in Model.TextChannels)
+                    @foreach(var textchanell in Model.TextChannels)
                     {
-                        <a href="#" class="channel-item active">@textchannel.Name</a>
+                    <a href="#" class="channel-item active">@textchanell.Name</a>
                         
                     }
-
+                        
                     
-
+                    
                 </div>
             </div>
 
-
+            
         </aside>
 
         <main class="chat-area">
@@ -315,49 +315,43 @@
             </div>
 
             <div class="messages" id="messagesList">
-                <!-- JS appends <div class="message"> here -->
-                    
+                <!-- Messages will be dynamically added here by SignalR -->
             </div>
 
             <div class="message-input">
                 <div class="input-container">
-                    <input type="hidden" id="userInput" value="@User.Identity.Name">
+                    <input type="hidden" id="userInput" value="User">
                     <input type="text" id="messageInput" placeholder="Message #welcome">
                     <button id="sendButton" class="send-button" disabled>Send</button>
                 </div>
             </div>
-
         </main>
     </div>
 
-    <script>
+    @* <script>
         "use strict";
 
         var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
-        var textchat = getTextchat();
-        for(var messageInfo of textchat) {
-            displayMessage(messageInfo.user,messageInfo.message);
-        }
-        // Disable the send button until connection is established.
+
+        //Disable the send button until connection is established.
         document.getElementById("sendButton").disabled = true;
 
-        connection.on("ReceiveMessage",displayMessage);
-        function displayMessage (user, message) {
+        connection.on("ReceiveMessage", function (user, message) {
             // Create message container
             var messageDiv = document.createElement("div");
             messageDiv.className = "message";
 
-            //Create avatar
+            // Create avatar
             var avatarDiv = document.createElement("div");
             avatarDiv.className = "avatar";
             avatarDiv.style.backgroundColor = getRandomColor();
             avatarDiv.textContent = user.substring(0, 2).toUpperCase();
 
-            //Create message content
+            // Create message content
             var contentDiv = document.createElement("div");
             contentDiv.className = "message-content";
 
-            //Create message header
+            // Create message header
             var headerDiv = document.createElement("div");
             headerDiv.className = "message-header";
 
@@ -384,38 +378,23 @@
             messageDiv.appendChild(contentDiv);
 
             document.getElementById("messagesList").appendChild(messageDiv);
-        };
+        });
 
         connection.start().then(function () {
             document.getElementById("sendButton").disabled = false;
         }).catch(function (err) {
             return console.error(err.toString());
         });
-        
+
         document.getElementById("sendButton").addEventListener("click", function (event) {
             var user = document.getElementById("userInput").value;
             var message = document.getElementById("messageInput").value;
             connection.invoke("SendMessage", user, message).catch(function (err) {
                 return console.error(err.toString());
             });
-            addMessage(user,message);
             document.getElementById("messageInput").value = '';
             event.preventDefault();
         });
-        function setTextchat(chatHistory){
-
-            localStorage.setItem("chatHistory" ,JSON.stringify(chatHistory));
-        }
-
-        function getTextchat(){
-            return JSON.parse(localStorage.getItem("chatHistory"));
-        }
-
-        function addMessage(user,message){
-            var chatHistory = getTextchat() ?? [];
-            setTextchat([...chatHistory, {user,message}])
-
-        }
 
         // Helper function to generate random colors for avatars
         function getRandomColor() {
@@ -430,7 +409,8 @@
                 document.getElementById("sendButton").click();
             }
         });
-    </script>
-    
+    </script> *@
+    <script src ="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
 </body>
 </html>
