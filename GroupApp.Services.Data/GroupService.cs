@@ -18,20 +18,21 @@ namespace GroupApp.Services.Data
             _context = context;
         }
 
-        public async Task<Group> AddGroupAsync(AddGroupInputModel model, string userId)
+        public async Task<Group> AddGroupAsync(AddGroupInputModel model, string userId, string imageB64)
         {
-            GroupCategory category = (GroupCategory)Enum.Parse(typeof(GroupCategory), model.Category);
+            bool category = Enum.TryParse(model.Category , out GroupCategory result);
             string format = "MM-dd-yy";
 
-            var createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
+            DateTime createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
                 DateTimeStyles.None);
-
+            
+            
             Group group = new Group()
             {
                 Title = model.Title,
                 Description = model.Description,
-                Banner = model.Banner.ToString(),
-                Category = category,
+                Banner = imageB64,
+                Category = result,
                 OwnerId = userId,
                 CreatedAt = createdAt,
                 TextChannels = new List<TextChannel>
@@ -41,18 +42,6 @@ namespace GroupApp.Services.Data
                         Name = "General", // Default channel
                         CreatedAt = createdAt,
                         Description = "This channel is for all general things"
-                    },
-                    new TextChannel
-                    {
-                        Name="Annoucments",
-                        CreatedAt = createdAt,
-                        Description = "This channel is for announcing the events and important things"
-                    },
-                    new TextChannel
-                    {
-                        Name = "Introductions",
-                        CreatedAt = createdAt,
-                        Description = "This is a channel for introducing yourself".Trim()
                     }
 
 
@@ -84,7 +73,6 @@ namespace GroupApp.Services.Data
             var group = await _context.Groups
               .Include(g => g.Owner)
               .Include(g => g.TextChannels)
-              .ThenInclude(tc => tc.Messages.OrderByDescending(m => m.CreatedAt).Take(50))
               .Include(g => g.GroupMembers)
               .ThenInclude(m => m.User)
               .FirstOrDefaultAsync(g => g.Id == groupId);
@@ -115,6 +103,24 @@ namespace GroupApp.Services.Data
             };
 
         }
-        
+
+        public async Task<List<GroupDisplayViewModel>> DisplayTop3GroupsByMembersCount()
+        {
+            List<GroupDisplayViewModel> topGroups = await _context.Groups
+                .Select(g=> new GroupDisplayViewModel
+                {
+                    Id = g.Id.ToString(),
+                    Title = g.Title,
+                    Description = g.Description,
+                    Banner = g.Banner,
+                    GroupMemberCount = g.GroupMembers.Count()
+                })
+                .OrderBy(g=>g.GroupMemberCount)
+                .ThenBy(g=>g.Title)
+                .Take(3)
+                .ToListAsync();
+
+            return topGroups;
+        }
     }
 }

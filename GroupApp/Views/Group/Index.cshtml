@@ -1,4 +1,5 @@
-﻿
+﻿@model List<GroupDisplayViewModel>
+@using GroupApp.ViewModels.Group
 
 
 
@@ -6,6 +7,7 @@
     ViewData["Title"] = "HomePage";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link rel="stylesheet" href="~/css/Index.css">
 <section class="hero">
     <h1>The Community Platform Built<br>for Learning Programs</h1>
     <p>Transform your courses, training and coaching programs with community-based<br>learning. Drive deeper engagement, higher completion rates, and lasting results.</p>
@@ -57,46 +59,20 @@
     <p class="discover-subtitle">Join existing communities or create your own group to connect with like-minded people.</p>
 
     <div class="groups-grid">
-
-
-        <div class="group-card">
-            <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop&q=80')"></div>
-            <div class="group-content">
-                <h3>Tech Innovators</h3>
-                <p class="members">👥 3,765 members</p>
-                <p class="description">Connect with technology professionals, entrepreneurs, and enthusiasts to discuss the latest in tech.</p>
-                <div class="group-actions">
-                    <button class="details-btn">Details</button>
-                    <button class="join-btn">Join Group</button>
+        @foreach (var group in Model)
+        {
+            <div class="group-card">
+                <div class="group-image" style="background-image: url('data:image/*;base64, @group.Banner')"></div>
+                <div class="group-content">
+                    <h3>@group.Title</h3>
+                    <p class="members">👥 @group.GroupMemberCount</p>
+                    <p class="description">@group.Description</p>
+                    <div class="group-actions">
+                        <button class="join-btn">Join Group</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="group-card">
-            <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80')"></div>
-            <div class="group-content">
-                <h3>Travel Adventures</h3>
-                <p class="members">👥 2,430 members</p>
-                <p class="description">Share your travel experiences, get tips, and connect with fellow adventurers from around the world.</p>
-                <div class="group-actions">
-                    <button class="details-btn">Details</button>
-                    <button class="join-btn">Join Group</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="group-card">
-            <div class="group-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&auto=format&fit=crop&q=80')"></div>
-            <div class="group-content">
-                <h3>Fitness & Wellness</h3>
-                <p class="members">👥 1,876 members</p>
-                <p class="description">A supportive community for fitness enthusiasts to share workout routines, nutrition tips, and wellness advice.</p>
-                <div class="group-actions">
-                    <button class="details-btn">Details</button>
-                    <button class="join-btn">Join Group</button>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 
     <button class="view-all">View All Groups</button>

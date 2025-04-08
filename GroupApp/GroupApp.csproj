@@ -24,4 +24,8 @@
     <ProjectReference Include="..\GroupApp.ViewModels\GroupApp.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\TextChannel\" />
+  </ItemGroup>
+
 </Project>

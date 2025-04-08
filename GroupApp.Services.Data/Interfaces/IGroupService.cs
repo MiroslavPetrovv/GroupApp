@@ -6,9 +6,11 @@ namespace GroupApp.Services.Data.Interfaces
 {
     public interface IGroupService
     {
-        Task<Group> AddGroupAsync(AddGroupInputModel model,string userId);
+        Task<Group> AddGroupAsync(AddGroupInputModel model,string userId,string image);
         Task<Group> GetGroupByIdAsync(Guid groupId);
 
         Task<GroupViewModel> DisplayGroupAsync(Guid groupId);
+
+        Task<List<GroupDisplayViewModel>> DisplayTop3GroupsByMembersCount();
     }
 }

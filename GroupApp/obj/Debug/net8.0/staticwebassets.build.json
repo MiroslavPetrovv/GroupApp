@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OPtYyxGEAcFn4dK6cTggpr0DtA8dhAY/mw/MPyPAsaI=",
+  "Hash": "CRhFH4bRJX85YFGmkuyzK7Z2iBdS9Ox1ng0vw85tNl0=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mj480w6b1h",
-      "Integrity": "/pYZSPnrtcvRtV1ZLMd6YH4JsWxqdcgXzmFxD0bU1lY=",
+      "Fingerprint": "98flq3wefw",
+      "Integrity": "WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3165,6 +3165,51 @@
       ]
     },
     {
+      "Route": "css/site.98flq3wefw.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 16:42:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "98flq3wefw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3175,7 +3220,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13677"
+          "Value": "13684"
         },
         {
           "Name": "Content-Type",
@@ -3183,11 +3228,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/pYZSPnrtcvRtV1ZLMd6YH4JsWxqdcgXzmFxD0bU1lY=\""
+          "Value": "\"WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:50 GMT"
+          "Value": "Tue, 08 Apr 2025 16:42:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3197,52 +3242,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/pYZSPnrtcvRtV1ZLMd6YH4JsWxqdcgXzmFxD0bU1lY="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.mj480w6b1h.css",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13677"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/pYZSPnrtcvRtV1ZLMd6YH4JsWxqdcgXzmFxD0bU1lY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mj480w6b1h"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/pYZSPnrtcvRtV1ZLMd6YH4JsWxqdcgXzmFxD0bU1lY="
+          "Value": "sha256-WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU="
         }
       ]
     },
@@ -3433,7 +3433,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:27 GMT"
+          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3470,7 +3470,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:27 GMT"
+          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3515,7 +3515,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:27 GMT"
+          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3560,7 +3560,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 18:10:27 GMT"
+          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
         },
         {
           "Name": "Cache-Control",

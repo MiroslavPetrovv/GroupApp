@@ -16,6 +16,15 @@ namespace GroupApp.Controllers
             this._groupService = _groupService;
             _environment = environment;
         }
+
+        public async Task<IActionResult> Index()
+        {
+            var topGroups = await _groupService.DisplayTop3GroupsByMembersCount();
+            ViewData["Title"] = "Home Page";
+            ViewData["Message"] = "Welocome to the Community";
+            return View(topGroups);
+        }
+
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Create()
@@ -45,34 +54,30 @@ namespace GroupApp.Controllers
             {
                 return this.View(model);
             }
-            string uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
-
-            // Create uploads directory if it doesn't exist
-            if (!Directory.Exists(uploadsFolder))
+           string imageBase64 = string.Empty;
+            using (var stream = model.Banner.OpenReadStream())
             {
-                Directory.CreateDirectory(uploadsFolder);
+                using (var memoryStream = new MemoryStream())
+                {
+                    stream.CopyTo(memoryStream);
+                    imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
+                    
+                }
             }
+                
+            
 
-            // Generate unique filename
-            string uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Banner.FileName;
-            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-            // Save file
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                await model.Banner.CopyToAsync(fileStream);
-            }
             TempData["Message"] = "File uploaded successfully";
-
+            string fileform =  model.Banner.ContentType;
             Guid userGuid = Guid.Empty;
             bool isValid = this.IsGuidValid(User.GetId(), ref userGuid);
             if (!isValid)
             {
                 return this.RedirectToAction("Index","Home");
             }
-
+            
             string userId = User.GetId();
-            var group =await this._groupService.AddGroupAsync(model, userId);
+            var group =await this._groupService.AddGroupAsync(model, userId, imageBase64);
             return RedirectToAction("Display", new {groupId = group.Id});
         }
         [HttpGet]
@@ -89,5 +94,7 @@ namespace GroupApp.Controllers
             return View(groupModel);
 
         }
+
+        
     }
 }
