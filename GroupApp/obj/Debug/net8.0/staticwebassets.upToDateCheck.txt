@@ -1,4 +1,5 @@
 wwwroot\css\AddGroup.css
+wwwroot\css\Index.css
 wwwroot\css\login.css
 wwwroot\css\site.css
 wwwroot\css\upload.css

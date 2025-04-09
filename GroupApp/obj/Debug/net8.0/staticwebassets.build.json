@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CRhFH4bRJX85YFGmkuyzK7Z2iBdS9Ox1ng0vw85tNl0=",
+  "Hash": "U/oyJT0Fx7IFxgsJry+l7/ORHwoCtJDXqy5UWr9sh5Q=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1338,6 +1338,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AddGroup.css"
+    },
+    {
+      "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\Index.css",
+      "SourceId": "GroupApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\",
+      "BasePath": "_content/GroupApp",
+      "RelativePath": "css/Index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i8op06taw6",
+      "Integrity": "8m5t/ki3rLtOtS/oKLGAKbl7RWmwVdlbgazpp1pnsS8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
       "Identity": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
@@ -3083,6 +3104,88 @@
       ]
     },
     {
+      "Route": "css/Index.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\Index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8m5t/ki3rLtOtS/oKLGAKbl7RWmwVdlbgazpp1pnsS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 16:54:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8m5t/ki3rLtOtS/oKLGAKbl7RWmwVdlbgazpp1pnsS8="
+        }
+      ]
+    },
+    {
+      "Route": "css/Index.i8op06taw6.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\Index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8m5t/ki3rLtOtS/oKLGAKbl7RWmwVdlbgazpp1pnsS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 16:54:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i8op06taw6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8m5t/ki3rLtOtS/oKLGAKbl7RWmwVdlbgazpp1pnsS8="
+        }
+      ]
+    },
+    {
       "Route": "css/login.css",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\login.css",
       "Selectors": [],
@@ -3187,7 +3290,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:42:12 GMT"
+          "Value": "Tue, 08 Apr 2025 16:55:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3232,7 +3335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:42:12 GMT"
+          "Value": "Tue, 08 Apr 2025 16:55:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3433,7 +3536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
+          "Value": "Tue, 08 Apr 2025 23:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3470,7 +3573,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
+          "Value": "Tue, 08 Apr 2025 23:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3515,7 +3618,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
+          "Value": "Tue, 08 Apr 2025 23:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3560,7 +3663,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:27:54 GMT"
+          "Value": "Tue, 08 Apr 2025 23:58:15 GMT"
         },
         {
           "Name": "Cache-Control",

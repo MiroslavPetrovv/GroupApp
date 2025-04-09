@@ -10,11 +10,11 @@ namespace GroupApp.Controllers
     public class GroupController : BaseController
     {
         private readonly IGroupService _groupService;
-        private readonly IWebHostEnvironment _environment;
-        public GroupController(IGroupService _groupService, IWebHostEnvironment environment)
+        
+        public GroupController(IGroupService _groupService)
         {
             this._groupService = _groupService;
-            _environment = environment;
+            
         }
 
         public async Task<IActionResult> Index()
@@ -93,6 +93,23 @@ namespace GroupApp.Controllers
 
             return View(groupModel);
 
+        }
+
+        [HttpGet]
+        [Authorize]
+
+        public async Task<IActionResult> JoinGroup(Guid groupId)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+
+                TempData["Message"] = "You must be logged in to start for free. Please register.";
+
+
+                return RedirectToAction("Register", "Account");
+            }
+
+            return RedirectToAction("Display", new { groupId = groupId });
         }
 
         
