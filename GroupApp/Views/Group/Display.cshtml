@@ -4,6 +4,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
+    var textChannelId = Model.TextChannels.First().Id;
     Layout = null;
 }
 <!DOCTYPE html>
@@ -322,6 +323,7 @@
             <div class="message-input">
                 <div class="input-container">
                     <input type="hidden" id="userInput" value="@User.Identity.Name">
+                    
                     <input type="text" id="messageInput" placeholder="Message #welcome">
                     <button id="sendButton" class="send-button" disabled>Send</button>
                 </div>
@@ -331,18 +333,24 @@
     </div>
 
     <script>
-        "use strict";
 
+        "use strict";
+        
+        const currentChannelId = "@textChannelId.ToString()";
         var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
-        var textchat = getTextchat();
+        var textchat = getTextchat(currentChannelId);
         for(var messageInfo of textchat) {
-            displayMessage(messageInfo.user,messageInfo.message);
+            
+            displayMessage(messageInfo.user,messageInfo.message, currentChannelId);
         }
         // Disable the send button until connection is established.
         document.getElementById("sendButton").disabled = true;
 
         connection.on("ReceiveMessage",displayMessage);
-        function displayMessage (user, message) {
+        function displayMessage (user, message, channelId) {
+            if(channelId !== currentChannelId){
+                return;
+            }
             // Create message container
             var messageDiv = document.createElement("div");
             messageDiv.className = "message";
@@ -395,25 +403,28 @@
         document.getElementById("sendButton").addEventListener("click", function (event) {
             var user = document.getElementById("userInput").value;
             var message = document.getElementById("messageInput").value;
-            connection.invoke("SendMessage", user, message).catch(function (err) {
+            connection.invoke("SendMessage", user, message, currentChannelId).catch(function (err) {
                 return console.error(err.toString());
             });
-            addMessage(user,message);
+            addMessage(user, message, currentChannelId);
             document.getElementById("messageInput").value = '';
             event.preventDefault();
         });
         function setTextchat(chatHistory){
 
-            localStorage.setItem("chatHistory" ,JSON.stringify(chatHistory));
+            localStorage.setItem(currentChannelId, JSON.stringify(chatHistory));
         }
 
-        function getTextchat(){
-            return JSON.parse(localStorage.getItem("chatHistory"));
+        function getTextchat(currentChannelId){
+            const storageChat = localStorage.getItem(currentChannelId) ?? "[]";
+            const chatObject =  JSON.parse(storageChat);
+            return chatObject;
+            
         }
 
-        function addMessage(user,message){
-            var chatHistory = getTextchat() ?? [];
-            setTextchat([...chatHistory, {user,message}])
+        function addMessage(user, message, currentChannelId){
+            const chatHistory = getTextchat(currentChannelId) ?? [];
+            setTextchat([...chatHistory, {user,message}]);
 
         }
 

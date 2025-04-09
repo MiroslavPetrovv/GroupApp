@@ -122,5 +122,21 @@ namespace GroupApp.Services.Data
 
             return topGroups;
         }
+
+        public async Task<bool> CheckIfPersonIsInGroup(Guid userId, Guid groupId)
+        {
+            var group = await _context.Groups.FindAsync(groupId);
+            var IsPersonIn = group.GroupMembers.FirstOrDefault(x => x.Id == userId);
+            if (IsPersonIn == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public async Task AddPersonInGroup(Guid groupId , Guid userId)
+        {
+
+        }
     }
 }
