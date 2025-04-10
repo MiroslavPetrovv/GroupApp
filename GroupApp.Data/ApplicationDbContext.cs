@@ -22,7 +22,7 @@ namespace GroupApp.Data
 
         public DbSet<TextChannel> TextChannels { get; set; } = null!;
 
-        public DbSet<Message> Messages { get; set; } = null!;
+        
 
         public DbSet<Enrollment> Enrollments { get; set; } = null!;
 

@@ -124,7 +124,6 @@ C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.G
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.AssemblyInfoInputs.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.AssemblyInfo.cs
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.csproj.CoreCompileInputs.cache
-C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.RazorAssemblyInfo.cache
 C:\Users\Miroslav\Documents\GitHub\GroupApp\GroupApp\obj\Debug\net8.0\GroupApp.RazorAssemblyInfo.cs

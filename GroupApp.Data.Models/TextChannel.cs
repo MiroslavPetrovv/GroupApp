@@ -14,8 +14,7 @@
         public Guid GroupId { get; set; }
         public Group Group { get; set; }
 
-        public ICollection<Message> Messages { get; set; } 
-            = new HashSet<Message>();
+        
 
 
     }

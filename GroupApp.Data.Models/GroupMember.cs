@@ -7,7 +7,7 @@ namespace GroupApp.Data.Models
         
         public Guid Id { get; set; }
 
-        public string NickName { get; set; }
+        
 
         public Guid GroupId { get; set; }
         public Group Group { get; set; }

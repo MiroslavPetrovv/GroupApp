@@ -19,6 +19,17 @@ namespace GroupApp.Data.Models
 
         public Course Course { get; set; }
 
-        public DateTime EnrolledAt { get;  set; } 
+        public DateTime EnrolledAt { get;  set; }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Enrollment enrollment &&
+                   Id.Equals(enrollment.Id);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

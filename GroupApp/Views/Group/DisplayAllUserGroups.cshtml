@@ -1,0 +1,35 @@
+﻿@model List<GroupDisplayViewModel>
+@using GroupApp.ViewModels.Group
+
+@{
+    ViewData["Title"] = "MyGroups";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/Index.css">
+<section class="discover">
+    <h2>My Groups</h2>
+    
+
+    <div class="groups-grid">
+        @foreach (var group in Model)
+        {
+
+            <form asp-controller="Group" asp-action="JoinGroup" method="get">
+            <input type="hidden" name="groupId" asp-for="@group.Id">
+                <div class="group-card">
+                    <div class="group-image" style="background-image: url('data:image/*;base64, @group.Banner')"></div>
+                    <div class="group-content">
+                        <h3>@group.Title</h3>
+                        <p class="members">👥 @group.GroupMemberCount</p>
+                        <p class="description">@group.Description</p>
+                        
+                        <div class="group-actions">
+                            <button  class="join-btn">Join Group</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>
+    
+</section>

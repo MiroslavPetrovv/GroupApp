@@ -7,17 +7,16 @@ namespace GroupApp.Data.Models
     {
         
         
-        public ICollection<Group> OwnedGroups { get; set; } 
+        public HashSet<Group> OwnedGroups { get; set; } 
             = new HashSet<Group>();
 
-        public ICollection<GroupMember> GroupMemberships { get; set; } 
+        public HashSet<GroupMember> GroupMemberships { get; set; } 
             = new HashSet<GroupMember>();
 
-        public ICollection<Enrollment> Enrollments { get; set; } 
+        public HashSet<Enrollment> Enrollments { get; set; } 
             = new HashSet<Enrollment>();
 
-        public ICollection<Message> Messages { get; set; } 
-            = new HashSet<Message>();
+        
 
     }
 }

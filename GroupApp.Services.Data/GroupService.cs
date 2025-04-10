@@ -53,7 +53,7 @@ namespace GroupApp.Services.Data
                         UserId = userId, // Owner as first member
                         Role = 0,
                         JoinedAt = createdAt,
-                        NickName = "Owner"
+                        
                     }
                 }
             };
@@ -123,20 +123,54 @@ namespace GroupApp.Services.Data
             return topGroups;
         }
 
-        public async Task<bool> CheckIfPersonIsInGroup(Guid userId, Guid groupId)
+        public async Task AddPersoninGroupAsync(string userId, Guid groupId)
         {
+            
+            var role = (GroupRole)Enum.Parse(typeof(GroupRole), "Member");
             var group = await _context.Groups.FindAsync(groupId);
-            var IsPersonIn = group.GroupMembers.FirstOrDefault(x => x.Id == userId);
-            if (IsPersonIn == null)
+            var person = await _context.Users.FindAsync(userId);
+            var IsPersonIn = group.GroupMembers.FirstOrDefault(x => x.Id.ToString() == userId);
+            if (IsPersonIn != null)
             {
-                return false;
+                return;
             }
-            return true;
+            var membership = new GroupMember
+            {
+                JoinedAt = DateTime.Now,
+                GroupId = groupId,
+                UserId = userId.ToString(),
+                Role = role
+            };
+            group.GroupMembers.Add(membership);
+            person.GroupMemberships.Add(membership);
+            
         }
-
-        public async Task AddPersonInGroup(Guid groupId , Guid userId)
+        public async Task<List<GroupDisplayViewModel>> DisplayUserGroups(string userId)
         {
+            var userGroups = await _context.GroupMembers
+                .Include(gm=>gm.Group)
+                .Where(gm=> gm.UserId == userId)
+                .Select(gm=> new GroupDisplayViewModel
+                {
+                    Id = gm.GroupId.ToString(),
+                    Description = gm.Group.Description,
+                    Title = gm.Group.Title,
+                    Banner = gm.Group.Banner,
+                    GroupMemberCount = gm.Group.GroupMembers.Count()
+                })
+                .OrderBy(gm=>gm.GroupMemberCount)
+                .ThenBy(gm=>gm.Title)
+                .ToListAsync();
 
+            if (userGroups == null)
+            {
+                
+            }
+
+            return userGroups;
         }
+        
+
+        
     }
 }

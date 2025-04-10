@@ -33,10 +33,7 @@ namespace GroupApp.Data.Configure
                 .HasForeignKey(gm => gm.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder
-                .Property(gm => gm.NickName)
-                .IsRequired()
-                .HasMaxLength(nickNameMaxLength);
+            
             builder
                 .HasIndex(gm => new { gm.UserId, gm.GroupId })
                 .IsUnique();

@@ -108,10 +108,29 @@ namespace GroupApp.Controllers
 
                 return RedirectToAction("Register", "Account");
             }
-
+            string userId = User.GetId();
+            await _groupService.AddPersoninGroupAsync(userId, groupId);
             return RedirectToAction("Display", new { groupId = groupId });
         }
 
-        
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> DisplayAllUserGroups()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+
+                TempData["Message"] = "You must be logged in to start for free. Please register.";
+
+
+                return RedirectToAction("Register", "Account");
+            }
+            string userId = User.GetId();
+            var userGroups= await _groupService.DisplayUserGroups(userId);
+            return View(userGroups);
+
+        }
+
+       
     }
 }

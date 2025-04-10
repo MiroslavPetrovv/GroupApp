@@ -12,5 +12,9 @@ namespace GroupApp.Services.Data.Interfaces
         Task<GroupViewModel> DisplayGroupAsync(Guid groupId);
 
         Task<List<GroupDisplayViewModel>> DisplayTop3GroupsByMembersCount();
+
+        public Task AddPersoninGroupAsync(string userId, Guid groupId);
+
+        public Task<List<GroupDisplayViewModel>> DisplayUserGroups(string userId);
     }
 }
