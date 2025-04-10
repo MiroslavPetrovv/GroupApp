@@ -42,6 +42,10 @@ body {
     font-weight: 600;
     color: var(--text-color);
 }
+    .logo a{
+        color:white;
+        text-decoration:none;
+    }
 
     .logo span {
         color: var(--primary-blue);

@@ -13,12 +13,10 @@ namespace GroupApp.Controllers
             _logger = logger;
         }
 
-        //public IActionResult Index()
-        //{
-        //    ViewData["Title"] = "Home Page";
-        //    ViewData["Message"] = "Welocome to the Community";
-        //    return View();
-        //}
+        public IActionResult Index()
+        {     
+            return RedirectToAction("Index", "Group");
+        }
 
 
     }

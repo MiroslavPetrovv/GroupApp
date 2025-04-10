@@ -62,7 +62,7 @@
         @foreach (var group in Model)
         {
 
-            <form asp-controller="Group" asp-action="DisplayAllUserGroups" method="get">
+            <form asp-controller="Group" asp-action="JoinGroup" method="get">
             <input type="hidden" name="groupId" asp-for="@group.Id">
                 <div class="group-card">
                     <div class="group-image" style="background-image: url('data:image/*;base64, @group.Banner')"></div>

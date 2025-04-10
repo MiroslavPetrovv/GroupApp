@@ -126,8 +126,8 @@ namespace GroupApp.Services.Data
         public async Task AddPersoninGroupAsync(string userId, Guid groupId)
         {
             
-            var role = (GroupRole)Enum.Parse(typeof(GroupRole), "Member");
-            var group = await _context.Groups.FindAsync(groupId);
+            
+            var group = await _context.Groups.Include(g=>g.GroupMembers).FirstOrDefaultAsync(g=>g.Id == groupId);
             var person = await _context.Users.FindAsync(userId);
             var IsPersonIn = group.GroupMembers.FirstOrDefault(x => x.Id.ToString() == userId);
             if (IsPersonIn != null)
@@ -138,11 +138,12 @@ namespace GroupApp.Services.Data
             {
                 JoinedAt = DateTime.Now,
                 GroupId = groupId,
-                UserId = userId.ToString(),
-                Role = role
+                UserId = userId,
+                Role = GroupRole.Member
             };
             group.GroupMembers.Add(membership);
             person.GroupMemberships.Add(membership);
+            _context.SaveChanges();
             
         }
         public async Task<List<GroupDisplayViewModel>> DisplayUserGroups(string userId)

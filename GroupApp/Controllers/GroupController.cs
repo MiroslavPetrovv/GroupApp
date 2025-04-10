@@ -35,7 +35,7 @@ namespace GroupApp.Controllers
                 TempData["Message"] = "You must be logged in to start for free. Please register.";
 
 
-                return RedirectToAction("Register", "Account");
+                return View("Index");
             }
             var model = new AddGroupInputModel
             {
@@ -73,7 +73,7 @@ namespace GroupApp.Controllers
             bool isValid = this.IsGuidValid(User.GetId(), ref userGuid);
             if (!isValid)
             {
-                return this.RedirectToAction("Index","Home");
+                return View("Index");
             }
             
             string userId = User.GetId();
@@ -123,7 +123,7 @@ namespace GroupApp.Controllers
                 TempData["Message"] = "You must be logged in to start for free. Please register.";
 
 
-                return RedirectToAction("Register", "Account");
+                return View("Index");
             }
             string userId = User.GetId();
             var userGroups= await _groupService.DisplayUserGroups(userId);

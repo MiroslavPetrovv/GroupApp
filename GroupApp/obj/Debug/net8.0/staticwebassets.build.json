@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GWhef4/SdVi7w9DEhkQrkD0IrFiOzp256Geab6s4yEo=",
+  "Hash": "AkdzpuhstCky9Ue6/7PbXINt0i0aZ3Sm3wwQVmU5LsQ=",
   "Source": "GroupApp",
   "BasePath": "_content/GroupApp",
   "Mode": "Default",
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "98flq3wefw",
-      "Integrity": "WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=",
+      "Fingerprint": "h5l9nviuuc",
+      "Integrity": "qznZCscj5juAJg5N92ESDLmmsO84LPOMWi5SREQEG6E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3268,51 +3268,6 @@
       ]
     },
     {
-      "Route": "css/site.98flq3wefw.css",
-      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13684"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:55:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "98flq3wefw"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3323,7 +3278,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13684"
+          "Value": "13758"
         },
         {
           "Name": "Content-Type",
@@ -3331,11 +3286,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU=\""
+          "Value": "\"qznZCscj5juAJg5N92ESDLmmsO84LPOMWi5SREQEG6E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:55:24 GMT"
+          "Value": "Thu, 10 Apr 2025 13:28:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3345,7 +3300,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WQaiL3g0zYVun4xc+3QHaVfMzNC5x+U+NbwcdNUbuYU="
+          "Value": "sha256-qznZCscj5juAJg5N92ESDLmmsO84LPOMWi5SREQEG6E="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.h5l9nviuuc.css",
+      "AssetFile": "C:\\Users\\Miroslav\\Documents\\GitHub\\GroupApp\\GroupApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qznZCscj5juAJg5N92ESDLmmsO84LPOMWi5SREQEG6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 13:28:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h5l9nviuuc"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qznZCscj5juAJg5N92ESDLmmsO84LPOMWi5SREQEG6E="
         }
       ]
     },
