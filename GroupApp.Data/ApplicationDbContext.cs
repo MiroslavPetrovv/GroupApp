@@ -18,7 +18,7 @@ namespace GroupApp.Data
 
         public DbSet<Course> Courses { get; set; } = null!;
 
-        public DbSet<GroupApp.Data.Models.Module> Modules { get; set; } = null!;
+        
 
         public DbSet<TextChannel> TextChannels { get; set; } = null!;
 

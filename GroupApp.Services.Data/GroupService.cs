@@ -51,7 +51,7 @@ namespace GroupApp.Services.Data
                     new GroupMember
                     {
                         UserId = userId, // Owner as first member
-                        Role = 0,
+                        Role = GroupRole.Owner,
                         JoinedAt = createdAt,
                         
                     }

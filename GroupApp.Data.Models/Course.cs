@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GroupApp.Common.EntityValidationConstants;
 
 namespace GroupApp.Data.Models
 {
@@ -21,8 +22,8 @@ namespace GroupApp.Data.Models
 
         public DateTime CreatedAt { get; set; } 
 
-        public ICollection<Module> Modules { get; set; } 
-            = new HashSet<Module>();
+        public ICollection<Lesson> Lessons { get; set; } 
+            = new HashSet<Lesson>();
         public ICollection<Enrollment> Enrollments{ get; set; } 
             = new HashSet<Enrollment>();
 

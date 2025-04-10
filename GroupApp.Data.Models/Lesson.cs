@@ -11,9 +11,9 @@ namespace GroupApp.Data.Models
         
         public Guid Id { get; set; }
 
-        public Guid ModuleId { get; set; }
+        public Guid CourseId { get; set; }
 
-        public Module Module { get; set; }
+        public Course Course { get; set; }
 
         public string Title { get; set; }
 

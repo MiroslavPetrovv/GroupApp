@@ -21,13 +21,12 @@ namespace GroupApp.Data.Configure
                 .IsRequired()
                 .HasMaxLength(ContentMaxLength);
 
-            builder.HasOne(l=>l.Module)
+            builder.HasOne(l=>l.Course)
                 .WithMany(m=>m.Lessons)
-                .HasForeignKey(l=>l.ModuleId)
+                .HasForeignKey(l=>l.CourseId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.Property(l => l.ModuleId)
-                .IsRequired();
+            
         }
     }
 }

@@ -30,7 +30,7 @@ namespace GroupApp.Data.Configure
             builder.Property(c=> c.CreatorId)
                 .IsRequired();
 
-            builder.HasMany(c => c.Modules)
+            builder.HasMany(c => c.Lessons)
                 .WithOne(m => m.Course)
                 .HasForeignKey(m => m.CourseId)
                 .OnDelete(DeleteBehavior.Cascade);
