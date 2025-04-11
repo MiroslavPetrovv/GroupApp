@@ -20,7 +20,9 @@ namespace GroupApp.Data.Models
 
         public ApplicationUser Creator { get; set; }
 
-        public DateTime CreatedAt { get; set; } 
+        public DateTime CreatedAt { get; set; }
+
+        public string? Banner { get; set; }
 
         public ICollection<Lesson> Lessons { get; set; } 
             = new HashSet<Lesson>();

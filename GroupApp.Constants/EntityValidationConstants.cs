@@ -40,7 +40,10 @@ namespace GroupApp.Common
         public static class Course
         {
             public const int TitleMaxLength = 75;
+            public const int TItleMinLength = 5;
+
             public const int DescriptionMaxLength = 350;
+            public const int DescriptionMinLength = 30;
         }
 
         public static class Module
