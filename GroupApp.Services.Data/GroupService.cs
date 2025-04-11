@@ -129,8 +129,8 @@ namespace GroupApp.Services.Data
             
             var group = await _context.Groups.Include(g=>g.GroupMembers).FirstOrDefaultAsync(g=>g.Id == groupId);
             var person = await _context.Users.FindAsync(userId);
-            var IsPersonIn = group.GroupMembers.FirstOrDefault(x => x.Id.ToString() == userId);
-            if (IsPersonIn != null)
+            var isPersonInGroup = person.GroupMemberships.FirstOrDefault(u => u.GroupId == groupId);
+            if (isPersonInGroup != null)
             {
                 return;
             }
