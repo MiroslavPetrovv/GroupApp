@@ -35,7 +35,7 @@ namespace GroupApp.Services.Data
                 Category = result,
                 OwnerId = userId,
                 CreatedAt = createdAt,
-                TextChannels = new List<TextChannel>
+                TextChannels = new HashSet<TextChannel>
                 {
                     new TextChannel
                     {
@@ -46,7 +46,7 @@ namespace GroupApp.Services.Data
 
 
                 },
-                GroupMembers = new List<GroupMember>
+                GroupMembers = new HashSet<GroupMember>
                 {
                     new GroupMember
                     {

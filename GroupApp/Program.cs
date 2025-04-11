@@ -27,6 +27,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IGroupService, GroupService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddRazorPages();
 
 WebApplication app = builder.Build();

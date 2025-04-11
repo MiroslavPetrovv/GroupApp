@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GroupApp.Data.Models;
+using GroupApp.ViewModels.Course;
+using GroupApp.ViewModels.Group;
 
 namespace GroupApp.Services.Data.Interfaces
 {
-    internal interface ICourseService
+    public interface ICourseService 
     {
+        Task AddCourseAsync(AddCourseInputModel model, string userId, string image);
+
+        Task<List<CourseDisplayViewModel>> DisplayAllGroupCourses(Guid groupId);
     }
 }

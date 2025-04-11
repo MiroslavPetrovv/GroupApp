@@ -1,5 +1,131 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GroupApp.ViewModels.Course.AddCourseInputModel
+
 @{
+    ViewData["Title"] = "Create Your Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/AddGroup.css">
+<div class="container">
+    <!-- Header -->
+    <header>
+        <a href="javascript:history.back()" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+            Back to Home
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Create Your Course</h1>
+        <p class="subtitle">Set up your community and start connecting with like-minded people.</p>
+
+        <!-- Form Card -->
+        <div class="form-card">
+            <h2>Group Details</h2>
+            <p class="text-danger">Fill in the information about your new group.</p>
+
+            <form asp-controller="Course" asp-action="Create"  enctype="multipart/form-data">
+                <!-- Group Name -->
+                <div class="form-group">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="Enter a name for your group">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <textarea asp-for="Description" class="form-control" rows="4" placeholder="What is your group about? What will members do?"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+
+
+                <!-- Group Image -->
+                <div class="form-group">
+                    <label>Group Image</label>
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" asp-for="Banner" class="file-input" name="Banner" id="fileInput" accept="image/*">
+                        <div class="upload-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
+                            </svg>
+                            <p class="upload-text">Drag and drop an image or click to browse</p>
+                            <p class="upload-size">Recommended size: 412 x 180px</p>
+                            <button type="button" class="upload-button" onclick="document.getElementById('fileInput').click()">Upload Image</button>
+                        </div>
+                        <div id="previewArea"></div>
+                    </div>
+                    <span asp-validation-for="Banner"></span>
+                </div>
+
+                
+                <input type="hidden" asp-for="GroupId">
+                <input type="hidden" asp-for="CreatedAt" />
+
+                <div class="form-submit">
+                    <button type="submit">Create Course</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+@section Scripts {
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const previewArea = document.getElementById('previewArea');
+        const uploadArea = fileInput.parentElement;
+
+        fileInput.addEventListener('change', handleFileSelect);
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('drop', handleDrop);
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                displayPreview(file);
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const file = e.dataTransfer.files[0];
+            if (file) {
+                fileInput.files = e.dataTransfer.files;
+                displayPreview(file);
+            }
+        }
+
+        function displayPreview(file) {
+            if (!file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview"
+
+                style="
+                display;block;
+                width: 412x;
+                margin-top: 1rem;
+                height:180;
+                border-radius: 10px;">`;
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

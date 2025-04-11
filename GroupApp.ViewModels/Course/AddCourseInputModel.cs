@@ -1,16 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupApp.ViewModels.Course
 {
     using static GroupApp.Common.EntityValidationConstants.Course;
     using static GroupApp.Common.EntityValidationMessages.Course;
-    internal class AddCourseInputModel
+    public class AddCourseInputModel
     {
         public AddCourseInputModel()
         {
@@ -29,7 +24,7 @@ namespace GroupApp.ViewModels.Course
         [Required(ErrorMessage = "Please select an image")]
         public IFormFile Banner { get; set; } = null!;
 
-
+        public Guid GroupId { get; set; }
 
         [Required(ErrorMessage = ReleaseDateFormatRequiredMessage)]
         public string CreatedAt { get; set; }

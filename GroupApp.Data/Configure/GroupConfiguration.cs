@@ -37,6 +37,11 @@ namespace GroupApp.Data.Configure
                 .WithOne(cr => cr.Group)
                 .HasForeignKey(cr => cr.GroupId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(g=> g.Courses)
+                .WithOne(c=>c.Group)
+                .HasForeignKey(c=>c.GroupId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         

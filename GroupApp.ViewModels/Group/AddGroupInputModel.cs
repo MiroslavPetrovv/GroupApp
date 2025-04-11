@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupApp.ViewModels.Group
 {
@@ -17,7 +12,7 @@ namespace GroupApp.ViewModels.Group
             this.CreatedAt = DateTime.UtcNow.ToString(ReleaseDateFormat);
         }
         
-
+        
         [Required(ErrorMessage = TitleRequiredMessage)]
         [MaxLength(TitleMaxLength)]
         public string Title { get; set; } = null!;

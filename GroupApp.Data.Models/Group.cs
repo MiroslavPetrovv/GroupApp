@@ -26,10 +26,13 @@
         
         public ApplicationUser Owner{ get; set; }
 
-        public ICollection<GroupMember> GroupMembers { get; set; } 
+        public HashSet<GroupMember> GroupMembers { get; set; } 
             = new HashSet<GroupMember>();
 
-        public ICollection<TextChannel> TextChannels { get; set; } 
+        public HashSet<TextChannel> TextChannels { get; set; } 
             = new HashSet<TextChannel>();
+
+        public HashSet<Course> Courses { get; set; }
+            = new HashSet<Course> { new Course() };
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GroupApp.Services.Data.Interfaces
+﻿namespace GroupApp.Services.Data.Interfaces
 {
     public interface IBaseService
     {

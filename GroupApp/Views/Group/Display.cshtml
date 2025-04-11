@@ -264,7 +264,8 @@
     <nav class="top-nav">
         <div class="logo">GroupHub</div>
         <div class="nav-links">
-            <a href="#" class="nav-link active">
+            <a asp-controller="Group" asp-action="DisplayClassRoom" class="nav-link active">
+                <input type="hidden" name="groupId" asp-for="@Model.Id">
                 <span>📺</span>
                 <span>Community</span>
             </a>

@@ -1,10 +1,10 @@
-﻿using GroupApp.Services.Data.Interfaces;
+﻿using GroupApp.Data.Models.Enums;
+using GroupApp.Services.Data.Interfaces;
+using GroupApp.ViewModels.Group;
+using GroupApp.Web.Infra.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using GroupApp.Web.Infra.Extensions;
-using GroupApp.Data.Models.Enums;
-using GroupApp.ViewModels.Group;
-using System.Reflection;
+using Microsoft.Identity.Client;
 namespace GroupApp.Controllers
 {
     public class GroupController : BaseController
@@ -129,6 +129,15 @@ namespace GroupApp.Controllers
             var userGroups= await _groupService.DisplayUserGroups(userId);
             return View(userGroups);
 
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> DisplayClassRoom(Guid grouipId)
+        {
+            //call the service
+
+            return View();
         }
 
        

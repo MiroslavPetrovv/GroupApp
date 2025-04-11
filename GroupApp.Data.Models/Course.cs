@@ -20,6 +20,10 @@ namespace GroupApp.Data.Models
 
         public ApplicationUser Creator { get; set; }
 
+        public Guid GroupId { get; set; }
+
+        public Group Group { get; set; }
+
         public DateTime CreatedAt { get; set; }
 
         public string? Banner { get; set; }
