@@ -18,6 +18,8 @@ namespace GroupApp.ViewModels.Course
 
         public Guid GroupId { get; set; }
 
-        public int Completeion { get; set; } 
+        public int Completeion { get; set; }
+
+        public int CourseEnrollments { get; set; }
     }
 }

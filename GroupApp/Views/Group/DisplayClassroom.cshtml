@@ -1,5 +1,9 @@
 ﻿@model GroupCoursesDisplayViewModel
+@using GroupApp.Data.Models
 @using GroupApp.ViewModels.Group
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
     Layout = null;
 }
@@ -7,60 +11,60 @@
 <link rel="stylesheet" href="~/css/Index.css">
 <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
     body {
-        background-color: #0a0c10;
-        color: white;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
+    background-color: #0a0c10;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     }
 
     /* Top Navigation */
     .top-nav {
-        background-color: #1a1d24;
-        padding: 1rem;
-        border-bottom: 1px solid #2d3139;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
+    background-color: #1a1d24;
+    padding: 1rem;
+    border-bottom: 1px solid #2d3139;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     }
 
     .logo {
-        font-size: 1.25rem;
-        font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: bold;
     }
 
     .nav-links {
-        display: flex;
-        gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
     }
 
     .nav-link {
-        color: #94a3b8;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: color 0.2s;
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
     }
 
-        .nav-link:hover {
-            color: #e2e8f0;
-        }
+    .nav-link:hover {
+    color: #e2e8f0;
+    }
 
-        .nav-link.active {
-            color: #60a5fa;
-        }
+    .nav-link.active {
+    color: #60a5fa;
+    }
 
-    
 
-    
+
+
 </style>
 <body>
     <nav class="top-nav">
@@ -72,15 +76,11 @@
                 <span>Community</span>
             </a>
 
-            
-
             <a asp-controller="Group" asp-action="DisplayClassroom" method="get" asp-route-groupId="@Model.Id" class="nav-link active">
                 <span>🎓</span>
                 <span>Classroom</span>
             </a>
-                
-                
-            
+
             
 
             <a href="#" class="nav-link">
@@ -91,6 +91,14 @@
                 <span>📅</span>
                 <span>Events</span>
             </a>
+            
+            @if (SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId)
+            {
+                <a asp-controller="Course" asp-action="Create"
+                   asp-route-groupId="@Model.Id" class="nav-link active"
+                   style="text-align:right;">Create Course
+               </a>
+            }
         </div>
     </nav>
     <div class="groups-grid">
@@ -103,7 +111,13 @@
                     <p class="description">@course.Description</p>
 
                     <div class="group-actions">
-                        <a asp-controller="Group" asp-action="Join Course" method="get" asp-route-groupId="@course.Id" class="join-btn" style="text-decoration:none;">
+                        @if (SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId)
+                        {
+                            <a asp-controller="Course" asp-action="Join Course" method="get" asp-route-courseId="@course.Id" class="join-btn" style="text-decoration:none;">
+                                Edit Course
+                            </a>
+                        }
+                        <a asp-controller="Course" asp-action="Join Course" method="get" asp-route-courseId="@course.Id" class="join-btn" style="text-decoration:none;">
                             Join Course
                         </a>
 

@@ -21,6 +21,10 @@ namespace GroupApp.Services.Data
             DateTime createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
                 DateTimeStyles.None);
             var group = await _context.Groups.FindAsync(model.GroupId);
+            if (group.OwnerId != userId)
+            {
+                return;
+            }
             Course course = new Course
             {
                 GroupId = model.GroupId,
@@ -36,6 +40,30 @@ namespace GroupApp.Services.Data
             _context.SaveChanges();    
         }
 
-        
+        public async Task AddPersonInCourseAsync(string userId, Guid courseId)
+        {
+            var course = await _context.Courses.FindAsync(courseId);
+            var isPersoninCourse = course.Enrollments
+                .FirstOrDefault(e => e.UserId == userId);
+            if (isPersoninCourse == null)
+            {
+                return;
+                //Person is already in course soo skip
+            }
+            var enrollment = new Enrollment
+            {
+                CourseId = courseId,
+                EnrolledAt = DateTime.UtcNow,
+                UserId = userId,
+            };
+
+            course.Enrollments.Add(enrollment);
+            _context.SaveChanges();
+        }
+
+        public Task<CourseLessonsDisplayViewModel> DisplayGroupAsync(Guid courseId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using GroupApp.Services.Data.Interfaces;
+using GroupApp.ViewModels.Course;
+using GroupApp.Web.Infra.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using GroupApp.ViewModels.Course;
-using GroupApp.ViewModels.Group;
-using GroupApp.Web.Infra.Extensions;
 
 namespace GroupApp.Controllers
 {
@@ -51,11 +50,29 @@ namespace GroupApp.Controllers
             TempData["Message"] = "Image uploaded successfully";
             string userId = User.GetId();
             await courseService.AddCourseAsync(model, userId, imageBase64);
-
             
-            return View("DisplayClassroom", "Group");
+            
+            return RedirectToAction("DisplayClassRoom", "Group", new{groupId = model.GroupId });
             //change it later
 
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Join(Guid courseId)
+        {
+            //Add logic for authorization in the future
+            string userId = User.GetId();
+            await courseService.AddPersonInCourseAsync(userId, courseId);
+            return RedirectToAction("Display", new { courseId = courseId });
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Display(Guid courseId)
+        {
+
+            return View();
         }
     }
 }

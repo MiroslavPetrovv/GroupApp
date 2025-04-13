@@ -8,6 +8,7 @@ using GroupApp.Services.Data.Interfaces;
 using GroupApp.Services.Data;
 using GroupApp.Data.Repository.Interfaces;
 using NuGet.Protocol.Core.Types;
+using Microsoft.AspNetCore.Authorization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,12 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.SignIn.RequireConfirmedAccount = true;
 })
 .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddAuthorization(options =>
+{
+    options.DefaultPolicy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IGroupService, GroupService>();

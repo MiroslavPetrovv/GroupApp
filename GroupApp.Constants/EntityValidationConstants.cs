@@ -54,7 +54,11 @@ namespace GroupApp.Common
         public static class Lesson
         {
             public const int TitleMaxLength = 100;
+            public const int TitleMinLentgh = 8;
+
             public const int ContentMaxLength = 300;
+            public const int ContentMinLenth = 20;
+
         }
         
         

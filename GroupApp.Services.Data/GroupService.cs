@@ -119,7 +119,7 @@ namespace GroupApp.Services.Data
                     Banner = g.Banner,
                     GroupMemberCount = g.GroupMembers.Count()
                 })
-                .OrderBy(g=>g.GroupMemberCount)
+                .OrderByDescending(g=>g.GroupMemberCount)
                 .ThenBy(g=>g.Title)
                 .Take(3)
                 .ToListAsync();
@@ -146,7 +146,7 @@ namespace GroupApp.Services.Data
                 Role = GroupRole.Member
             };
             group.GroupMembers.Add(membership);
-            person.GroupMemberships.Add(membership);
+            //person.GroupMemberships.Add(membership);
             _context.SaveChanges();
             
         }
@@ -189,6 +189,7 @@ namespace GroupApp.Services.Data
             var groupCourse = new GroupCoursesDisplayViewModel
             {
                 Id = groupId,
+                OwnerId = group.OwnerId,
                 Courses = group.Courses.Select(c => new CourseDisplayViewModel
                 {
                     Id = c.Id,
@@ -196,13 +197,11 @@ namespace GroupApp.Services.Data
                     Description = c.Description,
                     GroupId = groupId,
                     Banner = c.Banner,
+                    
 
                 }).ToList(),
             };
             return groupCourse;
         }
-        
-
-        
     }
 }
