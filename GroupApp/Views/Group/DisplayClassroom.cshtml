@@ -1,0 +1,115 @@
+﻿@model GroupCoursesDisplayViewModel
+@using GroupApp.ViewModels.Group
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/site.css">
+<link rel="stylesheet" href="~/css/Index.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+        background-color: #0a0c10;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+        background-color: #1a1d24;
+        padding: 1rem;
+        border-bottom: 1px solid #2d3139;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        color: #94a3b8;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.2s;
+    }
+
+        .nav-link:hover {
+            color: #e2e8f0;
+        }
+
+        .nav-link.active {
+            color: #60a5fa;
+        }
+
+    
+
+    
+</style>
+<body>
+    <nav class="top-nav">
+        <div class="logo">GroupHub</div>
+        <div class="nav-links">
+            <a asp-controller="Group" asp-action="Display" method="get" asp-route-groupId="@Model.Id" class="nav-link active">
+
+                <span>📺</span>
+                <span>Community</span>
+            </a>
+
+            
+
+            <a asp-controller="Group" asp-action="DisplayClassroom" method="get" asp-route-groupId="@Model.Id" class="nav-link active">
+                <span>🎓</span>
+                <span>Classroom</span>
+            </a>
+                
+                
+            
+            
+
+            <a href="#" class="nav-link">
+                <span>👥</span>
+                <span>Members</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span>📅</span>
+                <span>Events</span>
+            </a>
+        </div>
+    </nav>
+    <div class="groups-grid">
+        @foreach (var course in Model.Courses)
+        {
+            <div class="group-card" style="overflow-wrap: break-word;">
+                <div class="group-image" style="background-image: url('data:image/*;base64, @course.Banner')"></div>
+                <div class="group-content">
+                    <h3>@course.Title</h3>
+                    <p class="description">@course.Description</p>
+
+                    <div class="group-actions">
+                        <a asp-controller="Group" asp-action="Join Course" method="get" asp-route-groupId="@course.Id" class="join-btn" style="text-decoration:none;">
+                            Join Course
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>

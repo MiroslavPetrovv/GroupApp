@@ -1,6 +1,6 @@
 ﻿@using GroupApp.Data.Models
 @using Microsoft.AspNetCore.Identity
-@model GroupApp.ViewModels.Group.GroupViewModel
+@model GroupApp.ViewModels.Group.GroupTextChannelViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
@@ -15,6 +15,7 @@
     <title>GroupHub</title>
     <!-- Add SignalR client library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <link rel="stylesheet" href="~/css/Index.css">
     <style>
         * {
         margin: 0;
@@ -264,15 +265,18 @@
     <nav class="top-nav">
         <div class="logo">GroupHub</div>
         <div class="nav-links">
-            <a asp-controller="Group" asp-action="DisplayClassRoom" class="nav-link active">
-                <input type="hidden" name="groupId" asp-for="@Model.Id">
+            <a asp-controller="Group" asp-action="Display" method="get" asp-route-groupId="@Model.Id" class="nav-link active">
+
                 <span>📺</span>
                 <span>Community</span>
             </a>
-            <a href="#" class="nav-link">
+            <a asp-controller="Group" asp-action="DisplayClassroom" method="get" asp-route-groupId="@Model.Id" class="nav-link active">
                 <span>🎓</span>
                 <span>Classroom</span>
             </a>
+            
+            
+            
             <a href="#" class="nav-link">
                 <span>👥</span>
                 <span>Members</span>

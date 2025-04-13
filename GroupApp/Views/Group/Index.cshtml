@@ -61,10 +61,9 @@
     <div class="groups-grid">
         @foreach (var group in Model)
         {
-
-            <form asp-controller="Group" asp-action="JoinGroup" method="get">
-                <input type="hidden" name="groupId" asp-for="@group.Id">
-                <div class="group-card">
+            
+                
+                <div class="group-card" style="overflow-wrap: break-word;">
                     <div class="group-image" style="background-image: url('data:image/*;base64, @group.Banner')"></div>
                     <div class="group-content">
                         <h3>@group.Title</h3>
@@ -72,11 +71,14 @@
                         <p class="description">@group.Description</p>
                         
                         <div class="group-actions">
-                            <button  class="join-btn">Join Group</button>
+                            <a asp-controller="Group" asp-action="JoinGroup" method="get" asp-route-groupId="@group.Id" class="join-btn" style="text-decoration:none;">
+                                Join Group
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
-            </form>
+            
         }
     </div>
     <button class="view-all">View All Groups</button>

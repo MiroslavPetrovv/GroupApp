@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroupApp.Web.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+095dbde5dd67bc3ce6ef54958483f4a99c8aa13f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6df8b7606b00ee94426174788fb917b4f6faea3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroupApp.Web.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroupApp.Web.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

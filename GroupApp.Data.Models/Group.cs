@@ -32,7 +32,7 @@
         public HashSet<TextChannel> TextChannels { get; set; } 
             = new HashSet<TextChannel>();
 
-        public HashSet<Course> Courses { get; set; }
-            = new HashSet<Course> { new Course() };
+        public List<Course> Courses { get; set; }
+            = new List<Course>();
     }
 }

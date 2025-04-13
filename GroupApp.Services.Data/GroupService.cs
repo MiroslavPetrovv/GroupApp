@@ -2,6 +2,7 @@
 using GroupApp.Data.Models;
 using GroupApp.Data.Models.Enums;
 using GroupApp.Services.Data.Interfaces;
+using GroupApp.ViewModels.Course;
 using GroupApp.ViewModels.Group;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -12,10 +13,12 @@ namespace GroupApp.Services.Data
     public class GroupService :BaseService, IGroupService
     {
         private readonly ApplicationDbContext _context;
+        private readonly ICourseService _courseService;
 
-        public GroupService(ApplicationDbContext context)
+        public GroupService(ApplicationDbContext context, ICourseService courseService)
         {
             _context = context;
+            _courseService = courseService;
         }
 
         public async Task<Group> AddGroupAsync(AddGroupInputModel model, string userId, string imageB64)
@@ -41,7 +44,8 @@ namespace GroupApp.Services.Data
                     {
                         Name = "General", // Default channel
                         CreatedAt = createdAt,
-                        Description = "This channel is for all general things"
+                        Description = "This channel is for all general things",
+                        
                     }
 
 
@@ -68,7 +72,7 @@ namespace GroupApp.Services.Data
         }
 
 
-        public async Task<GroupViewModel> DisplayGroupAsync(Guid groupId)
+        public async Task<GroupTextChannelViewModel> DisplayGroupAsync(Guid groupId)
         {
             var group = await _context.Groups
               .Include(g => g.Owner)
@@ -83,19 +87,19 @@ namespace GroupApp.Services.Data
 
             }
 
-            return new GroupViewModel
+            return new GroupTextChannelViewModel
             {
                 Id = group.Id,
                 Title = group.Title,
                 OwnerId = group.OwnerId,
-                TextChannels = group.TextChannels.Select(tc => new GroupViewModel.TextChannelDto
+                TextChannels = group.TextChannels.Select(tc => new GroupTextChannelViewModel.TextChannelDto
                 {
                     Id = tc.Id,
                     Name = tc.Name,
                    
 
                 }).ToList(),
-                GroupMembers = group.GroupMembers.Select(m => new GroupViewModel.MemberDto
+                GroupMembers = group.GroupMembers.Select(m => new GroupTextChannelViewModel.MemberDto
                 {
                     UserId = m.UserId,
                     UserName = m.User.UserName
@@ -169,6 +173,33 @@ namespace GroupApp.Services.Data
             }
 
             return userGroups;
+        }
+
+        public async Task<GroupCoursesDisplayViewModel> DisplayClassroomAsync(Guid groupId)
+        {
+            var group = await _context.Groups
+                .Include(g => g.Courses)
+                .FirstOrDefaultAsync(g => g.Id == groupId);
+
+            if (group == null)
+            {
+                return null;
+            }
+
+            var groupCourse = new GroupCoursesDisplayViewModel
+            {
+                Id = groupId,
+                Courses = group.Courses.Select(c => new CourseDisplayViewModel
+                {
+                    Id = c.Id,
+                    Title = c.Title,
+                    Description = c.Description,
+                    GroupId = groupId,
+                    Banner = c.Banner,
+
+                }).ToList(),
+            };
+            return groupCourse;
         }
         
 

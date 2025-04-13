@@ -8,13 +8,15 @@ namespace GroupApp.ViewModels.Course
 {
     public class CourseDisplayViewModel
     {
-        public string Id { get; set; } = null!;
+        public Guid Id { get; set; } 
 
         public string Title { get; set; } = null!;
 
         public string Description { get; set; } = null!;
 
         public string Banner { get; set; } = null!;
+
+        public Guid GroupId { get; set; }
 
         public int Completeion { get; set; } 
     }

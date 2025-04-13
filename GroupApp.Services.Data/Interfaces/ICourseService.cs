@@ -8,6 +8,6 @@ namespace GroupApp.Services.Data.Interfaces
     {
         Task AddCourseAsync(AddCourseInputModel model, string userId, string image);
 
-        Task<List<CourseDisplayViewModel>> DisplayAllGroupCourses(Guid groupId);
+        
     }
 }

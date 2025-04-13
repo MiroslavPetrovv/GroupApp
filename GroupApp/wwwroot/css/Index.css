@@ -162,7 +162,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto 3rem;
+    margin: 3rem auto 3rem;
 }
 
 .group-card {

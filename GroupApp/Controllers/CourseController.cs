@@ -53,7 +53,7 @@ namespace GroupApp.Controllers
             await courseService.AddCourseAsync(model, userId, imageBase64);
 
             
-            return View("Index","Group");
+            return View("DisplayClassroom", "Group");
             //change it later
 
         }

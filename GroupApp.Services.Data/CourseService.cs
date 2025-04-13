@@ -36,9 +36,6 @@ namespace GroupApp.Services.Data
             _context.SaveChanges();    
         }
 
-        public Task<List<CourseDisplayViewModel>> DisplayAllGroupCourses(Guid groupId)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

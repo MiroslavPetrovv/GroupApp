@@ -133,11 +133,11 @@ namespace GroupApp.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> DisplayClassRoom(Guid grouipId)
+        public async Task<IActionResult> DisplayClassRoom(Guid groupId)
         {
-            //call the service
+            var groupClasroom = await _groupService.DisplayClassroomAsync(groupId);
 
-            return View();
+            return View(groupClasroom);
         }
 
        

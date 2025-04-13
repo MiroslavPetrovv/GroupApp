@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GroupApp.ViewModels.Group
 {
-    public class GroupViewModel
+    public class GroupTextChannelViewModel
     {
         public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;
