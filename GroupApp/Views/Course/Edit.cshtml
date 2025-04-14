@@ -128,16 +128,23 @@
         function displayPreview(file) {
             if (!file.type.startsWith('image/')) return;
 
+            // Hide the original previewImage if visible
+            previewImage.style.display = 'none';
+
+            // Clear any previous preview
+            previewArea.innerHTML = '';
+
             const reader = new FileReader();
             reader.onload = function(e) {
-                // previewImage.innerHTML = previewImage.innerHTML =`<img src="${e.target.result}" alt="Image"
-                // style="visibility: hidden;">`;
-                previewArea.innerHTML = previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview"
-                style="
-                width: 412px;
-                margin-top: 1rem;
-                height:180 px;
-                border-radius: 10px;">`;
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = 'Preview';
+                img.style.width = '412px';
+                img.style.height = '180px';
+                img.style.marginTop = '1rem';
+                img.style.borderRadius = '10px';
+
+                previewArea.appendChild(img);
             };
             reader.readAsDataURL(file);
         }
