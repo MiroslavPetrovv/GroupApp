@@ -74,5 +74,63 @@ namespace GroupApp.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Edit(Guid courseId)
+        {
+            var course = await courseService.GetCourseByIdAsync(courseId);
+            if (course == null)
+            {
+                return RedirectToAction("DisplayClassRoom", "Group", new { groupId = course.GroupId });
+            }
+
+            var courseForEdit = new EditCourseInputModel
+            {
+                Id = courseId,
+                Title = course.Title,
+                Description = course.Description,
+                GroupId = course.GroupId,
+                OldBanner = course.Banner
+
+            };
+
+            return View(courseForEdit);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(EditCourseInputModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+           
+            string imageBase64 = string.Empty;
+            if(model.Banner != null && model.Banner.Length > 0)
+            {
+                
+                using (var stream = model.Banner.OpenReadStream())
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        stream.CopyTo(memoryStream);
+                        imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
+
+                    }
+                }
+                TempData["Message"] = "Image uploaded successfully";
+                await courseService.Edit(model, imageBase64);
+            }
+            else
+            {
+                await courseService.Edit(model, model.OldBanner);
+            }
+            return RedirectToAction("DisplayClassRoom", "Group", new { groupId = model.GroupId });
+
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model GroupApp.ViewModels.Course.AddCourseInputModel
+﻿@model GroupApp.ViewModels.Course.EditCourseInputModel
 
 @{
     ViewData["Title"] = "Create Your Course";
@@ -16,15 +16,15 @@
 
     <!-- Main Content -->
     <main>
-        <h1>Create Your Course</h1>
-        <p class="subtitle">Set up your community and start connecting with like-minded people.</p>
+        <h1>Edit Your Course</h1>
+        
 
         <!-- Form Card -->
         <div class="form-card">
             <h2>Group Details</h2>
             <p class="text-danger">Fill in the information about your new group.</p>
 
-            <form asp-controller="Course" asp-action="Create"  enctype="multipart/form-data">
+            <form asp-controller="Course" asp-action="Edit" enctype="multipart/form-data">
                 <!-- Group Name -->
                 <div class="form-group">
                     <label asp-for="Title" class="form-label">Title</label>
@@ -41,11 +41,28 @@
 
 
 
-                <!-- Group Image -->
                 <div class="form-group">
                     <label>Group Image</label>
                     <div class="upload-area" id="uploadArea">
-                        <input type="file" asp-for="Banner" class="file-input" name="Banner" id="fileInput" accept="image/*">
+                        <!-- File input -->
+                        <input type="file" asp-for="@Model.Banner" class="file-input" name="Banner" id="fileInput" accept="image/*" hidden>
+
+                        <!-- Show current image from Base64 -->
+                        @if (!string.IsNullOrEmpty(Model.OldBanner))
+                        {
+                            <img id="previewImage" src="data:image/png;base64,@Model.OldBanner" alt="Current Image" style="
+                                        
+                                         width: 412px;
+                                         margin-top: 1rem;
+                                         height:360px;
+                                         border-radius: 10px;">
+                        }
+                        else
+                        {
+                            <img id="previewImage" style="display:none; max-width: 100%; height: auto; margin-bottom: 10px;">
+                        }
+
+                        <!-- Upload content UI -->
                         <div class="upload-content">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -57,15 +74,17 @@
                         </div>
                         <div id="previewArea"></div>
                     </div>
-                    <span asp-validation-for="Banner"></span>
+                    <span asp-validation-for="@Model.Banner"></span>
                 </div>
 
                 
-                <input type="hidden" asp-for="GroupId">
-                <input type="hidden" asp-for="CreatedAt" />
+                <input type="hidden" asp-for="@Model.OldBanner">
+                <input type="hidden" asp-for="@Model.Id">
+                <input type="hidden" asp-for="@Model.GroupId">
+                
 
                 <div class="form-submit">
-                    <button type="submit">Create Course</button>
+                    <button type="submit">Update Course</button>
                 </div>
             </form>
         </div>
@@ -76,6 +95,7 @@
     <script>
         const fileInput = document.getElementById('fileInput');
         const previewArea = document.getElementById('previewArea');
+        const previewImage = document.getElementById(`previewImage`)
         const uploadArea = fileInput.parentElement;
 
         fileInput.addEventListener('change', handleFileSelect);
@@ -110,9 +130,10 @@
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview"
+                // previewImage.innerHTML = previewImage.innerHTML =`<img src="${e.target.result}" alt="Image"
+                // style="visibility: hidden;">`;
+                previewArea.innerHTML = previewArea.innerHTML = `<img src="${e.target.result}" alt="Preview"
                 style="
-                display:block;
                 width: 412px;
                 margin-top: 1rem;
                 height:180 px;

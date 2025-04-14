@@ -12,6 +12,10 @@ namespace GroupApp.Services.Data.Interfaces
 
         Task<CourseLessonsDisplayViewModel> DisplayGroupAsync(Guid courseId);
 
+        Task<Course> GetCourseByIdAsync(Guid courseId);
+
+        Task Edit(EditCourseInputModel model, string image);
+
 
         
     }

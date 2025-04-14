@@ -113,7 +113,7 @@
                     <div class="group-actions">
                         @if (SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId)
                         {
-                            <a asp-controller="Course" asp-action="Join Course" method="get" asp-route-courseId="@course.Id" class="join-btn" style="text-decoration:none;">
+                            <a asp-controller="Course" asp-action="Edit" method="get" asp-route-courseId="@course.Id" class="join-btn" style="text-decoration:none;">
                                 Edit Course
                             </a>
                         }

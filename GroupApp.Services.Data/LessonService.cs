@@ -14,7 +14,7 @@ namespace GroupApp.Services.Data
             this._context = _context;
         }
 
-        public async Task AddLesson(AddLessonInputModel model, string userId ,Guid courseId)
+        public async Task AddLesson(AddLessonInputModel model, string userId)
         {
             string format = "MM-dd-yy";
             DateTime createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
@@ -25,7 +25,7 @@ namespace GroupApp.Services.Data
                 Title = model.Title,
                 CreatedAt = createdAt,
                 Content = model.Content,
-                CourseId = courseId,
+                CourseId = model.CourseId,
                 VideoURL = model.VideoURL,
 
             };

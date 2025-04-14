@@ -3,6 +3,7 @@ using GroupApp.Data.Models;
 using GroupApp.Services.Data.Interfaces;
 using GroupApp.ViewModels.Course;
 using GroupApp.ViewModels.Group;
+using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
 namespace GroupApp.Services.Data
@@ -39,7 +40,17 @@ namespace GroupApp.Services.Data
             //group.Courses.Add(course);
             _context.SaveChanges();    
         }
+        public async Task Edit(EditCourseInputModel model, string image)
+        {
+            var course = await _context.Courses.FindAsync(model.Id);
 
+            course.Title = model.Title;
+            course.Description = model.Description;
+            course.Banner = image;
+
+            _context.Courses.Update(course);
+            _context.SaveChanges();
+        }
         public async Task AddPersonInCourseAsync(string userId, Guid courseId)
         {
             var course = await _context.Courses.FindAsync(courseId);
@@ -65,5 +76,18 @@ namespace GroupApp.Services.Data
         {
             throw new NotImplementedException();
         }
+
+        public async Task<Course> GetCourseByIdAsync(Guid courseId)
+        {
+            var course = await _context.Courses.FindAsync(courseId);
+            if (course == null)
+            {
+                return null;
+            }
+
+            return course;        
+        }
+
+       
     }
 }

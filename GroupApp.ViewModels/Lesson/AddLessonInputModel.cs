@@ -29,6 +29,10 @@ namespace GroupApp.ViewModels.Lesson
 
         [Url]
         public string VideoURL { get; set; }
+
+        public Guid CourseId { get; set; }
+
+        
     }
 }
 
