@@ -3,6 +3,7 @@ using GroupApp.Data.Models;
 using GroupApp.Services.Data.Interfaces;
 using GroupApp.ViewModels.Course;
 using GroupApp.ViewModels.Group;
+using GroupApp.ViewModels.Lesson;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -36,9 +37,9 @@ namespace GroupApp.Services.Data
                 Title = model.Title,
             };
 
-            _context.Courses.Add(course);
+            await _context.Courses.AddAsync(course);
             //group.Courses.Add(course);
-            _context.SaveChanges();    
+            await _context.SaveChangesAsync();
         }
         public async Task Edit(EditCourseInputModel model, string image)
         {
@@ -49,7 +50,7 @@ namespace GroupApp.Services.Data
             course.Banner = image;
 
             _context.Courses.Update(course);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
         public async Task AddPersonInCourseAsync(string userId, Guid courseId)
         {
@@ -69,12 +70,31 @@ namespace GroupApp.Services.Data
             };
 
             course.Enrollments.Add(enrollment);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public Task<CourseLessonsDisplayViewModel> DisplayGroupAsync(Guid courseId)
+        public async Task<CourseLessonsDisplayViewModel> DisplayCourseAsync(Guid courseId)
         {
-            throw new NotImplementedException();
+            var course = await _context.Courses
+                .AsNoTracking()
+                .Where(c => c.Id == courseId)
+                .Include(c => c.Lessons)
+                .Select(c => new CourseLessonsDisplayViewModel
+                {
+                    Id = c.Id,
+                    OwnerId = c.CreatorId,
+                    Lessons = c.Lessons.Select(l => new LessonDisplayViewModel
+                    {
+                        Id = l.Id,
+                        Content = l.Content,
+                        CourseId = l.CourseId,
+                        Title = l.Title,
+                        VideoURL = l.VideoURL,
+                        
+                    }).ToList()
+                }).FirstOrDefaultAsync();
+
+            return course;
         }
 
         public async Task<Course> GetCourseByIdAsync(Guid courseId)
@@ -88,6 +108,6 @@ namespace GroupApp.Services.Data
             return course;        
         }
 
-       
+        
     }
 }

@@ -4,6 +4,6 @@ namespace GroupApp.Services.Data.Interfaces
 {
     public interface ILessonService
     {
-        Task AddLesson(AddLessonInputModel model, string userId);
+        Task Add(AddLessonInputModel model, string userId);
     }
 }

@@ -10,9 +10,10 @@ namespace GroupApp.Services.Data.Interfaces
 
         Task AddPersonInCourseAsync(string userId,Guid courseId);
 
-        Task<CourseLessonsDisplayViewModel> DisplayGroupAsync(Guid courseId);
+        Task<CourseLessonsDisplayViewModel> DisplayCourseAsync(Guid courseId);
 
         Task<Course> GetCourseByIdAsync(Guid courseId);
+
 
         Task Edit(EditCourseInputModel model, string image);
 

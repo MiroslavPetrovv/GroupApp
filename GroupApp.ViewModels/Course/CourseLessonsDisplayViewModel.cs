@@ -11,6 +11,7 @@ namespace GroupApp.ViewModels.Course
     {
         public Guid Id { get; set; }
 
+        public string OwnerId { get; set; }
         public List<LessonDisplayViewModel> Lessons { get; set; } =
             new List<LessonDisplayViewModel>();
     }

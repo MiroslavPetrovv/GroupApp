@@ -35,7 +35,7 @@ namespace GroupApp.Controllers
                 return View(model);
             }
             string userId = User.GetId();
-            await lessonService.AddLesson(model, userId);
+            await lessonService.Add(model, userId);
             return Ok();
         }
 

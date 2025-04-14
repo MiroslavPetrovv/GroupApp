@@ -178,8 +178,10 @@ namespace GroupApp.Services.Data
         public async Task<GroupCoursesDisplayViewModel> DisplayClassroomAsync(Guid groupId)
         {
             var group = await _context.Groups
+                .AsNoTracking()
+                .Where(g => g.Id == groupId)
                 .Include(g => g.Courses)
-                .FirstOrDefaultAsync(g => g.Id == groupId);
+                .FirstOrDefaultAsync();
 
             if (group == null)
             {

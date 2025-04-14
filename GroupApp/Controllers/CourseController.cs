@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GroupApp.Controllers
 {
+    [Authorize]
     public class CourseController : BaseController
     {
         private readonly ICourseService courseService;
@@ -16,7 +17,7 @@ namespace GroupApp.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        
 
         public async Task<IActionResult> Create(Guid groupId)
         {
@@ -29,7 +30,7 @@ namespace GroupApp.Controllers
             return View(courseModel);
         }
         [HttpPost]
-        [Authorize]
+        
         public async Task<IActionResult> Create(AddCourseInputModel model)
         {
 
@@ -58,25 +59,20 @@ namespace GroupApp.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> Join(Guid courseId)
-        {
-            //Add logic for authorization in the future
-            string userId = User.GetId();
-            await courseService.AddPersonInCourseAsync(userId, courseId);
-            return RedirectToAction("Display", new { courseId = courseId });
+        
+        //public async Task<IActionResult> Join(Guid courseId)
+        //{
+        //    //Add logic for authorization in the future
+        //    string userId = User.GetId();
+        //    await courseService.AddPersonInCourseAsync(userId, courseId);
+        //    return RedirectToAction("Display", new { courseId = courseId });
 
-        }
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> Display(Guid courseId)
-        {
-
-            return View();
-        }
+        
 
         [HttpGet]
-        [Authorize]
+        
         public async Task<IActionResult> Edit(Guid courseId)
         {
             var course = await courseService.GetCourseByIdAsync(courseId);
@@ -99,7 +95,7 @@ namespace GroupApp.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        
         public async Task<IActionResult> Edit(EditCourseInputModel model)
         {
             if (!ModelState.IsValid)
@@ -131,6 +127,28 @@ namespace GroupApp.Controllers
             return RedirectToAction("DisplayClassRoom", "Group", new { groupId = model.GroupId });
 
 
+        }
+
+        [HttpGet]
+        
+        public async Task<IActionResult> Details(Guid courseId)
+        {
+            var courseLessons = await courseService.DisplayCourseAsync(courseId);
+
+            return View(courseLessons);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Join(Guid courseId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(courseId);
+            }
+
+            string userId = User.GetId();
+            await courseService.AddPersonInCourseAsync(userId, courseId);
+            return RedirectToAction(nameof(Details), new { courseId = courseId });
         }
     }
 }

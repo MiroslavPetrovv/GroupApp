@@ -1,0 +1,66 @@
+﻿@using GroupApp.Data.Models
+@using Microsoft.AspNetCore.Identity
+@model GroupApp.ViewModels.Course.CourseLessonsDisplayViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Course Lessons";
+    var isCreator = SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId;
+    var selectedLesson = Model.Lessons.OrderBy(l => l.LessonsOrder).FirstOrDefault(); // Select the first lesson by default
+    Layout = null;
+}
+
+<div class="row">
+    <!-- Left Sidebar: Lessons -->
+    <div class="col-md-3 bg-light p-3">
+        <h5>@ViewData["Title"]</h5>
+        <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 0%">0%</div>
+        </div>
+
+        <ul class="list-group">
+            @foreach (var lesson in Model.Lessons.OrderBy(l => l.LessonsOrder))
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center @(lesson.Id == selectedLesson?.Id ? "active" : "")">
+                    @lesson.Title
+                    @if (isCreator)
+                    {
+                        <div class="btn-group btn-group-sm">
+                            <a href="@Url.Action("Edit", "Lessons", new { id = lesson.Id })" class="btn btn-outline-secondary">✏️</a>
+                            <a href="@Url.Action("Delete", "Lessons", new { id = lesson.Id })" class="btn btn-outline-danger">🗑</a>
+                        </div>
+                    }
+                </li>
+            }
+        </ul>
+
+        @if (isCreator)
+        {
+            <a asp-controller="Lesson" asp-action="Add"
+               asp-route-courseId="@Model.Id"
+               class="btn btn-success mt-3 w-100"
+               style="text-align:right;">
+                ➕ Add Lesson
+            </a>
+        }
+    </div>
+
+    <!-- Right Content: Video + Transcript -->
+    <div class="col-md-9 p-4">
+        @if (selectedLesson != null)
+        {
+            <h4>@selectedLesson.Title</h4>
+            <div class="ratio ratio-16x9 mb-3">
+                <iframe src="@selectedLesson.VideoURL" title="@selectedLesson.Title" allowfullscreen></iframe>
+            </div>
+
+            <h6>Transcript</h6>
+            <p>@selectedLesson.Content</p>
+        }
+        else
+        {
+            <p>No lessons available yet.</p>
+        }
+    </div>
+</div>
