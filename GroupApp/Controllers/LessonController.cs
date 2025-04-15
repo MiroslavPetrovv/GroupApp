@@ -36,7 +36,7 @@ namespace GroupApp.Controllers
             }
             string userId = User.GetId();
             await lessonService.Add(model, userId);
-            return Ok();
+            return RedirectToAction("Details" , "Course");
         }
 
     }
