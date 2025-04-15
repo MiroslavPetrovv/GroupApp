@@ -30,7 +30,7 @@ namespace GroupApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(AddLessonInputModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }

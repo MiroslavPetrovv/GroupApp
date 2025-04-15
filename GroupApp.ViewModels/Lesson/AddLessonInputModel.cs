@@ -30,6 +30,12 @@ namespace GroupApp.ViewModels.Lesson
         [Url]
         public string VideoURL { get; set; }
 
+        [Required]
+        public int LessonOrder { get; set; }
+
+        [Required]
+        public double Duration { get; set; }
+
         public Guid CourseId { get; set; }
 
         

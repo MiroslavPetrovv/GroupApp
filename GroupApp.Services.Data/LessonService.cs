@@ -28,6 +28,8 @@ namespace GroupApp.Services.Data
                 Content = model.Content,
                 CourseId = model.CourseId,
                 VideoURL = model.VideoURL,
+                Duration = model.Duration,
+                LessonOrder = model.LessonOrder,
 
             };
 

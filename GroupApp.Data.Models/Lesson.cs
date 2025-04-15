@@ -23,7 +23,7 @@ namespace GroupApp.Data.Models
 
         public int LessonOrder { get; set; }
 
-        public int Duration { get; set; }
+        public double Duration { get; set; }
 
         public string VideoURL { get; set; }
     }

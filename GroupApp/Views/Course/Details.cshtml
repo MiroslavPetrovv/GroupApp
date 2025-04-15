@@ -3,7 +3,6 @@
 @model GroupApp.ViewModels.Course.CourseLessonsDisplayViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
-
 @{
     ViewData["Title"] = "Course Lessons";
     var isCreator = SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId;
@@ -11,56 +10,379 @@
     Layout = null;
 }
 
-<div class="row">
-    <!-- Left Sidebar: Lessons -->
-    <div class="col-md-3 bg-light p-3">
-        <h5>@ViewData["Title"]</h5>
-        <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 0%">0%</div>
-        </div>
-
-        <ul class="list-group">
-            @foreach (var lesson in Model.Lessons.OrderBy(l => l.LessonsOrder))
-            {
-                <li class="list-group-item d-flex justify-content-between align-items-center @(lesson.Id == selectedLesson?.Id ? "active" : "")">
-                    @lesson.Title
-                    @if (isCreator)
-                    {
-                        <div class="btn-group btn-group-sm">
-                            <a href="@Url.Action("Edit", "Lessons", new { id = lesson.Id })" class="btn btn-outline-secondary">✏️</a>
-                            <a href="@Url.Action("Delete", "Lessons", new { id = lesson.Id })" class="btn btn-outline-danger">🗑</a>
-                        </div>
-                    }
-                </li>
-            }
-        </ul>
-
-        @if (isCreator)
-        {
-            <a asp-controller="Lesson" asp-action="Add"
-               asp-route-courseId="@Model.Id"
-               class="btn btn-success mt-3 w-100"
-               style="text-align:right;">
-                ➕ Add Lesson
-            </a>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --background-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --card-border-radius: 8px;
+            --button-bg: #2563eb;
+            --border-color: #334155;
         }
-    </div>
 
-    <!-- Right Content: Video + Transcript -->
-    <div class="col-md-9 p-4">
-        @if (selectedLesson != null)
-        {
-            <h4>@selectedLesson.Title</h4>
-            <div class="ratio ratio-16x9 mb-3">
-                <iframe src="@selectedLesson.VideoURL" title="@selectedLesson.Title" allowfullscreen></iframe>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        #app {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 280px;
+            background-color: var(--card-bg);
+            padding: 24px;
+            height: 100vh;
+            position: fixed;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+        }
+
+        .logo {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+            .logo h2 {
+                color: var(--text-primary);
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+        .nav-links {
+            list-style: none;
+        }
+
+            .nav-links li {
+                margin-bottom: 8px;
+            }
+
+            .nav-links a {
+                display: flex;
+                align-items: center;
+                padding: 12px 16px;
+                color: var(--text-secondary);
+                text-decoration: none;
+                border-radius: var(--card-border-radius);
+                transition: all 0.2s ease;
+                font-size: 0.95rem;
+            }
+
+                .nav-links li.active a,
+                .nav-links a:hover {
+                    background-color: rgba(37, 99, 235, 0.1);
+                    color: var(--button-bg);
+                }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 32px;
+        }
+
+        .content-header {
+            margin-bottom: 32px;
+        }
+
+            .content-header h1 {
+                font-size: 1.5rem;
+                color: var(--text-primary);
+                margin-bottom: 24px;
+            }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            margin-bottom: 32px;
+        }
+
+        .progress {
+            width: 25%;
+            height: 100%;
+            background-color: var(--button-bg);
+            border-radius: 4px;
+        }
+
+        .course-section {
+            background-color: var(--card-bg);
+            border-radius: var(--card-border-radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .course-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .course-header h2 {
+                font-size: 1.1rem;
+                color: var(--text-primary);
+            }
+
+        .completion-status {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--button-bg);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+        .transcript {
+            padding: 24px;
+            background-color: var(--card-bg);
+            border-radius: var(--card-border-radius);
+            margin-top: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+            .transcript h3 {
+                font-size: 1.1rem;
+                color: var(--text-primary);
+                margin-bottom: 16px;
+            }
+
+            .transcript p {
+                color: var(--text-secondary);
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+        .expand-button {
+            color: var(--button-bg);
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        /* Action Buttons */
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: var(--card-border-radius);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: var(--button-bg);
+            color: var(--text-primary);
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #1d4ed8;
+            }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--button-bg);
+            border: 1px solid var(--button-bg);
+        }
+
+            .btn-outline:hover {
+                background-color: rgba(37, 99, 235, 0.1);
+            }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 0.8rem;
+        }
+
+        .lesson-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: var(--card-border-radius);
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+            .lesson-item:hover {
+                background-color: rgba(37, 99, 235, 0.1);
+            }
+
+            .lesson-item.active {
+                background-color: rgba(37, 99, 235, 0.2);
+                color: var(--text-primary);
+                font-weight: 500;
+            }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 4px 8px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+            .edit-btn:hover {
+                color: var(--button-bg);
+                background-color: rgba(37, 99, 235, 0.1);
+            }
+
+            .delete-btn:hover {
+                color: #ef4444;
+                background-color: rgba(239, 68, 68, 0.1);
+            }
+
+        .alert {
+            padding: 16px;
+            border-radius: var(--card-border-radius);
+            margin-bottom: 16px;
+        }
+
+        .alert-info {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--button-bg);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        /* Responsive Design */
+       
+
+        .logo h2,
+        .nav-links span {
+            display: none;
+        }
+
+        .main-content {
+            margin-left: 70px;
+            padding: 16px;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Course Lessons</h2>
             </div>
 
-            <h6>Transcript</h6>
-            <p>@selectedLesson.Content</p>
-        }
-        else
-        {
-            <p>No lessons available yet.</p>
-        }
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+            </div>
+
+            <ul class="nav-links">
+                @foreach (var lesson in Model.Lessons.OrderBy(l => l.LessonsOrder))
+                {
+                    <li class="@(lesson.Id == selectedLesson?.Id ? "active" : "")">
+                        <div class="lesson-item @(lesson.Id == selectedLesson?.Id ? "active" : "")">
+                            <span>@lesson.Title</span>
+                            @if (isCreator)
+                            {
+                                <div class="action-buttons">
+                                    <a href="@Url.Action("Edit", "Lessons", new { id = lesson.Id })" class="edit-btn">✏️</a>
+                                    <a href="@Url.Action("Delete", "Lessons", new { id = lesson.Id })" class="delete-btn">🗑️</a>
+                                </div>
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+
+            @if (isCreator)
+            {
+                <a asp-controller="Lesson" asp-action="Create"
+                   asp-route-courseId="@Model.Id"
+                   class="btn btn-primary" style="display: block; margin-top: 24px; text-align: center;">
+                    Add Lesson
+                </a>
+            }
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>@ViewData["Title"]</h1>
+            </div>
+
+            @if (selectedLesson != null)
+            {
+                <div class="course-section">
+                    <div class="course-header">
+                        <h2>@selectedLesson.Title</h2>
+                        <span class="completion-status">Not started</span>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="@selectedLesson.VideoURL" title="@selectedLesson.Title" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="transcript">
+                    <h3>Transcript</h3>
+                    <p>@selectedLesson.Content</p>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">No lessons available yet.</div>
+            }
+        </div>
     </div>
-</div>
+</body>
+</html>
