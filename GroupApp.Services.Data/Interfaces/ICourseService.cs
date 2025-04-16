@@ -17,6 +17,7 @@ namespace GroupApp.Services.Data.Interfaces
 
         Task Edit(EditCourseInputModel model, string image);
 
+        Task<Guid> GetFirstLessonIdAsync(Guid courseId);
 
         
     }

@@ -1,53 +1,47 @@
 ﻿@using GroupApp.Data.Models
 @using Microsoft.AspNetCore.Identity
-@using System.Web;
 @model GroupApp.ViewModels.Course.CourseLessonsDisplayViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
     ViewData["Title"] = "Course Lessons";
     var isCreator = SignInManager.IsSignedIn(User) && UserManager.GetUserId(User) == Model.OwnerId;
-    var selectedLesson = Model.Lessons.First(x => x.Id == Model.CurrentLessonId); // Select the first lesson by default
-
+    var selectedLesson = Model.Lessons.OrderBy(l => l.LessonsOrder).FirstOrDefault(); // Select the first lesson by default
     Layout = null;
 }
 
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="~/css/Showlessons.css"/>
+    <link rel="stylesheet" type="image/svg+xml" href="~/css/Showlessons.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lessons</title>
 </head>
 <body>
     <div id="app">
-        
+        @foreach (var lesson in Model.Lessons.OrderBy(l => l.LessonsOrder))
+        {
             <nav class="sidebar">
                 <div class="logo">
                     <h2>Course Platform</h2>
                 </div>
                 <ul class="nav-links">
-                    @foreach (var lesson in Model.Lessons.OrderBy(l => l.LessonsOrder))
-                    {
-
-
-                    <li class="@(lesson.Id == selectedLesson.Id ? "active" : string.Empty)">
-                            <a asp-controller="Course" asp-action="Details" asp-route-courseId="@Model.CourseId" asp-route-currentLessonId="@lesson.Id">Lesson @lesson.LessonsOrder: @lesson.Title</a>
-                    </li>
-                    }
+                    <li class="active"><a href="#">Lesson @lesson.LessonsOrder: @lesson.Title</a></li>
                 </ul>
             </nav>
 
             <main class="main-content">
                 <div class="content-header">
-                <h1>Lesson @selectedLesson.LessonsOrder @selectedLesson.LessonsOrder: @selectedLesson.Title</h1>
-                    
+                    <h1>Lesson @lesson.LessonsOrder @lesson.LessonsOrder: @lesson.Title</h1>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
                 </div>
 
                 <div class="course-section">
 
                     <div class="video-container">
-                    <iframe src="@selectedLesson.VideoURL"
+                        <iframe src="@lesson.VideoURL"
                                 title="Course Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -57,15 +51,15 @@
 
                 <div class="transcript">
                     <h3>Transcript</h3>
-                <p>@selectedLesson.Content</p>
+                    <p>@lesson.Content</p>
                 </div>
             </main>
-        
+        }
         @if (isCreator)
         {
             <a asp-controller="Lesson" asp-action="Create"
                asp-route-courseId="@Model.CourseId"
-               class="btn btn-Courseprimary" style="display: block; margin-top: 24px; text-align: center;">
+               class="btn btn-primary" style="display: block; margin-top: 24px; text-align: center;">
                 Add Lesson
             </a>
         }

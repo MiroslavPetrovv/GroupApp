@@ -131,9 +131,10 @@ namespace GroupApp.Controllers
 
         [HttpGet]
         
-        public async Task<IActionResult> Details(Guid courseId)
+        public async Task<IActionResult> Details(Guid courseId ,Guid currentLessonId)
         {
             var courseLessons = await courseService.DisplayCourseAsync(courseId);
+            courseLessons.CurrentLessonId = currentLessonId;
 
             return View(courseLessons);
         }
@@ -148,7 +149,8 @@ namespace GroupApp.Controllers
 
             string userId = User.GetId();
             await courseService.AddPersonInCourseAsync(userId, courseId);
-            return RedirectToAction(nameof(Details), new { courseId = courseId });
+            Guid currentLesson = await courseService.GetFirstLessonIdAsync(courseId);
+            return RedirectToAction(nameof(Details), new { courseId = courseId ,currentLessonId = currentLesson });
         }
     }
 }

@@ -36,10 +36,23 @@ namespace GroupApp.Services.Data
                 Description = model.Description,
                 Title = model.Title,
             };
-
+            
             await _context.Courses.AddAsync(course);
-            //group.Courses.Add(course);
+           
             await _context.SaveChangesAsync();
+            var Lesson = new Lesson
+            {
+                Content = "Pls Create your first lesson ussing the add lesson button",
+                CreatedAt = DateTime.UtcNow,
+                CourseId = course.Id,
+                Duration = 0,
+                LessonOrder = 0,
+                Title = "Thank you for Using our services",
+                VideoURL = "",
+                
+            };
+             course.Lessons.Add(Lesson);
+            _context.SaveChanges();
         }
         public async Task Edit(EditCourseInputModel model, string image)
         {
@@ -81,7 +94,7 @@ namespace GroupApp.Services.Data
                 .Include(c => c.Lessons)
                 .Select(c => new CourseLessonsDisplayViewModel
                 {
-                    Id = c.Id,
+                    CourseId = c.Id,
                     OwnerId = c.CreatorId,
                     Lessons = c.Lessons.Select(l => new LessonDisplayViewModel
                     {
@@ -108,6 +121,15 @@ namespace GroupApp.Services.Data
             return course;        
         }
 
-        
+        public async Task<Guid> GetFirstLessonIdAsync(Guid courseId)
+        {
+            var currentLessonId = await _context.Courses.Where(x => x.Id == courseId)
+                .Include(x => x.Lessons)
+                .SelectMany(x => x.Lessons)
+                .Select(x => x.Id)
+                .FirstOrDefaultAsync();
+
+            return currentLessonId;
+        }
     }
 }

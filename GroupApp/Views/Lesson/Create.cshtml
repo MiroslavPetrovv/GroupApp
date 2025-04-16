@@ -48,8 +48,8 @@
 
                 <div class="form-row">
                     <div class="form-group form-group-compact">
-                        <label asp-for="LessonOrder" class="form-label">Order</label>
-                        <input type="number" name="LessonsOrder" class="form-input form-input-compact" min="1" value="1" placeholder="write the sequence of your lessons"/>
+                        <label asp-for="LessonOrder" class="form-label">LessonOrder</label>
+                        <textarea asp-for="LessonOrder" class="form-control" placeholder="enter the number of sequence of your video"></textarea>
                     </div>
 
                     <div class="form-group form-group-compact">
@@ -63,7 +63,7 @@
 
 
                 <input type="hidden" asp-for="CourseId">
-                <input type="hidden" asp-for="CreatedAt" />
+                <input type="hidden" asp-for="CreatedAt"/>
 
                 <div class="form-submit">
                     <button type="submit">Create Lesson</button>

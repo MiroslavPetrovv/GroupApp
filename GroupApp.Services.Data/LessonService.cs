@@ -17,6 +17,7 @@ namespace GroupApp.Services.Data
 
         public async Task Add(AddLessonInputModel model, string userId)
         {
+
             string format = "MM-dd-yy";
             DateTime createdAt = DateTime.ParseExact(model.CreatedAt.ToString(), format, CultureInfo.InvariantCulture,
                 DateTimeStyles.None);

@@ -9,9 +9,11 @@ namespace GroupApp.ViewModels.Course
 {
     public class CourseLessonsDisplayViewModel
     {
-        public Guid Id { get; set; }
+        public Guid CourseId { get; set; }
 
         public string OwnerId { get; set; }
+
+        public Guid CurrentLessonId {  get; set; }
         public List<LessonDisplayViewModel> Lessons { get; set; } =
             new List<LessonDisplayViewModel>();
     }
