@@ -2,6 +2,7 @@
 using GroupApp.Data.Models;
 using GroupApp.Services.Data.Interfaces;
 using GroupApp.ViewModels.Lesson;
+using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System.Net.Http.Headers;
 
@@ -37,6 +38,16 @@ namespace GroupApp.Services.Data
             _context.Add(lesson);
             _context.SaveChanges();
         }
-        
+
+        public Task Edit(EditLessonInputModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<Lesson> GetLessonByIdAsync(Guid lessonId)
+        {
+            var lesson = await _context.Lessons.FirstAsync(x=>x.Id == lessonId);
+            return lesson;
+        }
     }
 }

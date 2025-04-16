@@ -39,5 +39,41 @@ namespace GroupApp.Controllers
             return RedirectToAction("Details" , "Course" , new {courseId = model.CourseId });
         }
 
+        [HttpGet]
+
+        public async Task<IActionResult> Edit(Guid lessonId)
+        {
+            var lesson = await lessonService.GetLessonByIdAsync(lessonId);
+            if (lesson == null)
+            {
+                return RedirectToAction("Details", "Course" , new { courseId = lesson.CourseId, currentLessonId = lesson.Id });
+            }
+            var lessonForEdit = new EditLessonInputModel
+            {
+                Id = lesson.Id,
+                Content = lesson.Content,
+                Duration = lesson.Duration,
+                LessonOrder = lesson.LessonOrder,
+                Title = lesson.Title,
+                VideoURL = lesson.VideoURL,
+                CourseId = lesson.CourseId,
+            };
+
+            return View(lessonForEdit);
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Edit(EditLessonInputModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            await lessonService.Edit(model);
+            return RedirectToAction("Details", "Course", new { courseId = model.CourseId, currentLessonId = model.Id });
+        }
+
     }
 }

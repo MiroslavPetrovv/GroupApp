@@ -1,0 +1,70 @@
+﻿@model GroupApp.ViewModels.Lesson.EditLessonInputModel
+@{
+    ViewData["Title"] = "Edit Lesson";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/AddGroup.css">
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <a href="javascript:history.back()" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+            Back to Home
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Create Your Lesson</h1>
+        <p class="subtitle">Set up your course lessons and let your student receive the knowelegde</p>
+
+        <!-- Form Card -->
+        <div class="form-card">
+            <h2>Lesson Details</h2>
+            <p class="text-danger">Fill in the information about your new group.</p>
+
+            <form asp-controller="Lesson" asp-action="Create" enctype="multipart/form-data">
+                <!-- Group Name -->
+                <div class="form-group">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="Enter a name for your lesson">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label asp-for="Content" class="form-label">Content</label>
+                    <textarea asp-for="Content" class="form-control" rows="4" placeholder="What is your lesson about? What will members learn?"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VideoURL" class="form-label">VideoURL</label>
+                    <textarea asp-for="VideoURL" class="form-control" placeholder="enter the url to your video"></textarea>
+                    <span asp-validation-for="VideoURL" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group form-group-compact">
+                        <label asp-for="LessonOrder" class="form-label">LessonOrder</label>
+                        <textarea asp-for="LessonOrder" class="form-control" placeholder="enter the number of sequence of your video"></textarea>
+                    </div>
+
+                    <div class="form-group form-group-compact">
+                        <label asp-for="Duration" class="form-label">Duration (min)</label>
+                        <input type="text" name="Duration" class="form-input form-input-compact" placeholder="Write the duration of your lesson" />
+                    </div>
+                </div>
+
+                <input type="hidden" asp-for="CourseId">
+                
+                <div class="form-submit">
+                    <button type="submit">Create Lesson</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
