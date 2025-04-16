@@ -3,12 +3,15 @@ using GroupApp.ViewModels.Lesson;
 using GroupApp.Web.Infra.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GroupApp.Controllers
 {
+    [Authorize]
     public class LessonController : BaseController
     {
         private readonly ILessonService lessonService;
+        private readonly ICourseService courseService;
 
         public LessonController(ILessonService lessonService)
         {
@@ -16,7 +19,7 @@ namespace GroupApp.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        
         public async Task<IActionResult> Create(Guid courseId)
         {
             var lessonModel = new AddLessonInputModel
@@ -35,8 +38,8 @@ namespace GroupApp.Controllers
                 return View(model);
             }
             string userId = User.GetId();
-            await lessonService.Add(model, userId);
-            return RedirectToAction("Details" , "Course" , new {courseId = model.CourseId });
+            var currentLessonId = await lessonService.Add(model, userId);
+            return RedirectToAction("Details" , "Course" , new {courseId = model.CourseId , currentLessonId = currentLessonId });
         }
 
         [HttpGet]
@@ -73,6 +76,20 @@ namespace GroupApp.Controllers
 
             await lessonService.Edit(model);
             return RedirectToAction("Details", "Course", new { courseId = model.CourseId, currentLessonId = model.Id });
+        }
+
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Guid lessonId)
+        {
+            var lesson = await lessonService.GetLessonByIdAsync(lessonId);
+            if (lesson != null)
+            {
+                await lessonService.Delete(lessonId);
+            }
+            var firstCourseLessonId = await courseService.GetFirstLessonIdAsync(lessonId);
+            return RedirectToAction("Details", "Course", new { courseId = lesson.CourseId, currentLessonId = firstCourseLessonId });
         }
 
     }

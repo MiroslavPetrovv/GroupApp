@@ -17,14 +17,12 @@
         @* <div class="logo">Group<span>Hub</span></div> *@
         <div class="logo"><a asp-controller="Group" asp-action="Index">Group<span>Hub</span></a></div>
         <div class="nav-links">
+            <a asp-controller="Group" asp-action="DisplayAllUserGroups">My groups</a>
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#training">Free Training</a>
-            <a href="#demo">Demo</a>
-            <a href="#blog">Blog</a> 
+            <a href="#discover">Discover</a>
+            <a href="#testimonials">Testimonials</a>
             <partial name="_LoginPartial"/>
             <a asp-controller="Group" asp-action="Create" class="start-free">Start for free</a>
-            <a asp-controller="Group" asp-action="DisplayAllUserGroups">My groups</a>
         </div>
     </nav>
 

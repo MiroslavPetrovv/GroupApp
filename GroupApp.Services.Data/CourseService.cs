@@ -12,6 +12,7 @@ namespace GroupApp.Services.Data
     public class CourseService : BaseService, ICourseService
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILessonService _lessonService;
 
         public CourseService(ApplicationDbContext _context)
         {
@@ -70,7 +71,7 @@ namespace GroupApp.Services.Data
             var course = await _context.Courses.FindAsync(courseId);
             var isPersoninCourse = course.Enrollments
                 .FirstOrDefault(e => e.UserId == userId);
-            if (isPersoninCourse == null)
+            if (isPersoninCourse != null)
             {
                 return;
                 //Person is already in course soo skip
@@ -88,6 +89,7 @@ namespace GroupApp.Services.Data
 
         public async Task<CourseLessonsDisplayViewModel> DisplayCourseAsync(Guid courseId)
         {
+            
             var course = await _context.Courses
                 .AsNoTracking()
                 .Where(c => c.Id == courseId)
@@ -107,7 +109,35 @@ namespace GroupApp.Services.Data
                     }).ToList()
                 }).FirstOrDefaultAsync();
 
-            return course;
+            if (course.Lessons.Count == 0)
+            {
+                var Lesson = new LessonDisplayViewModel
+                {
+                    Content = "Pls Create your first lesson ussing the add lesson button",
+                    
+                    CourseId = courseId,
+                    Duration = 0,
+                    LessonsOrder = 0,
+                    Title = "Thank you for Using our services",
+                    VideoURL = "",
+                    
+
+                };
+                course.Lessons.Add(Lesson);
+                _context.SaveChanges();
+            }
+            else
+            {
+
+                var defaultLesson = await _context.Courses.Include(c => c.Lessons).SelectMany(x => x.Lessons).Where(l => l.Title == "Thank you for Using our services").FirstOrDefaultAsync();
+                if (defaultLesson != null)
+                {
+                    await _lessonService.Delete(defaultLesson.Id);
+                }
+            }
+            
+
+                return course;
         }
 
         public async Task<Course> GetCourseByIdAsync(Guid courseId)

@@ -20,7 +20,7 @@ namespace GroupApp.ViewModels.Lesson
 
         public int LessonsOrder {  get; set; }
 
-        public string Duration { get; set; }
+        public double Duration { get; set; }
 
         public string VideoURL { get; set; }
     }

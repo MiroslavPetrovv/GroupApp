@@ -16,7 +16,7 @@ namespace GroupApp.Services.Data
             this._context = _context;
         }
 
-        public async Task Add(AddLessonInputModel model, string userId)
+        public async Task<Guid> Add(AddLessonInputModel model, string userId)
         {
 
             string format = "MM-dd-yy";
@@ -37,11 +37,32 @@ namespace GroupApp.Services.Data
 
             _context.Add(lesson);
             _context.SaveChanges();
+
+            return lesson.Id;
         }
 
-        public Task Edit(EditLessonInputModel model)
+        public async Task Delete(Guid lessonId)
         {
-            throw new NotImplementedException();
+            var lessonToDelete = await _context.Lessons.FirstOrDefaultAsync(x => x.Id == lessonId);
+            if (lessonToDelete is null)
+            {
+                return;
+            }
+            _context.Lessons.Remove(lessonToDelete);
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task Edit(EditLessonInputModel model)
+        {
+            var lesson = await _context.Lessons.FirstOrDefaultAsync(x=>x.Id==model.Id);
+            lesson.Duration = model.Duration;
+            lesson.LessonOrder = model.LessonOrder;
+            lesson.Title = model.Title;
+            lesson.Content = model.Content;
+            lesson.VideoURL = model.VideoURL;
+            _context.Lessons.Update(lesson);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Lesson> GetLessonByIdAsync(Guid lessonId)

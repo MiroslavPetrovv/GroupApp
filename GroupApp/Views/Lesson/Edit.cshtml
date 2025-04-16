@@ -24,7 +24,7 @@
             <h2>Lesson Details</h2>
             <p class="text-danger">Fill in the information about your new group.</p>
 
-            <form asp-controller="Lesson" asp-action="Create" enctype="multipart/form-data">
+            <form asp-controller="Lesson" asp-action="Edit" enctype="multipart/form-data">
                 <!-- Group Name -->
                 <div class="form-group">
                     <label asp-for="Title" class="form-label">Title</label>
@@ -59,6 +59,7 @@
                 </div>
 
                 <input type="hidden" asp-for="CourseId">
+                <input type="hidden" asp-for="Id">
                 
                 <div class="form-submit">
                     <button type="submit">Create Lesson</button>

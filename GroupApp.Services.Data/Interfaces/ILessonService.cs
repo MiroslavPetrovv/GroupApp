@@ -5,7 +5,8 @@ namespace GroupApp.Services.Data.Interfaces
 {
     public interface ILessonService
     {
-        Task Add(AddLessonInputModel model, string userId);
+        Task<Guid> Add(AddLessonInputModel model, string userId);
+        Task Delete(Guid lessonId);
         Task Edit(EditLessonInputModel model);
         Task<Lesson> GetLessonByIdAsync(Guid lessonId);
     }
