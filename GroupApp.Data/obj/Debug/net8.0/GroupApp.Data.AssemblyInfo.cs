@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroupApp.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cdbfec57d9da3b4d4d33322c1f345d323acce45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f4b8dfce117e445b0169d0522566e0ac10f23c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroupApp.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroupApp.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
