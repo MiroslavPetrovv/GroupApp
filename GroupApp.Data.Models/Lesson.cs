@@ -26,5 +26,7 @@ namespace GroupApp.Data.Models
         public double Duration { get; set; }
 
         public string VideoURL { get; set; }
+
+        
     }
 }

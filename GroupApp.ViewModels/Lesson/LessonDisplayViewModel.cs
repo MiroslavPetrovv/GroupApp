@@ -23,5 +23,7 @@ namespace GroupApp.ViewModels.Lesson
         public double Duration { get; set; }
 
         public string VideoURL { get; set; }
+
+        public bool IsDefaultLesson { get; set; }
     }
 }

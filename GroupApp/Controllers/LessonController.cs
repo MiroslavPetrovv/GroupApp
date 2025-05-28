@@ -13,8 +13,9 @@ namespace GroupApp.Controllers
         private readonly ILessonService lessonService;
         private readonly ICourseService courseService;
 
-        public LessonController(ILessonService lessonService)
+        public LessonController(ILessonService lessonService,ICourseService courseService)
         {
+            this.courseService = courseService;
             this.lessonService = lessonService;
         }
 
@@ -84,12 +85,21 @@ namespace GroupApp.Controllers
         public async Task<IActionResult> Delete(Guid lessonId)
         {
             var lesson = await lessonService.GetLessonByIdAsync(lessonId);
-            if (lesson != null)
+            
+            if (lesson is null)
             {
-                await lessonService.Delete(lessonId);
+
             }
-            var firstCourseLessonId = await courseService.GetFirstLessonIdAsync(lessonId);
+            var courseId = lesson.CourseId;
+            await lessonService.Delete(lessonId);
+            var course = await courseService.GetCourseByIdAsync(courseId);
+            if (course.Lessons.Count ==0)
+            {
+                return RedirectToAction("DisplayClassRoom", "Group" ,new { groupId = course.GroupId });
+            }
+            var firstCourseLessonId = await courseService.GetFirstLessonIdAsync(courseId);
             return RedirectToAction("Details", "Course", new { courseId = lesson.CourseId, currentLessonId = firstCourseLessonId });
+            
         }
 
     }

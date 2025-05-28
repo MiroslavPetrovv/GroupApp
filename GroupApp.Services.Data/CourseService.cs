@@ -41,19 +41,7 @@ namespace GroupApp.Services.Data
             await _context.Courses.AddAsync(course);
            
             await _context.SaveChangesAsync();
-            var Lesson = new Lesson
-            {
-                Content = "Pls Create your first lesson ussing the add lesson button",
-                CreatedAt = DateTime.UtcNow,
-                CourseId = course.Id,
-                Duration = 0,
-                LessonOrder = 0,
-                Title = "Thank you for Using our services",
-                VideoURL = "",
-                
-            };
-             course.Lessons.Add(Lesson);
-            _context.SaveChanges();
+            
         }
         public async Task Edit(EditCourseInputModel model, string image)
         {
@@ -108,41 +96,30 @@ namespace GroupApp.Services.Data
                         
                     }).ToList()
                 }).FirstOrDefaultAsync();
-
-            if (course.Lessons.Count == 0)
+            if (course.Lessons.Count ==0)
             {
-                var Lesson = new LessonDisplayViewModel
+                var lesson = new LessonDisplayViewModel
                 {
                     Content = "Pls Create your first lesson ussing the add lesson button",
-                    
-                    CourseId = courseId,
+                    CourseId = course.CourseId,
                     Duration = 0,
                     LessonsOrder = 0,
                     Title = "Thank you for Using our services",
                     VideoURL = "",
-                    
+                    IsDefaultLesson = true
 
                 };
-                course.Lessons.Add(Lesson);
-                _context.SaveChanges();
-            }
-            else
-            {
-
-                var defaultLesson = await _context.Courses.Include(c => c.Lessons).SelectMany(x => x.Lessons).Where(l => l.Title == "Thank you for Using our services").FirstOrDefaultAsync();
-                if (defaultLesson != null)
-                {
-                    await _lessonService.Delete(defaultLesson.Id);
-                }
+                course.Lessons.Add(lesson);
+                
+                
             }
             
-
                 return course;
         }
 
         public async Task<Course> GetCourseByIdAsync(Guid courseId)
         {
-            var course = await _context.Courses.FindAsync(courseId);
+            var course = await _context.Courses.FirstOrDefaultAsync(x=>x.Id == courseId);
             if (course == null)
             {
                 return null;

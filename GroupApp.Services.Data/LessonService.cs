@@ -67,7 +67,7 @@ namespace GroupApp.Services.Data
 
         public async Task<Lesson> GetLessonByIdAsync(Guid lessonId)
         {
-            var lesson = await _context.Lessons.FirstAsync(x=>x.Id == lessonId);
+            var lesson = await _context.Lessons.FirstOrDefaultAsync(x=>x.Id == lessonId);
             return lesson;
         }
     }
